@@ -1,0 +1,444 @@
+---
+title: Fundamental SQL part 3
+date: '2022-11-09'
+tags: ['SQL','Inner Join','Union']
+draft: false
+summary: Using INNER JOIN and UNION
+image: /static/images/certificates/certificate-DQLABSQLT2DGBAER.png
+layout: PostLayout
+authors: ['default']
+---
+# 1. Penggabungan Tabel dari Relasi Kolom
+## Pendahuluan
+Aku terlonjak kaget ketika merasakan sentuhan tangan di balik pundakku. Ternyata Senja. Dahinya mengernyit, menatapku penuh tanya. “Kamu tampak kebingungan, Aksara. Ada masalah?”
+
+Hening sejenak. Aku menimbang-nimbang apakah akan menyampaikan kegelisahanku pada Senja. Kutengok jam dinding di seberang meja, sudah setengah jam aku berkutat sendiri dalam ketidaktahuan. Lebih baik bertanya.
+
+“Ini, Nja. Aku dapet laporan mengenai transaksi penjualan produk kotak pensil dan flashdisk 32 GB cabang X. Sudah aku coba utak-atik dan lihat, aku nemuin kalau tabel data penjualannya enggak berisi kolom nama produk, jadi aku benar-benar bingung untuk mengidentifikasi tiap kategori produknya,” curhatku akhirnya.
+
+Aku melihat Senja tersenyum dan mendorong bangku yang teronggok di pojok ke sebelahku. “Kalau kamu sudah mahir SQL ini akan mudah. Untuk mendapatkan kolom nama produk, kamu hanya perlu menggabungkan tabel data penjualan dengan tabel lain di database yang berisi detail produk termasuk nama_produk, mekanisme penggabungan ini disebut JOIN,” jelas Senja sembari mengarahkanku.
+
+“Dengan JOIN, beberapa tabel pada suatu database bisa digabungkan satu sama lain. Kemampuan inilah sebenarnya ciri khas dan kekuatan yang membedakan RDMS dengan sistem database lain. Sudah dapat gambarannya, Aksara?” lanjut Senja.
+
+Kepala mengangguk sedikit. Aku perlu mempraktikkan sendiri agar lebih jelas. Seperti tahu keinginan dan maksudku, Senja mengajakku untuk menyelesaikan studi kasus lebih sederhana.
+
+“Oke, mari kita coba praktikkan penggunaannya lebih konkrit dengan dua contoh tabel sederhana, yaitu ms_item_warna dan ms_item_category, sehingga kita dapat dengan mudah memahami penggunaan JOIN. Jadi, kamu juga lebih mudah menyelesaikan kasus tadi.”
+
+“Siap!” Mataku berbinar.
+
+## Tabel pertama:ms_item_warna
+“Oke, contoh tabel pertama yang akan kita gunakan sebagai bahan latihan adalah tabel **ms_item_warna** seperti terlihat berikut ini,” bimbing Senja sambil memperlihatkan layar laptopnya padaku:
+
+> ![image](https://user-images.githubusercontent.com/36031213/163102909-d7f6b186-0cf7-4453-a735-a4df6aafed3d.png)
+
+“Tabel ini terdiri dari dua kolom yang berisi informasi nama buah atau sayuran dengan warnanya, dan memiliki delapan baris data,” ujar Senja.
+
+“Lalu, bagaimana langkah selanjutnya?” tanyaku menunggu.
+
+“Selanjutnya, jika permasalahan kita adalah ingin mengetahui informasi tidak hanya mengenai warna tetapi juga jenis/kategori dari setiap nama barang apakah tergolong sayuran atau buah, maka kita tidak dapat memperoleh informasi tersebut jika hanya berdasarkan tablel ms_item_warna. Oleh karena itu, kita perlu menghubungkan tabel tersebut dengan tabel lain yang berisi informasi tersebut, yaitu tabel **ms_item_kategori**.”
+
+## Tabel kedua:ms_item_kategori
+“Perhatikan kembali ya, Aksara. Kalau ini contoh tabel kedua, yakni tabel **ms_item_kategori** seperti terlihat berikut ini.”
+
+> ![image](https://user-images.githubusercontent.com/36031213/163102960-b4128db2-aef0-4315-9255-80a79a29c0b4.png)
+
+Tabel ini terdiri dari dua kolom yang berisi informasi nama tumbuhan dengan kategorinya, dan memiliki delapan baris data.
+
+“Nah, sekarang kita telah memiliki tabel kedua yaitu tabel ms_item_kategori yang memiliki delapan baris data dan berisi informasi mengenai nama tumbuhan dengan kategorinya. Sama seperti permasalahan di tabel sebelumnya, jika kita hanya memiliki tabel ms_item_kategori maka kita tidak dapat memperoleh informasi mengenai nama dan warna tumbuhan. Oleh karena itu, kita bisa menggabungkan kedua tabel tersebut menjadi satu tabel baru yang berisi informasi lengkap mengenai nama, warna dan kategori setiap barang/item, “ tambah Senja.
+
+Aku mengangguk paham.
+
+“Kalau sudah cukup mengerti contoh dua tabel tadi, kamu bisa kerjakan tugas praktik dan kuisnya. Saya akan memperhatikan.”
+
+Aku pun kembali mengambil alih laptop
+
+## Tugas Peraktek
+> ![image](https://user-images.githubusercontent.com/36031213/163103087-abfb8125-1946-4e63-8e45-89a3b4baf1a7.png)`
+> ![image](https://user-images.githubusercontent.com/36031213/163103155-7c6b8312-a7ec-46e4-9164-21d9f14bcde5.png)
+
+## Quiz: 
+> ![image](https://user-images.githubusercontent.com/36031213/163103333-b197c720-14b0-41bd-a05d-6b02d6cc0f51.png)
+
+## Quiz: 
+> ![image](https://user-images.githubusercontent.com/36031213/163103444-803b2147-4f2e-4988-a91c-5485534f1a7a.png)
+
+## Key Columns
+Penjelasan selanjutnya adalah mengenai key columns dan bagaimana penggunaannya dalam menggabungkan kedua tabel.
+
+Perhatikan kembali tabel **ms_item_warna** dan **ms_item_kategori** yang telah ditemui pada pembahasan sebelumnya.
+> ![image](https://user-images.githubusercontent.com/36031213/163103696-e7bff69d-7827-43e7-b415-cf9c3cefc25a.png)
+
+Dari rangkaian pembahasan sebelumnya, dapat disimpulkan bahwa kedua tabel tersebut memiliki hubungan/relasi yaitu pada kolom **nama_barang** (tabel ms_item_warna) dan kolom **nama_item** (tabel ms_item_kategori) karena banyak kecocokan dari isi data.
+
+Kedua kolom ini untuk selanjutnya disebut sebagai **kolom kunci** atau **_key columns_**.
+
+## Menggabungkan Tebel dengan Key Column
+Saatnya  mempraktekkan penggabungan tabel ms_item_kategori dan ms_item_warna menggunakan key columns.
+
+Cobalah tuliskan query berikut di code editor:
+> `Select * from ms_item_kategori, ms_item_warna where nama_barang = nama_item`
+
+Jika query yang ditunjukkan dengan benar diketikkan maka akan mendapatkan hasil berikut .
+> ![image](https://user-images.githubusercontent.com/36031213/163103776-afe1306f-dfbb-41d4-9d3e-6f92426e0187.png)
+
+Dapat dilihat **hasil dari penggabungan dua tabel** tersebut yaitu berupa **tabel baru dengan empat kolom dan enam baris data**. Perlu diketahui bahwa penggabungan ini bersifat sementara artinya tabel asli di database tidak mengalami perubahan, dan tabel baru hasil penggabungan ini juga tidak serta merta tersimpan di database.  
+
+## Penjelasan Query Penggabungan Tabel
+Penggabungan dua tabel menjadi satu tabel baru menggunakan query **SELECT** pada subbab sebelumnya dilakukan dengan cara berikut:
+* menuliskan dua nama tabel yang akan digunakan dengan dipisahkan operator koma (,).
+* menuliskan pasangan key columns dengan penghubung operator sama dengan (=) di bagian filter atau kondisi.
+
+Berikut adalah gambaran detil syntax penggunaan cara di atas .
+> ![image](https://user-images.githubusercontent.com/36031213/163104012-00ae2239-eb55-40b5-ba0f-53dd4584780a.png)
+
+Cara join seperti ini disebut dengan cara join menggunakan **operator koma**.
+
+## Penjelasan Hasil Penggabungan Tabel
+Sejauh ini aku tidak menemukan masalah yang signifikan, tapi ketika berusaha menggabungkan tabel aku masih kesulitan. Untungnya Senja masih di sampingku.
+
+“Nja, aku mau nanya. Jika aku amati, penggabungan tabel menghasilkan enam baris data. Sedangkan di kedua tabel asal masing-masing memiliki delapan baris data. Lalu, kenapa bisa berkurang dua baris data?” tanyaku penasaran.
+
+“Untuk menjawab pertanyaan tersebut, cobalah perhatikan gambar berikut,” jawab Senja lugas langsung memberi penjelasan lengkap bersama visualnya
+> ![image](https://user-images.githubusercontent.com/36031213/163104156-abb98ef4-8dba-4f5e-b369-ac905af2e62b.png)
+
+Dua tabel di bagian atas yaitu tabel **ms_item_kategori** dan tabel **ms_item_warna** merupakan tabel sumber data, dan bagian bawah adalah tabel hasil penggabungan dari kedua tabel tersebut.
+
+Dari tabel hasil penggabungan terlihat bahwa baris data yang muncul hanyalah baris data yang isi datanya terdapat di kedua key columns, dan data yang isinya cocok untuk kedua tabel jumlahnya hanya enam dari total delapan baris data yang ada. Sedangkan baris data yang berisi belimbing, jamur, apel dan daun bawang, tidak terdapat di kedua tabel, sehingga baris data ini akan di-exclude dan tidak akan muncul di tabel hasil penggabungan.
+
+## Penjelasan Proses Penggabungan Tabel
+Mari diperhatikan kembali gambar di bawah ini untuk penjelasan proses penggabungan.
+
+> ![image](https://user-images.githubusercontent.com/36031213/163104304-0d38c9ba-80f5-4afb-b3f4-66790c76eb0f.png)
+
+Panah berwarna magenta menunjukkan proses pencocokan dan penggabungan data. Sebagai contoh: Baris data pertama dengan isi **“bayam”** pada key column **nama_item** (tabel **ms_item_kategori**), akan mencari isi yang sama di key column **nama_barang** (tabel **ms_item_warna**), dan ditemukan pada baris kedua kemudian dihubungkan menjadi satu baris di tabel baru hasil penggabungan.
+
+Pencocokan dengan pencarian ini berdasarkan bagian kondisi (_conditional clause_) pada query yang ditandai dengan warna kuning berikut.
+
+> ![image](https://user-images.githubusercontent.com/36031213/163104351-7620e419-a9b6-4a89-b09d-34b3b63c81c6.png)
+
+Setelah seluruh data ditemukan dengan kondisi ini, dan jika tidak menentukan spesifik kolom maka seluruh kolom data dari kedua tabel akan dimunculkan dengan isi/baris data yang sama dan terdapat di kedua key column digabungkan menjadi satu baris pada tabel baru. 
+
+Isi data yang ditandai dengan warna merah adalah data yang tidak memiliki pasangan sehingga tidak bisa digabungkan, dan dengan demikian tidak memiliki data gabungan pada hasil akhir.
+
+Cara pencocokan dan penggabungan disebut dengan INNER JOIN - dimana isi dari key column kedua tabel harus cocok satu sama lain baru dapat digabungkan.
+
+Penjelasan Senja selalu lengkap seperti biasa. Aku mengintip buku catatan dari sudut mataku, tak terasa sudah sekitar tiga halaman habis oleh coretan tanganku. Malam ini harus kurapikan nih!
+
+“Satu lagi, Aksara. Saya perhatikan kamu suka sekali mencatat, jangan kelewat soal ini: jika kamu biasa bekerja dengan Excel, proses ini hampir menyerupai penggunaan fungsi **vlookup**. Jadi harusnya sudah terbiasa.”
+
+Aku terkekeh, “Hehehe, iya. Biar rapi. Biasanya aku taruh di buku diari juga.”
+
+“Metode belajarmu unik juga, Aksara. Kuisnya jangan lupa dikerjakan.”
+
+Aku mengangguk sambil mengangkat jari membentuk kata ‘peace’. Setelah kutelusuri lagi lebih dalam, tak hanya ada kuis saja tapi juga banyak sekali materi-materi baru lainnya! Mumpung Senja masih di sini, aku harus belajar ‘ngebut’ agar bisa bertanya kalau ada yang bingung.
+
+## Quiz:
+> ![image](https://user-images.githubusercontent.com/36031213/163104477-3a2b219b-16d0-4faa-98d2-737873d00e39.png)
+
+## Quiz: 
+> ![image](https://user-images.githubusercontent.com/36031213/163104557-366bacc8-6edc-417f-8f89-c6a508891fa9.png)
+
+## Bagaimana Jika urutan Tabel diubah?
+Jika akan mengubah urutan tabel di bagian FROM pada query inner join, maka hanya urutan kolom saja yang berubah tetapi isi data dan jumlah data tidak berubah.
+
+> ![image](https://user-images.githubusercontent.com/36031213/163104696-f236f4ea-8803-46de-8c57-2f15a49b160f.png)
+
+## Menggunakan Prefix Nama Tabel
+Seperti yang dijelaskan sebelumnya, jika akan menggunakan wildcard (*), dan tidak menentukan spesifik nama kolom yang akan dimunculkan di bagian SELECT, maka secara default urutan kolom dimulai dengan kolom dari tabel yang dinyatakan pertama di bagian FROM. Akan tetapi, bisa juga memanfaatkan wildcard dengan menambahkan prefix nama tabel, dimana dengan merinci prefix nama tabel ini, dimungkinkan untuk menentukan urutan kolom dari tabel mana yang muncul duluan.
+
+Jika lupa dapat mengacu kembali ke Modul: **Fundamental SQL Using SELECT Statement, Chapter: Prefix dan Alias.**
+
+Sebagai contoh, jika akan menggabungkan kedua tabel, dengan menyatakan tabel **ms_item_warna** terlebih dahulu di bagian FROM, tetapi yang ingin dimunculkan kolomnya di awal hasil adalah dari yang **ms_item_kategori**, maka querynya akan menjadi sebagai berikut.
+
+> ![image](https://user-images.githubusercontent.com/36031213/163104932-be77e7bb-80f7-4998-adc6-eec1569c5bf6.png)
+
+## Penggabungan Tanpa Kondisi
+Sesuai dugaanku. Aku kembali menemukan hal yang membingungkan. Dan, tampaknya hari ini Senja memang sudah mendedikasikan waktunya untuk mengajariku karena (beruntungnya!) Senja masih tepat di sebelahku.
+
+“Nja, hehehe. Sorry mau ganggu lagi. Bagaimana kalau aku ingin menggabungkan tabel tanpa ada kondisi? Apakah tetap bisa memakai metode ini?”
+
+Senja memicingkan matanya pada layar laptop yang kutunjuk sebelum menjawab. “Pertanyaan bagus. Penjelasan dan praktek yang kita lakukan pada materi sebelumnya adalah penggabungan dua tabel dengan menggunakan kondisi, yaitu terdapat data yang sama pada key kolom dari kedua tabel. Akan tetapi, memang benar, dalam beberapa case di real problem, sering kali terdapat permasalahan tertentu dimana kita ingin menggabungkan tabel tanpa ada kondisi. Proses penggabungan ini juga dapat dilakukan dengan metode koma dan tanpa menggunakan kondisi relasi antar kolom.”
+
+Aku mencoba mencerna penjelasan Senja. Sebelum aku sempat memahami semuanya. Senja sudah mengajakku untuk melihat contoh.
+
+“Berikut adalah contoh query dari penggabungan seperti itu.”
+
+> `SELECT * FROM ms_item_kategori, ms_item_warna`
+
+“Terlihat pada query kita hanya menyertakan nama dua tabel yang akan diambil datanya, tapi tidak ada informasi kondisi bagaimana kedua tabel tersebut berelasi satu dengan yang lainnya melalui key column. Lalu apa hasilnya?” tanya Senja retoris.
+
+“Kamu hanya butuh untuk mengetik  query ini pada code editor dan jalankan, jika berhasil dengan baik maka akan muncul hasil dengan enam puluh empat baris data seperti berikut.”
+> ![image](https://user-images.githubusercontent.com/36031213/163105120-f0a537dc-7ab4-48d6-be51-e253a005449a.png)
+
+## Quiz: Berapa Jumlah Baris Hasil "Join Tanpa Kondisi" Berikur ?
+> ![image](https://user-images.githubusercontent.com/36031213/163105197-b52a4ef7-a061-4863-aa66-9b68e9014535.png)
+
+## Kesimpulan
+Bahasa SQL diciptakan untuk sistem database relasional atau RDBMS. Dan aspek **relasional** inilah yang menjadi fitur paling penting dan unggul, dimana beberapa tabel dapat digabungkan menjadi satu sumber data baru.
+
+Cara menggabungkan antar tabel disebut sebagai mekanisme join. Pada bab ini telah dicontohkan bagaimana dua tipe join, yaitu **inner join** dan **cross join** diterapkan dengan dua contoh tabel sederhana.
+
+**Inner join** terjadi jika kedua tabel digabungkan melalui kolom kunci atau key column. Syarat penggabungan adalah dimana Isi data dari key column tabel yang satu harus dapat dicocokkan dengan isi data dari key column tabel yang lain.
+
+Sedangkan **cross join** terjadi dari penggabungan tabel tanpa kondisi, dan menghasilkan seluruh penggabungan data seperti proses perkalian.
+
+Untuk bab ini, inner join maupun cross join dilakukan dengan cara menggunakan operator koma dan pengkondisian where. Pada bab selanjutnya, akan terlihat penggunaan inner join dengan menggunakan keyword **INNER JOIN … ON.**
+
+# 2. INNER JOIN
+## Pendahuluan
+Pagi ini ada yang membuatku menyunggingkan senyum: menemukan laptop dan beberapa berkas kerja Senja sudah rapi di sebelah mejaku. Ini artinya Senja akan mendampingiku lagi hari ini!
+
+“Eits, jangan girang dulu! Karena bakal ada materi baru yang enggak kalah ribet dibanding kasus kamu kemarin lho,” bisik Senja dari belakang pundakku. Aku sontak membalikkan badan karena terkejut oleh kemunculan Senja yang tiba-tiba.
+
+“Senja! Bikin kaget saja.”
+
+“Sorry, hahaha. Soalnya kamu senyum-senyum sendiri begitu. Oh ya, kemarin kamu sudah mempelajari mengenai konsep dan penggunaan inner join menggunakan operator koma dengan klausa **FROM…WHERE… **pada perintah **SELECT **untuk menggabungkan dua tabel menjadi satu sumber data baru. Hari ini kita naik level ya, sudah siap?”
+
+“Pastinya,” tantangku. Senja hanya tersneyum melihat kepercayaan diriku, padahal lubuk hati terdalamku tegang juga rasanya!
+
+“Selanjutnya saya akan menjelaskan bagaimana menggabungkan dua tabel dengan metode INNER JOIN lain, yaitu dengan keyword INNER JOIN, yang memberikan hasil yang sama, tetapi dengan konstruksi atau syntax yang sedikit berbeda. Konstruksi baru ini akan memberi manfaat lebih ketika pada suatu query melibatkan beberapa join sehingga penggunaan operator koma menjadi sangat terbatas. Sampai sini sudah cukup pusing?”
+
+Lagi-lagi Senja menggodaku. Aku menggeleng mantap, walau sebenarnya ada beberapa hal yang masih asing di telingaku. Tapi, kuyakin pasti akan paham akhirnya. Optimis itu harus!
+
+“Untuk penjelasan mengenai materi JOIN dengan penggunaan keyword INNER JOIN, kita akan kembali menggunakan dua contoh tabel sederhana, yaitu ms_item_warna dan ms_item_category, sehingga kita dapat dengan mudah memahami penggunaan keyword **INNER JOIN** untuk menggabungkan dua tabel tersebut. Here we go, Aksara.”
+
+## Syntax INNER JOIN
+Aku menerima modul baru dari Senja. Saat kubuka, bab baru yang menyapaku adalah “Syntax INNER JOIN”.
+
+“Sudah tahu kan bahwa tujuan JOIN adalah menggabungkan dua atau lebih tabel yang berbeda di dalam database. Nah, JOIN ini hanya bisa dilakukan apabila tabel - tabel tersebut memiliki key kolom yang sama. Di SQL, terdapat beberapa tipe JOIN yaitu : INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL JOIN, dan SELF JOIN. Setiap tipe join memiliki tujuan dan hasil query yang berbeda. Pada metode INNER JOIN, baris dari kedua atau lebih tabel akan dibandingkan untuk mengecek baris - baris mana saja yang cocok satu sama lain berdasarkan kondisi JOIN yang ditentukan,” jelas Senja fasih. 
+
+“Memang JOIN itu sendiri ada berapa tipe sih, Nja?”“Untuk materi ini, kita akan ke tipe pertama, yaitu **INNER JOIN**. Namun demikian, pembahasan akan makin mendalam dengan memberikan konsep pengantar terlebih dahulu agar memudahkan dalam memahami tipe-tipe JOIN lainnya.”
+
+`Sintax INNER JOIN : `
+
+> ![image](https://user-images.githubusercontent.com/36031213/163105558-cea7b4a5-88f4-4637-8a56-991f38672c45.png)
+
+Penggunaan prefix pada tabel_1.nama_kolom dan tabel_2.nama_kolom ditujukan agar terdapat kejelasan (_clarity_) kolom pada tabel mana yang dijadikan acuan dalam proses INNER JOIN. Tentunya, penggunaan prefix ini ini sangat bermanfaat jika ingin menggabungkan beberapa tabel. Untuk penjelasan lebih detail, coba ingat kembali penggunaan prefix dan alias, yang telah dipelajari pada modul "Fundamental SQL with SELECT statement chapter Prefix dan Alias".
+
+Jika masing-masing tabel tersebut dianalogikan sebagai dua himpunan maka proses INNER JOIN ekivalen dengan INTERSECTION (IRISAN) antara dua himpunan.
+> ![image](https://user-images.githubusercontent.com/36031213/163105614-79222a18-6af8-4a44-b256-82aef5a0ca1f.png)
+
+Proses INNER JOIN memiliki konsep penggabungan untuk records pada kedua tabel yang bernilai sama.
+
+## Tugas Praktek: Menggunakan INNER JOIN (1/3)
+Sejauh ini aku belum memiliki pertanyaan berarti dan semoga saja tidak ada. Dalam hati kuberdoa kelancaran pembelajaran ini juga sampai ke kuis dan tugasnya, hehehe.
+
+“Kita lanjut penjelasannya ya, Aksara,” ujar Senja menarikku kembali ke materi.
+
+“Nah, sebelumnya kan kita sudah menerapkan penggunaan **… WHERE …**; dari perintah **SELECT …** dan operator koma, untuk penggabungan tabel ms_item_warna dan ms_item_kategori. Selanjutnya, ini kita akan menggunakan klausa **INNER JOIN … ON …;** untuk menggabungkan kedua ms_item_warna dan ms_item_kategori berdasarkan sintaks INNER JOIN yang telah dijelaskan sebelumnya.”
+
+Silakan ketikkan query berikut pada code editor
+
+> ![image](https://user-images.githubusercontent.com/36031213/163105841-ee929cdf-5c13-414a-a4c8-202fec2eccd7.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163105903-def82fdf-57e4-4aee-b876-6c17248b0dc5.png)
+
+## tabel tr_penjualan dan tabel ms_produk
+Tak kusangka penggunaan INNER JOIN ini banyak sekali langkah per langkahnya. Untungnya aku sudah diberi modul oleh Senja, kalau tidak, buku catatanku bisa habis diisi oleh materi ini saja.
+
+“Setelah kita menggunakan tabel ms_item_warna dan ms_item_kategori, sekarang mari kita gunakan tabel **tr_penjualan** dan tabel **ms_produk** yang ada di-database, sehingga kita bisa lebih paham mengenai penerapan konsep JOIN di real case,” pinta Senja.
+
+“Oke, Nja.”
+
+”Mari kita lihat isi dari tabel tr_penjualan. Silakan ketikkan query berikut pada code editor.”
+
+> `SELECT * FROM tr_penjualan;`
+> `SELECT * FROM ms_produk;`
+
+> ![image](https://user-images.githubusercontent.com/36031213/163106069-a193d753-94b2-4340-a0f0-37cee130320f.png)
+
+## QUIZ: 
+> ![image](https://user-images.githubusercontent.com/36031213/163106207-c07d5415-08b5-4741-92ac-ec6184735d5e.png)
+
+## Tugas Praktek: Menggunakan INNER JOIN (2/3)
+> ![image](https://user-images.githubusercontent.com/36031213/163106358-bd9ce77b-30c9-44c4-b5d5-b47abaedb55f.png)
+
+> `SELECT * FROM tr_penjualan  INNER JOIN ms_produk  ON tr_penjualan.kode_produk = ms_produk.kode_produk`
+
+## Memahami Proses dan Hasil Query dengan INNER JOIN
+“Lanjut ya, Aksara. Kita ngejar supaya materi ini bisa kamu kuasai hari ini juga,” ujar Senja.
+
+Aku pun kembali serius menekuri layar laptop dan isi modul.
+
+“Perhatikan tabel hasil query pada tugas praktek sebelumnya, apakah perbedaan antara tabel sebelum penggabungan dengan INNER JOIN dan setelah penggabungan?”
+> ![image](https://user-images.githubusercontent.com/36031213/163106523-2da6b3e3-0bc7-46f9-88c9-f4a3b6186fca.png)
+
+“Sekarang seluruh kolom dari kedua tabel berada di satu tabel dan berisi seluruh kolom - kolom dari kedua tabel. Jadi, Aku juga dapat dengan mudah mengidentifikasi nama produk dari setiap kode produk yang dibeli oleh customer.”
+
+“Iya, benar sekali, Aksara. Sekarang perhatikan lebih lanjut dan bandingkan antara kolom **kode_produk** pada hasil query dengan INNER JOIN di atas, dengan kolom **kode_produk** pada tabel **ms_produk**. Menurutmu apa yang berbeda?”
+
+“Hm, aku tidak menemukan **prod-06** di tabel hasil query, padahal di tabel **ms_produk** terdapat data **prod-06** yaitu pulpen multifunction + laser DQLAB.”
+
+“Tepat sekali, selanjutnya bandingkan dengan tabel tr_penjualan, apakah kamu menemukan data prod-06 di tabel tr_penjualan?” tanya Senja kembali menguji kepemahamanku.Dan, untungnya aku tak pernah mengantuk saat mendengar penjelasan Senja sepanjang materi. Kalau iya, habislah sudah!
+
+“Tidak ada transaksi dengan **kode_produksi prod-06** di tabel **tr_penjualan**.   Sepertinya aku mulai paham. INNER JOIN akan mencocokkan key kolom tabel **tr_penjualan** dengan key kolom **ms_produk**, jika value dari key kolom sama - sama ada di kedua tabel , maka baris itu akan dikembalikan sebagai hasil query dan membentuk satu tabel yang berisi seluruh kolom dari kedua tabel, sedangkan jika value key kolom hanya terdapat di satu kolom, maka baris ini tidak akan ditampilkan. **prod-06** ada di tabel di **ms_produk** tetapi tidak ada di data penjualan sehingga saat penggabungan tabel dengan INNER JOIN, data **prod-06** dari tabel **ms_produk** tidak akan muncul di hasil query.”
+
+Bibir Senja melengkung. Aku bisa mendapati senyum puas Senja atas jawabanku. Senyum apresiasi dari Senja selalu mampu menghangatkan hatiku. Senangnya! Walau sederhana tapi bermakna.
+
+“Tepat Sekali, Aksara. Sepertinya kamu sudah paham dengan penggunaan INNER JOIN. Silahkan lanjutkan  materinya di modul. Oh iya, pada bagian SELECT, kamu boleh memilih kolom mana saja yang ingin kamu tampilkan setelah kedua tabel di-JOIN.”
+
+## Syntax INNER JOIN - Memilih Beberapa Kolom Untuk Ditampilkan
+“Satu lagi, Aksara. Sementara itu, jika kita ingin menampilkan beberapa kolom saja dari tabel hasil penggabungan, maka syntax SQL dari INNER JOIN dinyatakan sebagai berikut ini.”
+> ![image](https://user-images.githubusercontent.com/36031213/163106605-e8863e96-0217-46d1-9ddd-9b5cf1a08f06.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/163106666-e13d3433-49a6-46f7-b6b8-2a229fd089e1.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/163106723-17910ae3-f02c-4622-b173-5e5cd53fcb69.png)
+
+## Tugas Praktek: Menggunakan INNER JOIN (3/3)
+“Oke, semua dariku sudah. Sekarang silakan dipraktikkan pada code editor untuk menggabungkan tabel **tr_penjualan** dan **ms_produk** dengan kolom yang ditampilkan dari tabel **tr_penjualan** adalah **kode_transaksi, kode_pelanggan, kode_produk, qty**. Untuk tabel **ms_produk** tampilkan kolom **nama_produk** dan **harga**." 
+
+Aku mengangguk mantap. Senja sudah membekaliku sampai di sini. Ini saatnya aku mandiri.
+
+Kemudian aku membentuk kolom **total** yang merupakan hasil perkalian setiap baris pada kolom **harga** di tabel **ms_produk** dengan kolom **qty** di tabel **tr_penjualan**.
+ 
+"Tabel hasil penggabungan haruslah membentuk kolom-kolom dengan urutannya adalah **kode_transaksi**, **kode_pelanggan**, **kode_produk**, **nama_produk**, **harga, qty**, dan **total**," lanjut Senja lagi mengingatkan.
+
+> ![image](https://user-images.githubusercontent.com/36031213/163107086-f04ff194-46c0-4e77-a684-c01b799f4e6d.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/163107166-1b14259a-00a1-497c-82d3-03b3699a32a5.png)
+
+## Kesimpulan
+Pada chapter **INNER JOIN** ini kita telah mempelajari bagaimana menggabungkan dua tabel berdasarkan key column-nya.
+
+* Pada tahap awal kita menggunakan INNER JOIN untuk menggabungkan keseluruhan kolom yang dimiliki oleh kedua tabel tersebut. 
+* Selanjutnya, kita menerapkan INNER JOIN dengan menggunakan prefix nama tabel untuk memilih kolom-kolom mana saja yang akan ditampilkan pada tabel hasil penggabungan.
+
+Untuk chapter selanjutnya kita akan menggabungkan tabel dengan menggunakan **UNION**.
+
+# 3. UNION
+## Pendahuluan
+Aku sedang mengerjakan kuis-kuis kecil ketika Senja datang membawa dua gelas minuman hangat. Dari aromanya bisa kutebak kalau itu kopi.
+
+“Kopi saya. Ini teh susu buatmu.” Pagi di ruangan kantor yang masih sejuk-sejuk dingin memang paling pas minum yang anget! Dan, Senja masih ingat kalau aku enggak ngopi.
+
+“Hari ini masih lanjut belajarnya, Aksara. Masih semangat kan?” tanya Senja sambil menyeruput kopinya lagi.
+
+“Tentang apa materinya?”
+
+“Saya melihat prosesmu bagus. Jadi kita sudah bisa lanjut ke bagian yang lebih kompleks, yaitu mengakses data dalam database dengan SQL (Structure Query Language).” Senja mengatakannya dengan begitu santai, padahal aku yang mendengarnya pun sudah mengerutkan alis.
+
+“Sip, aku tak mungkin menolak bukan? Hehehe,” jawabku terkekeh.
+
+“Pembelajaran kita hari ini akan dimulai dengan studi kasus praktik jadi learning by doing. Ini ada data berupa analisis hasil penjualan suatu store. Akan tetapi ketika kita coba cek di database, terdapat 2 tabel penjualan, yaitu :
+
+* Tabel A berisi data transaksi untuk kode transaksi ‘tr-001’ sampai ‘tr-003’, dan
+* Tabel B berisi data data transaksi untuk kode transaksi ‘tr-004’ sampai ‘tr-006’," buka Senja. 
+
+“Lalu, bagaimana cara yang cepat dan efektif untuk membuat analisis dari kedua tabel tersebut menggunakan SQL? Apakah bisa menggunakan metode JOIN seperti yang kupelajari sebelumnya?”
+
+“Mari kita selesaikan bersama.”
+
+## Penggabungan hasil SELECT secara "Vertikal"
+> ![image](https://user-images.githubusercontent.com/36031213/163107424-bc42e847-952e-4f44-842c-6240fdb63873.png)
+
+## Tabel yang Akan Digabungkan
+> ![image](https://user-images.githubusercontent.com/36031213/163107572-b8183a53-dd85-4bf5-af09-993126a29f9a.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163107597-ce9a0fef-77bf-4dd9-a776-08da44ee2d9b.png)
+
+## Menggunakan UNION
+Kedua **tabel_A** dan **tabel_B** sudah memiliki jumlah kolom yang sama, dan juga urutan posisi kolom juga sama, jadi bisa langsung menggabungkan kedua kolom tersebut dengan menambahkan **UNION**. 
+
+Ketikkanlah kode berikut di code editor:
+
+> `SELECT * FROM tabel_A`
+> `UNION`
+> `SELECT * FROM tabel_B;`
+
+> ![image](https://user-images.githubusercontent.com/36031213/163107762-2bcd9410-f494-45f8-a3b6-288f23557716.png)
+
+## Menggunakan UNION dengan Klausa WHERE
+Aku bertanya pada Senja, “Terus, kalo ada kondisi WHERE, syntaxnya bagaimana? Misalnya aku hanya ingin menggabungkan tabel yang isinya data penjualan untuk kode produk **prod-04** saja?”
+
+”Mudah saja, tinggal tambahkan **WHERE** di kedua **SELECT**-statement, seperti berikut ini,
+> ![image](https://user-images.githubusercontent.com/36031213/163107952-ed347b7e-db2d-41ca-9a61-d7988b9ffdb9.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163108000-c57f2a14-02ad-428f-a795-f6d47f6a8a91.png)
+
+## Menyelaraskan (Conforming) Kolom
+Aku diam sebentar untuk menyimak. Tapi, masih ada pertanyaan yang mengganjal di benakku.
+
+“Hmm, aku masih bingung, Nja. Kebetulan data penjualan ini berada di kedua tabel A & B jumlah kolom dan posisinya sama serta nama kolomnya sama. Bagaimana kalau posisi kolom dari kedua tabelnya tidak sama? Apa tidak bisa di-**UNION**-kan?”
+
+“Tentu saja bisa, kamu bisa menyelaraskan kolom dari kedua tabel di SELECT-statement. Mari kita contohkan dengan data dari tabel berikut ini.”
+> ![image](https://user-images.githubusercontent.com/36031213/163108118-0eb96eda-1864-4dba-9236-631c301cc206.png)
+
+Jika terdapat perbedaan nama kolom antara SELECT-statement pertama dan SELECT-statement kedua, maka secara default akan digunakan nama kolom dari SELECT-statement yang pertama.
+
+## Menggunakan UNION dan menyelaraskan Kolom-Kolomnya
+
+Senja menyerahkan tugas praktik sederhana untuk menguji materi ini. Sekilas kubaca pertanyaan dan perintahnya tidak sulit. Baiklah, mari langsung terapkan ilmunya!
+
+Ketikkan syntax query di bawah pada Code Editor, untuk melihat hasil dari penggabungan tabel (UNION) dengan menyelaraskan kolom. 
+
+> ![image](https://user-images.githubusercontent.com/36031213/163108538-122cf265-3011-4e53-aa34-35cf9e1749b7.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163108573-faeefb8e-d2c2-4a13-aade-b08c9b07bd7e.png)
+
+## Perbedaan antara UNION dan JOIN
+Setelah mengerjakan tugas, aku jadi teringat materiku sebelumnya mengenai JOIN. Sebenarnya kalau dipikir-pikir fungsi keduanya tampak mirip. Jadi, kapan waktu yang tepat untuk memaki salah satu darinya? Aku memutuskan menanyakan hal ini pada Senja.
+
+“ Nja, aku sudah paham bagaimana menggunakan UNION tetapi aku masih belum mengerti bedanya dengan metode JOIN, bukankah keduanya sama – sama untuk menggabungkan data dari 2 tabel? Lalu, kapan aku perlu pakai JOIN dan kapan aku perlu pakai UNION?”
+
+“Memang benar UNION dan JOIN digunakan untuk menggabungkan data dari dua atau lebih tabel. Tapi yang membedakan adalah bagaimana tabel - tabel itu digabungkan. Kita menggunakan JOIN ketika akan menggabungkan tabel secara horizontal, sehingga hasil join akan memuat kolom - kolom dari kedua atau lebih tabel yang digabungkan. Berikut gambaran penggabungan tabel dengan metode JOIN,” Senja menampilkan contoh tabel di layar laptop
+
+> ![image](https://user-images.githubusercontent.com/36031213/163108703-e8203c12-7b8c-476f-b756-6ed615c6deb9.png)
+
+Pada metode JOIN, penggabungan dilakukan berdasarkan key/kolom tertentu yang terdapat di tabel-tabel yang akan digabungkan dan key/kolom ini memiliki nilai yang saling terkait. Seperti yang terlihat pada gambar, Kolom A dan Kolom E merupakan key/kolom yang saling terkait sehingga kedua tabel dapat digabungkan dengan mencocokan nilai dari kedua kolom ini. Proses JOIN tidak dapat dilakukan jika tidak terdapat key/kolom yang saling terkait di kedua atau lebih tabel yang akan digabungkan.
+
+Untuk UNION seperti yang sudah dijelaskan, digunakan ketika ingin menggabungkan tabel secara secara vertikal yaitu menggabungkan baris/row dari dua atau lebih tabel. Tidak seperti JOIN, untuk penggabungan dengan UNION, tidak diperlukan key/kolom yang saling terkait tetapi UNION mensyaratkan bahwa jumlah kolom dari tabel - tabel yang akan digabungkankan adalah sama dan berada diposisi yang sama pula. Berikut ilustrasi penggabungan dengan UNION:
+
+> ![image](https://user-images.githubusercontent.com/36031213/163108778-e3765c4f-e098-4a1c-800a-5ecfd1e81fdd.png)
+
+Pada proses penggabungan UNION, tidak terdapat penambahan kolom tetapi jumlah baris/rows yang akan bertambah
+
+## Quis
+> ![image](https://user-images.githubusercontent.com/36031213/163108891-7adbf5a4-c23f-4c88-a72d-51971a527b83.png)
+
+## Kesimpulan
+Pada chapter **UNION **ini telah dipelajari bagaimana menggabungkan dua tabel secara vertikal (bertambah barisnya). Tentunya ada syarat yang harus dipenuhi oleh kedua tabel yang digabungkan dengan UNION, yaitu:
+
+* Setiap hasil dari **SELECT **statement yang akan digabungkan (**UNION**) memiliki jumlah kolom yang sama
+* Kolom tersebut juga harus memiliki tipe data yang sama, dan
+* Kolom tersebut memiliki urutan posisi yang sama.
+
+Selain itu, mempelajari bagaimana penyelerasan kolom sehingga record/baris yang ditampilkan pada tabel hasil penggabungan memiliki arti.
+
+Perbedaan mendasar dari JOIN dan UNION adalah JOIN menggabungkan 2 tabel atau lebih berdasarkan baris yang saling berelasi/terkait sedangkan UNION menggabungkan 2 tabel secara vertikal. 
+
+# 4. Mini Project
+## Pendahuluan
+“Sudah bisa menjawab kuis-kuisnya, Aksara?”
+
+Aku mengangguk. Syukurlah materi baru hari ini berjalan lancar dan aku belum menemukan persoalan berarti. “Ini juga berkat kamu,” pujiku tulus.
+
+“Baiklah, kamu tentu tahu kenapa saya cukup ‘ngebut’ mengajarimu banyak hal minggu ini. Soalnya dari atasan sudah menyiapkan mini proyek untuk kamu. Untuk mengerjakan proyek ini kamu perlu menguasai kompetensi dari materi yang diajarkan sepanjang minggu.”
+
+Ini bukan kali pertama aku diberi proyek setelah pembelajaran berakhir. Tapi, tetap saja tiap kali mendengarnya berhasil bikin aku tegang. Seperti biasa, aku tetap menyanggupi.
+
+“Sekarang istirahat saja dulu, Aksara. Sebentar lagi jam makan siang. Aku akan mengirim detail proyeknya melalui email. Nanti bisa langsung dikerjakan ya, tenggat waktunya besok siang,” tambah Senja sembari mengedipkan satu matanya padaku saat mengatakan tenggat waktu.
+
+Dan, email berisi mini proyek itu pun mampir ke kotak masuk kurang dari setengah jam sesudahnya:
+
+1. Project INNER JOIN, dan
+1. Project UNION.
+
+Akupun membuka project pertama (INNER JOIN).
+
+## Project INNER JOIN
+> ![image](https://user-images.githubusercontent.com/36031213/163109081-7ec950f3-dc2d-4fca-b756-33e259cc5115.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163109108-4bb819a0-695e-48e0-b3a5-5b7c722ddc9c.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163109152-95c5e625-9cfa-43bf-99e5-582fb2550e32.png)
+
+## Poject UNION
+> ![image](https://user-images.githubusercontent.com/36031213/163109354-24ffd37b-ac46-4f0f-9d95-070e0ecec33c.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163109390-da9c1bd4-9531-4d0c-bc81-4341ba4f65d0.png)
+
+## Hasil Belajarku
+Wah, tidak terasa aku telah menyelesaikan modul **Fundamental SQL Using INNER JOIN and UNION**. Selama belajar dengan modul ini, aku sudah dapat memahami dan mampu mempraktikkan:
+* Penggabungan dua tabel dengan menggunakan WHERE clause dan teknik cross join.
+* Penggabungan dua tabel relasi dengan menggunakan INNER JOIN.
+* Penggabungan dua tabel secara vertikal dengan menggunakan UNION.
+* Mengerjakan mini project yang merupakan integrasi keseluruhan materi dan tentunya materi-materi pada modul-modul sebelumnya untuk menyelesaikan persoalan bisnis.
+
+Dengan kemampuan ini, aku lebih pede untuk mengolah data dengan SQL. Keterampilan ini sendiri adalah 60% aktivitas awal yang akan dilakukan seorang analis. Keep Fighting!
+
+## My certificate of completion
+> ![image](/static/images/certificates/certificate-DQLABSQLT2DGBAER.png)

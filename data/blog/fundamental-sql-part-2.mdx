@@ -1,0 +1,341 @@
+---
+title: Fundamental SQL part 2
+date: '2022-11-09'
+tags: ['SQL','Function','Group By']
+draft: false
+summary: Using FUNCTION and GROUP BY
+image: /static/images/certificates/certificate-DQLABSQLT2JJFKKH.png
+layout: PostLayout
+authors: ['default']
+---
+# Fungsi di SQL
+## Pendahuluan
+Buat jadi analis data itu belajarnya banyak banget. Kemarin aku baru saja kelar belajar tentang ‘Python’, tapi kata Senja, aku masih perlu tahu soal SQL atau _Structure Query Language_. SQL ini nantinya akan jadi tools yang membantuku dalam menganalisis data perusahaan.
+
+Apalagi, sebentar lagi perusahaan bakal merilis data penjualan tahun lalu. Jadi butuh sekali analis data untuk mengolahnya menjadi data berbentuk agregasi, bukan lagi raw data. Mendengarnya saja aku masih bingung.
+
+“Senja, _I really need your help!_” kataku akhirnya setelah membaca isi modul.
+
+“Oke, jadi kamu bingung di bagian apa? Biar saya bantu jelaskan,” ujar Senja.
+
+Untungnya aku punya mentor sebaik Senja.
+
+## Fungsi Scalar vs Fungsi Aggregate
+“Bagian fungsi nih, Nja. Boleh kasih tahu perannya apa dalam pengolahan data?” Aku mulai bertanya.
+
+“Oke, begini Aksara. Fungsi adalah metode yang digunakan untuk melakukan operasi data di database. Operasi ini bisa berupa kalkulasi numerik seperti sum, count, avg, etc; atau operasi non-numerik seperti string concatenations dan sub-strings. SQL Function dapat dibagi ke dalam 2 kategori, yaitufungsi scalar dan fungsi aggregate.”
+
+Penjelasan Senja mengundang pertanyaan baru di benakku.
+
+“Hm, apa aja sih bedanya fungsi skalar dan fungsi aggregate?”
+
+“Fungsi skalar dalam SQL digunakan untuk mengembalikan nilai tunggal (single value) dari suatu nilai input yang diberikan, sedangkan fungsi agregat dalam SQL digunakan untuk melakukan perhitungan pada sekelompok nilai dan kemudian mengembalikan nilai tunggal. Nah, biar lebih mudah dipahami mari kita bahas dan praktekkan fungsi-fungsi dari kedua kategori ini.”
+
+Aku mengangguk. “Oke, Nja. Sejauh ini paham. Aku coba pelajari lagi yah modulnya. Kalau ada yang bingung, boleh kutanya lagi?”
+
+“Silakan
+
+## Fungsi Skalar Matematika
+“Nja, ini aku nemu jenis fungsi lain. Fungsi skalar matematika. Ini apa yah?” sahutku sekali lagi.
+
+“Kamu sudah belajar sampai fungsi skalar ya, Aksara. Oke  kalau begitu fungsi skalar pertama yang akan kita bahas adalah fungsi skalar untuk numerik value. Fungsi ini umumnya digunakan jika kita ingin melakukan operasi matematika di SQL secara cepat dan efektif. Di SQL sendiri ada banyak fungsi matematika,” jelas Senja rinci.
+
+“Memangnya fungsi-fungsi apa saja yang bisa dilakukan di SQL?”
+
+“Untuk mengecek fungsi-fungsi apa saja yang bisa dilakukan di SQL, kita bisa membuka dokumentasi fungsi SQL di sini: https://www.postgresql.org/docs/9.5/functions-math.html, untuk postgresql database dan di sini: https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html, untuk mysql database. Nah, sebagai bahan praktik kamu agar lebih paham kamu bisa coba beberapa fungsi saja yang umumnya digunakan seperti ini,” ujar Senja sambil mengajakku menyimak isi tampilan layar laptopnya:
+
+> ![image](https://user-images.githubusercontent.com/36031213/163096923-fe4d52bf-286b-4148-a417-e534e06c9170.png)
+
+Untuk memudahkan pemahaman, aku diberikan Senja tabel dummy berisi nilai siswa semester 1 dan 2 di suatu sekolah. Berikut contoh penggunaan fungsi skalar dengan menggunakan tabel dummy: 
+Tabel: **students**
+> ![image](https://user-images.githubusercontent.com/36031213/163096970-7fb21afd-63a3-4269-8d10-a34da57d7872.png)
+
+
+## Fungsi Skalar Matematika - ABS()
+Fungsi **ABS( )**
+
+Syntax: 
+
+> `SELECT ABS(ColumnName)  `
+> `FROM TableName; `
+
+> ![image](https://user-images.githubusercontent.com/36031213/163098116-a280bd42-42c0-44db-9902-173eba9024e1.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/163098176-9163dcb6-41b3-4724-a35c-6f8ffcd87cf4.png)
+
+## Fungsi Skalar Matematika - CEILING()
+Fungsi **CEILING()**
+
+Syntax:
+
+> `SELECT CEILING(ColumnName)  `
+> `FROM TableName;`
+
+> ![image](https://user-images.githubusercontent.com/36031213/163098373-6b8e607e-e608-4479-b2bf-0cc02885b0f7.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/163098404-132498f0-dbf7-4df2-8352-7f8f5c615b80.png)
+
+## Fungsi Skalar Matematika - FLOOR()
+Fungsi FLOOR()
+
+Syntax: 
+> `SELECT FLOOR(ColumnName)  `
+> `FROM TableName;`
+
+> ![image](https://user-images.githubusercontent.com/36031213/163098491-06b11e31-7181-4a79-9ae2-ada7b12bddbd.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/163098519-4d3810a5-f6c6-490c-8274-8ab7d4bb65e7.png)
+
+## Fungsi Skalar Matematika - ROUND()
+Fungsi **ROUND()**
+
+Syntax: 
+
+> `SELECT ROUND(ColumnName)  `
+> `FROM TableName;`
+
+> ![image](https://user-images.githubusercontent.com/36031213/163098596-cef95eb3-9081-4718-8b19-98c4b18c8b56.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/163098623-31e694da-ded3-43f5-a647-2e8f5b259597.png)
+
+## Fungsi Skalar Matematika - SQRT()
+Fungsi SQRT()
+
+Syntax: 
+
+> `SELECT SQRT(ColumnName) `
+> `FROM TableName; `
+
+> ![image](https://user-images.githubusercontent.com/36031213/163098868-7596c6c3-a669-4d72-9668-179b2d5998c5.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163098905-addf647a-2df5-4519-baba-8d01bab3f492.png)
+
+## Tugas Peraktek
+> ![image](https://user-images.githubusercontent.com/36031213/163099005-e12f4e1c-ef9c-4cfc-b3aa-75df6caadb0f.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/163099087-782467e6-fa02-4ee0-bf1e-728a0351fa8c.png)
+
+# Fungsi Text di SQL
+## Fungsi Text
+“Aku sudah cukup paham soal fungsi skalar matematika, Nja. Thank you!”
+
+“Sip, tapi jangan senang dulu, karena masih ada fungsi lain. Sekarang kita akan membahas tentang fungsi skalar untuk text/string value. Fungsi ini digunakan jika kita ingin melakukan operasi pada text atau karakter di SQL, misalnya, mengubah huruf kecil ke huruf besar, menghitung jumlah karakter dari text, dll. Fungsi skalar text di SQL juga cukup banyak.”
+
+Aku menarik napas panjang, kukira fungsi skalar hanya tadi saja.
+
+“Jadi, aku bisa cek di mana untuk fungsi skalar text?”
+
+“Sama seperti fungsi skalar matematika, kita juga bisa mengecek fungsi - fungsi skalar text di dokumentasi postgresql: https://www.postgresql.org/docs/9.1/functions-string.html; dan dokumentasi mysql: https://dev.mysql.com/doc/refman/8.0/en/string-functions.html.  Aku kirim ya link ini ke kamu, Aksara.”
+
+Aku segera mengecek kotak masuk emailku.
+
+“Untuk  bahan praktik, kita akan mencoba beberapa fungsi saja yang sering digunakan saja, Aksara, yang ini,” tambah Senja sembari menunjuk tabel fungsinya untukku:
+> ![image](https://user-images.githubusercontent.com/36031213/163099185-238a6a0d-b3d8-438e-b781-32b32aa203e0.png)
+
+## Fungsi Text - COUNCAT()
+Fungsi CONCAT()
+
+Syntax: 
+> `SELECT CONCAT(ColumnName1, ColumnName2, ColumnNameN)  `
+> `FROM TableName`; 
+
+> ![image](https://user-images.githubusercontent.com/36031213/163099381-c2ebd78b-a295-444d-b09f-fc045bbc1aa8.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163099414-51ceb597-721c-49ca-a208-9b515da484ee.png)
+
+## Fungsi Text - **SUBSTRING_INDEX()**
+Syntax: 
+
+> `SELECT SUBSTRING_INDEX(column, delimiter, index to return)  `
+> `FROM TableName; `
+
+Keterangan:
+*  _column _--> merupakan nama kolom yang akan dipecah text-nya,
+*  _delimiter _--> karakter atau gabungan beberapa karakter untuk pemecah text pada kolom bersangkutan,
+*  _index_to_return _--> indeks dari pecahan text yang akan diambil.
+
+> ![image](https://user-images.githubusercontent.com/36031213/163099561-e210aa37-2ee8-49e4-85a2-299570375d83.png)
+
+## Fungsi Text - SUBSTR()
+Fungsi Text SUBSTR()
+
+Syntax: 
+> `SELECT SUBSTR(columnName, Start Index, Number of string to be extract)`
+> `FROM TableName; `
+
+Keterangan:
+* _columnName _--> nama kolom yang akan dicari substring-nya
+* _Start Index_ --> indeks dari text yang dimiliki (dimulai dari 1)
+* _Number of string to be extract_ --> jumlah karakter atau beberapa karakter yang akan diambil.
+
+> ![image](https://user-images.githubusercontent.com/36031213/163099723-81e61b36-2566-4af4-a2df-d6bd8236fe78.png)
+
+## Fungsi Text - LENGTH()
+Syntax: 
+
+> `SELECT LENGTH(ColumnName)`
+> `FROM TableName; `
+
+> ![image](https://user-images.githubusercontent.com/36031213/163099843-a02bb937-ca0d-4260-a4a0-4f9a591137ec.png)
+
+## Fungsi Text - REPLACE()
+Syntax: 
+
+> SELECT REPLACE(ColumnName, Character/String to be change, New String/Character)
+> FROM TableName; 
+
+Keterangan:
+* _ColumnName _--> nama kolom yang akan diganti isi tiap record/barisnya berdasarkan string/karakter tertentu
+* _Character/String to be change_ --> string/karakter yang dimiliki untuk diganti
+* _New String/Character_ --> string/karakter baru pengganti string/karakter sebelumnya
+
+> ![image](https://user-images.githubusercontent.com/36031213/163099964-a01462a0-c8e2-4551-b849-77a9fec2d8bd.png)
+
+## Tugas Praktek
+> ![image](https://user-images.githubusercontent.com/36031213/163100013-d02476f8-4747-4717-9981-a07efe6e816a.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163100069-a0f1f456-8628-403c-bf48-10024470bd6f.png)
+
+# Fungsi Aggregate dan Group By
+## Fungsi Aggregate
+“Aksara, sepertinya aku lupa menunjukkan tabel fungsi aggregate padamu. Sebentar.”
+
+Aku mengalihkan perhatianku dari layar laptop dan mendorong bangku mendekati Senja. “Ya?”
+
+“Seperti yang sudah dijelaskan bahwa fungsi aggregate ini digunakan untuk melakukan perhitungan pada sekelompok nilai. Biar lebih jelas kita akan mempraktikkan penggunaan fungsi aggregate di SQL dengan menggunakan fungsi - fungsi aggregate yang umum digunakan. Tapi sebelumnya, kamu simak saja dulu tabel fungsinya ini.”
+> ![image](https://user-images.githubusercontent.com/36031213/163100190-d8a99ddd-601d-4030-8d99-1de20a5980d0.png)
+
+## Fungsi Aggregate - SUM()
+> ![image](https://user-images.githubusercontent.com/36031213/163100277-ce06ede3-e2cf-4760-af99-a2021705fb56.png)
+
+## Fungsi Aggregate - COUNT()
+> ![image](https://user-images.githubusercontent.com/36031213/163100321-12980058-9bf9-4043-adcc-31e061b8c9b8.png)
+
+## Fungsi Aggregate - AVG()
+> ![image](https://user-images.githubusercontent.com/36031213/163100482-d0944ff0-f931-4ed5-a9ee-877b74d2b6e7.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163100514-a9dbc0ad-f9e7-46cc-9ce1-3d4f07fc9003.png)
+
+## Tugas Praktek
+> ![image](https://user-images.githubusercontent.com/36031213/163100571-d16aff7d-3dc5-411c-abdf-68947593a68b.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163100609-b2cb0c32-df91-4399-98bd-d9237d294a44.png)
+
+## Pengenalan GROUP BY
+“Nja, kamu perlu bilang kalau kita akan mengolah data penjualan tahun lalu bukan?”
+
+“Iya, ada apa?”
+
+“Kalau sudah ada datanya, kita pasti butuh mengelompokkannya dan menghitungnya berdasarkan penjualan setiap provinsi maupun dikelompokkan per bulan. Kalau kayak begitu kasusnya, pakai SQL bagaimana caranya ya?”
+
+“Gambaranmu bagus sekali, Aksara. Saya bantu jelaskan ya. Untuk mengelompokkan data di SQL kita menggunakan GROUP BY Statement. GROUP BY statement akan mengelompokkan data yang bernilai sama ke dalam satu group, dan dengan menggunakan fungsi aggregate seperti (COUNT, MAX, MIN, SUM, AVG) kita bisa melakukan agregasi untuk untuk setiap group atau kelompok yang terbentuk. Biar lebih jelas, coba pelajari penulisan syntax-nya,” jelas Senja.
+
+Aku pun menyimak syntax yang diberikan:
+> `SELECT column_name(s)`
+> `FROM table_name`
+> `WHERE condition`
+> `GROUP BY column_name(s)`
+> `ORDER BY column_name(s);`
+
+Hal penting yang perlu diperhatikan adalah: 
+
+1. GROUP BY digunakan dengan SELECT, artinya kolom yang digunakan di GROUP BY statement, juga perlu ditempatkan di SELECT.
+2. GROUP BY ditempatkan setelah WHERE, tetapi jika tidak menggunakan WHERE maka langsung ditempatkan setelah FROM. 
+3. Jika menggunakan ORDER BY, maka GROUP BY ditempatkan sebelum ORDER BY. 
+
+“Apakah kita bisa menggunakan group by untuk mengelompokkan data menggunakan 2 kriteria atau 2 kolom, Nja?” tanyaku penasaran.
+
+“Tentu saja bisa. Group by bisa dilakukan dengan single column ataupun multiple column. Seperti ini contohnya:”
+* Group by Single Column, data dikelompokkan menggunakan kriteria dari satu kolom saja, misalnya mengelompokkan data berdasarkan provinsi saja. 
+* Group by Multiple Column, data dikelompokkan menggunakan kriteria dari dua kolom atau lebih, misalnya mengelompokkan data berdasarkan province dan brand.
+
+## Group by Single Column
+Fungsi Group by **Single Column** memastikan data dapat dikelompokkan menggunakan kriteria dari satu kolom saja, misalnya mengelompokkan data berdasarkan provinsi saja.
+
+> ![image](https://user-images.githubusercontent.com/36031213/163100841-ae99c340-c7ab-470c-a048-2031828439b4.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163100949-87601433-ec92-4ba7-98b1-f0f968a0dbea.png)
+
+## Group by Multiple Column
+Dengan fungsi Group by **Multiple Column**, data dapat dikelompokkan menggunakan kriteria dari dua kolom atau lebih, misalnya mengelompokkan data berdasarkan province dan brand.
+
+> ![image](https://user-images.githubusercontent.com/36031213/163101171-bcd9a10d-1264-4e07-a5cb-a55166f6d0b7.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163101209-1172009a-dc44-4677-9542-2991549be454.png)
+
+## Fungsi Aggregate dengan Grouping
+“Tambahan lagi, Aksara. Kamu masih ingatkan fungsi agregasi yang kita pelajari dan praktikkan sebelumnya? Pada fungsi itu kita belum menggunakan group by sehingga hasil SUM dan COUNT kita adalah hasil SUM dan COUNT dari seluruh baris yang ada di tabel data penjualan.”
+
+“Ada data penjualannya kah, Nja? Biar lebih mudah membayangkan dan mempraktikkannya,” usulku.
+
+Senja membuka data penjualan perusahaan tahun lalu untukku. Wow!
+
+“Kalau begitu, kita praktik langsung saja. Sekarang coba kamu gunakan fungsi agregasi dan GROUP BY untuk menghitung total penjualan dari setiap provinsi di tahun 2019, dan kita bandingkan dengan hasil fungsi agregasi tanpa menggunakan group by,” pinta Senja.
+
+Contoh aggregate dengan grouping: 
+> ![image](https://user-images.githubusercontent.com/36031213/163101284-44f24d26-058b-4ba0-832a-a70afad6ce27.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163101356-679768e7-9414-40e5-b9bf-d9cce9d1ca38.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/163101454-f46af8d5-ba17-4215-b479-cd28b53ee750.png)
+
+## Penggunaan CASE ... WHEN ..
+ “Wah, terima kasih Senja, aku sudah mulai paham menggunakan fungsi aggregate di SQL. Tapi aku mau tanya deh, kalau aku diminta untuk menambahkan kolom rekomendasi atau remark dari hasil agregasi data, misalnya nilai penjualan bulan Maret 2019 lebih dari 30M, maka diberikan rekomendasi/remark “Target Achieved”, kalau kurang diberi remark “Follow Up”. Bagaimana melakukannya di SQL ya? 
+
+“Itu mudah saja, Aksara. Itu bisa kamu lakukan dengan CASE - statement di SQL. CASE - statement ini sama dengan IF - THEN - ELSE di pemrograman pada umumnya. Syntax dari CASE – statement seperti ini. Coba lihat.”
+
+> ![image](https://user-images.githubusercontent.com/36031213/163101631-84af962d-6d8c-414c-a04c-b124ed196721.png)
+
+CASE-statement akan mengevaluasi kondisi yang sudah ditentukan, dimulai dari condition1, dan akan mengembalikan hasil (result1), jika condition1 terpenuhi (TRUE). Jika tidak, maka condition2 akan dievaluasi, dan akan mengembalikan result2 jika condition2 terpenuhi, dst. Apabila tidak ada kondisi yang terpenuhi, maka result pada bagian ELSE yang akan dikembalikan. 
+
+Nah, silahkan praktikkan penggunaan CASE-Statement untuk membuat remark pada data aggregasi penjualan. 
+
+## Tugas Praktek
+Dengan menggunakan data **sales_retail_2019**,  buatlah syntax query yang menggunakan fungsi skalar **MONTH()** untuk mengubah **order_date** dari tanggal ke bulan, fungsi aggregate **SUM()** untuk menjumlahkan kolom **item_price**.
+
+Tambahkan kolom **remark** menggunakan **CASE… WHEN…** statement. Jika **sum(item_price) ">=" 30.000.000.000**, maka remark-nya **'Target Achieved'**; Jika **sum(item_price) ">=" 25.000.000.000** maka remark-nya **'Less performed'**; Selain itu, beri remark **'Follow Up'**.
+
+Tugas:
+> ![image](https://user-images.githubusercontent.com/36031213/163101731-b387e774-7448-4248-ae5b-d50a5fc46b62.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163101767-5b5e42d3-0a6e-4f7e-b553-60a949ed3ded.png)
+
+# Mini Project
+## Pendahuluan
+Seperti dugaanku, setelah selesai memahami modul dan mempraktikkan latihan-latihannya dengan lancar, aku akan diberi proyek pekerjaan oleh Senja.
+Walaupun kadang menyebalkan karena bikin aku pulang telat, tapi ini caranya untuk mengajakku berkontribusi bagi perusahaan. Aku harus lebih semangat!
+Aku pun membuka email proyek dari Senja sambil menyeruput boba milk tea favoritku.
+Aksara, saya senang dengan perkembanganmu belakangan ini. Saya mau minta tolong agar kamu melakukan analisis penjualan di suatu store. Adapun laporan yang diminta sebagai berikut:
+1. Total jumlah seluruh penjualan (total/revenue).
+2. Total quantity seluruh produk yang terjual.
+3. Total quantity dan total revenue untuk setiap kode produk.
+4. Rata - Rata total belanja per kode pelanggan.
+5. Selain itu, jangan lupa untuk menambahkan kolom baru dengan nama "kategori" yang mengkategorikan total/revenue ke dalam 3 kategori: High: > 300K; Medium: 100K - 300K; Low: kurang 100K.
+
+
+
+## Proyek Pekerjaan - Analisis Penjualan Part 1
+Aku pun membuka email proyek dari Senja sambil menyeruput boba milk tea favoritku.
+
+Aksara, saya senang dengan perkembanganmu belakangan ini. Saya mau minta tolong agar kamu melakukan analisis penjualan di suatu store. Adapun laporan yang diminta sebagai berikut:
+
+1. Total jumlah seluruh penjualan (total/revenue).
+2. Total quantity seluruh produk yang terjual.
+3. Total quantity dan total revenue untuk setiap kode produk.
+
+> ![image](https://user-images.githubusercontent.com/36031213/163102085-0f9195dd-b2b7-45f1-a89a-82d42246eef8.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163102131-2fa6d93f-5eaa-4ff7-bcd8-f9af8e274392.png)
+
+## Proyek Pekerjaan - Analisis Penjualan Part2
+(lanjutan ...)
+
+Saya mau minta tolong agar kamu melakukan analisis penjualan di suatu store. Adapun laporan yang diminta sebagai berikut:
+Rata - Rata total belanja per kode pelanggan.
+Selain itu,  jangan lupa untuk menambahkan kolom baru dengan nama ‘kategori’ yang mengkategorikan total/revenue ke dalam 3 kategori: High: > 300K; Medium: 100K - 300K; Low: kurang dari 100K.
+
+> ![image](https://user-images.githubusercontent.com/36031213/163102368-ccc2522d-e85b-4564-9d07-794e477b9c71.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163102428-9c1b45a3-ee14-4a31-9596-d38f9d6fbdf0.png)
+
+## Hasil Belajarku
+Aku bangga dengan diriku sendiri! Dari modul **Fundamental SQL Using FUNCTION and GROUP BY** yang aku pelajari, aku telah memahami dan mampu mempraktikkan:
+
+* Penggunaan fungsi skalar dan fungsi aggregate dalam operasi string dan numerik di SQL database
+* Penggunaan GROUP BY dalam mengelompokkan data dan memahami konsep menggabungkan GROUP BY dengan fungsi aggregate
+* Penggunaan CASE Statement untuk struktur pengambilan keputusan.
+* Mengerjakan mini project yang merupakan integrasi keseluruhan materi dan tentunya materi-materi pada modul-modul sebelumnya untuk menyelesaikan persoalan bisnis.
+
+Dengan kemampuan ini, aku lebih pede untuk mengolah data dengan SQL. Keterampilan ini sendiri adalah 60% aktivitas awal yang akan dilakukan seorang analis. Keep Fighting!
+
+## My certificate of completion
+> ![image](/static/images/certificates/certificate-DQLABSQLT2JJFKKH.png)

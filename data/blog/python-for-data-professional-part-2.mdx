@@ -1,0 +1,502 @@
+---
+title: Python for data professional Part 2
+date: '2022-11-09'
+tags: ['Python','Data Engineer']
+draft: false
+summary: Collections manipulation adalah salah satu teknik yang penting untuk dikuasai setiap programmer.
+image: /static/images/certificates/certificate-DQLABINTP1HJBCVE.png
+layout: PostLayout
+authors: ['default']
+---
+# 1. Collection Manipulation dengan Python
+## Memulai dengan Collection Manipulation
+Hari pertama aku mempelajari Python bersama Senja, aku masih belum mendapat kesulitan yang berarti. Sebaliknya, aku merasa mendapatkan duniaku. Di sinilah aku dapat menjadi diriku sendiri: mengerjakan yang sejak dulu aku sukai.
+
+Meja sebelahku masih kosong, sepertinya Senja belum datang. Aku membuka laptopku dulu dan segera melanjutkan pembelajaran modul kedua Python. Total modul yang Senja berikan padaku kemarin ada tiga!
+
+Harus kucicil belajar dari sekarang. Aku membuka bab pertama isi modul kedua. Materi mengenai “Collection Manipulation”, “List dan Tuple” hingga “Set Manipulation” langsung menyapaku.
+
+## Apa itu Collection Manipulation?
+**Collections manipulation** adalah salah satu teknik yang penting untuk dikuasai setiap programmer. Melalui penguasaan materi _collections  manipulation_, aku dapat mengolah berbagai tipe data _collections_dalam Python yang meliputi:
+
+* list,
+* tuple,
+* set, dan
+* Dictionary.
+
+## Mengakses List dan Tuple - Part 1
+Seperti yang telah aku pelajari pada modul Python for Data Professional Beginner - Part 1: Bab “Sequence Type”, aku dapat mengakses elemen pada suatu _list_ ataupun _tuple_ dengan menggunakan indeks atau semacam nomor urut dari _list_ atau _tuple_ tersebut. Indeks pada suatu tipe data _list_ atau _tuple_ dimulai dari angka 0.
+
+> ![image](https://user-images.githubusercontent.com/36031213/162901027-33bc3472-b1c8-4307-be06-ddd45f9bafcc.png)
+
+Kemudian, untuk mengakses elemen dari belakang pada suatu list/tuple, aku juga dapat menggunakan indeks negatif pada list/tuple
+
+> ![image](https://user-images.githubusercontent.com/36031213/162901232-dcb44a97-7a5f-4cc9-88a8-b45b284f4e39.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/162901378-1f85e99f-ae46-4589-b3c8-41d7f91e2252.png)
+
+## Mengakses List dan Tuple - Part 2
+Cara collections manipulation pertama yang akan aku pelajari adalah memotong (slicing) list/tuple dengan menggunakan rentangan nilai indeks (range of index).
+
+> ![image](https://user-images.githubusercontent.com/36031213/162901527-c1c6f2fc-4a04-4ef2-bcaa-d267f6e32eb8.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/162901575-975ab2bb-daa4-40b8-a0af-28e598b8a10e.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/162901751-aa5d0bb5-9011-4fda-a88f-349edcabb7d2.png)
+
+## Menggabungan Dua atau lebig List atau Tuple
+Selain dapat melakukan pemotongan terhadap tipe data _list/tuple_, aku juga dapat menggabungkan isi dari suatu _list_ (ataupun _tuple_) dengan list lainnya (atau dengan _tuple_ lainnya) dengan menggunakan operator penambahan (+). 
+
+> ![image](https://user-images.githubusercontent.com/36031213/162902154-23582b9b-0b3c-4852-8a04-1a372fba37c3.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/162902460-9fa42ce9-6c94-4fd6-bdb0-2a026c7f4af4.png)
+
+## Quiz
+> ![image](https://user-images.githubusercontent.com/36031213/162902902-135e7076-b2a2-4844-afe4-01b72a8e255c.png)
+
+## List Manipulation - Part 1
+Untuk memanipulasi tipe data list, aku dapat menggunakan sekumpulan fitur yang telah tersedia dalam bahasa pemrograman Python. Merujuk pada tabel di bawah, aku dapat memahami fitur-fitur untuk melakukan manipulasi data yang terdiri atas _append(), clear(), copy(), count() dan extend()_
+
+> ![image](https://user-images.githubusercontent.com/36031213/162903109-4b11c585-dd43-4a22-bce2-5ae44f19289c.png)
+> ![image](https://user-images.githubusercontent.com/36031213/162903169-368ac55b-f511-4849-b784-f71d1160c02a.png)
+> ![image](https://user-images.githubusercontent.com/36031213/162903208-32978e61-9613-4a2a-9f60-434886133076.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/162903445-e8c86fbb-e9b4-4325-93a4-4a5141d5782e.png)
+
+## List Manipulation - Part 2
+Selanjutnya aku akan mempelajari fitur **index(), insert(), pop(), remove(), reverse(), dan sort()** untuk melakukan manipulasi.
+
+Tugas:
+Ketikkanlah kode yang diberikan pada contoh penggunaan di live code editor.
+
+> ![image](https://user-images.githubusercontent.com/36031213/162903760-4529ada7-657b-406c-9f8e-71955a0dc2cd.png)
+> ![image](https://user-images.githubusercontent.com/36031213/162903822-cc888e42-983f-4a79-ad92-b3acd744458d.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/162903952-9b705429-6b0b-49e1-8e58-f4c38c291d66.png)
+
+## Tuple Manipulation
+Aku juga mempelajari fitur yang dapat digunakan untuk melakukan manipulasi data dengan tipe data tuple
+
+> ![image](https://user-images.githubusercontent.com/36031213/162904146-c3b08202-0eaa-410c-9697-c10f49d8e4d9.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/162904226-07ee51eb-fa63-45be-8818-7cd81f3f7958.png)
+
+## Quiz
+> ![image](https://user-images.githubusercontent.com/36031213/162904372-49273084-799d-4a72-95c1-a5d92adfaf86.png)
+
+## Set Manipulation - Part 1
+Sedikit berbeda dengan tipe data list dan tuple, pada tipe data set terdapat cukup banyak fitur yang disediakan oleh bahasa Python.
+
+Tugas:
+Ketikkan potongan kode pada kolom Contoh Penggunaan di live code editor.
+> ![image](https://user-images.githubusercontent.com/36031213/162904541-fd82db1e-9770-4ddd-9beb-c6cb38c8c6b0.png)
+> ![image](https://user-images.githubusercontent.com/36031213/162904602-be3b207b-422c-43e3-93fa-f8e33df641fe.png)
+> ![image](https://user-images.githubusercontent.com/36031213/162904674-aa354966-7d73-43be-b992-4f2628b5d658.png)
+> ![image](https://user-images.githubusercontent.com/36031213/162904718-01780d47-f684-4c19-b3cd-3313b39bbb87.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/162904956-85f2650d-c39f-471f-95ad-c0db6e62fa9a.png)
+
+## Set Manipulation - Part 2
+Sedikit berbeda dengan tipe data list dan tuple, pada tipe data set terdapat cukup banyak fitur manipulasi yang bisa aku gunakan.
+
+Tugas:
+Ketikkan potongan kode yang diberikan pada Contoh Penggunaan pada live code editor:
+> ![image](https://user-images.githubusercontent.com/36031213/162905168-fdab4824-e6d6-46dd-8a50-79f7ac571965.png)
+> ![image](https://user-images.githubusercontent.com/36031213/162905238-8c040dbd-f4fc-420a-8475-35d50ade591e.png)
+> ![image](https://user-images.githubusercontent.com/36031213/162905295-4fb91517-3bea-4eb4-b2b9-e068792e917f.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/162905526-0b84e95f-cbef-45c0-919d-c8168df8fdcd.png)
+
+## Quiz
+> ![image](https://user-images.githubusercontent.com/36031213/162905733-a2c33879-a820-4d5b-9078-c902179a6990.png)
+
+## Dictionary Manipulation
+
+Aku menunjukkan subjudul yang sedang kupelajari saat ini: “Dictionary Manipulation” pada Senja.
+“Oke, pas banget. Bab ini ada praktiknya, nanti kupandu ya. Bagian string manipulation juga.”
+Sembari menunggu Senja membuka laptopnya, aku kembali melanjutkan membaca:
+Terakhir, untuk memanipulasi tipe data dictionary.
+
+Tugas:
+Ketikkan potongan kode berikut pada live code editor:
+> ![image](https://user-images.githubusercontent.com/36031213/162906050-4ef6aeab-cdd5-4e08-af89-7ece189180d1.png)
+> ![image](https://user-images.githubusercontent.com/36031213/162906127-436df7d2-b3fc-4e89-ae60-044420d55a0d.png)
+> ![image](https://user-images.githubusercontent.com/36031213/162906202-f75367f3-bdde-44ab-b56a-1613888b2762.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/162906312-b430a99c-36d2-44fa-bbb1-1356524b493b.png)
+
+## Useful Tips and Tricks
+Untuk menentukan berapa jumlah data yang tersimpan di setiap elemen pada tuple/list, aku dapat menggunakan fungsi buit-in _len()_
+
+> ![image](https://user-images.githubusercontent.com/36031213/162906511-ae23d35c-7f81-4458-907c-7e0bc1d2227a.png)
+> ![image](https://user-images.githubusercontent.com/36031213/162906556-b69737a2-80ed-413f-82f1-2c7fa794cb5d.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/162906730-1215a6fe-8b26-4b8b-a396-4334f974f578.png)
+
+## Tugas Praktek
+“Aksara, untuk praktik kali ini, saya membebaskan kamu memilih case yang akan digunakan,” ujar Senja padaku.
+
+Aku pun mulai berpikir. Selama ini aku bikin program hitung-menghitung untuk kantor dan keluarga, kok enggak bikin buat diri sendiri juga yah? Apalagi belakangan aku suka nge-boba, kayaknya memang harus dilacak deh pengeluaran dan pemasukanku minimal 9 bulan terakhir. Kalau begitu, aku pakai case pengalamanku sendiri ini saja untuk dianalisis!
+
+Buat menganalisisnya, berarti aku harus merapikan struktur data yang kumiliki terlebih dulu dengan dictionary dan kuberi nama keuangan untuk merepresentasikan pengeluaran dan pemasukan. “Pakai format juta, lalu masukkan variabel keuangan,” ujarku sembari mengetik
+
+> ![image](https://user-images.githubusercontent.com/36031213/162907174-73bf8f57-cd22-4570-9cff-917a5a986897.png)
+
+Tugas:
+Dari variabel keuangan, aku akan menghitung rata-rata pengeluaran dan pemasukanku selama 9 bulan terakhir. Semoga keuanganku sehat-sehat saja. 
+
+> ![image](https://user-images.githubusercontent.com/36031213/162907311-3c59dd64-74f0-43bc-b713-b6265fec04f7.png)
+
+Cara di atas adalah dua cara yang valid untuk mendeklarasikan variabel dengan bertipe string. Kemudian, untuk mendeklarasikan tipe data string ke dalam beberapa baris, aku dapat melakukannya dengan mengapitnya dengan tanda kutip satu ataupun tanda kutip dua sebanyak 6 kali (3 di bagian awal dan 3 di bagian akhir dari string). Sebagai contoh:
+
+> ![image](https://user-images.githubusercontent.com/36031213/162909683-c74a508f-7fb6-42a1-b7f3-f47b59ab56e2.png)
+
+akan menghasilkan:
+
+> ![image](https://user-images.githubusercontent.com/36031213/162909733-6f5f8814-a3b1-41bd-9485-70ecf50c8155.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/162909789-336620e4-8628-406c-b6da-e21a2d98ef1a.png)
+
+# 2. String Manipulation dengan Python
+## Tinjauan Ulang String pada Python
+Seperti yang telah aku pelajari pada bab sebelumnya, layaknya general-purpose programming language lainnya, Python mengizinkan aku untuk mengolah berbagai berbagai tipe data, tak terkecuali tipe data text. Dalam Python, tipe data text dapat aku deklarasikan sebagai sebuah string dengan mengapitnya menggunakan tanda kutip satu ataupun tanda kutip dua. Sebagai contoh:
+
+![image](https://user-images.githubusercontent.com/36031213/162909530-75219a87-8ad4-4828-81fa-f5689bb21971.png)
+
+Cara di atas adalah dua cara yang valid untuk mendeklarasikan variabel dengan bertipe string. Kemudian, untuk mendeklarasikan tipe data string ke dalam beberapa baris, aku dapat melakukannya dengan mengapitnya dengan tanda kutip satu ataupun tanda kutip dua sebanyak 6 kali (3 di bagian awal dan 3 di bagian akhir dari string). Sebagai contoh:
+
+> ![image](https://user-images.githubusercontent.com/36031213/162910369-9707d5eb-cd70-424a-bb6e-c36ae51fb020.png)
+
+## Apa itu String Manipulation?
+Aku belajar bahwa String Manipulation adalah teknik yang digunakan dalam memanipulasi data yang disimpan dalam tipe data str. Pada bahasa Python, untuk mempermudah proses pengolahan data, tipe data string dapat diperlakukan layaknya seperti tipe data list
+Tugas:
+Aku mengikuti contoh yang diberikan dengan mengetik syntax pada live code editor untuk memahami bagaimana String Manipulation bekerja pada Python.
+
+> ![image](https://user-images.githubusercontent.com/36031213/162910974-4780d8f6-5c2a-4ead-9870-98e9b79315d4.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/162911042-ba6b2264-8f9e-4586-a4e4-1f7dd54163d5.png)
+
+## Operator "+" untuk Tipe Data String
+Setelah aku mempelajari String Manipulation, sekarang aku beralih ke Operator +. Operator + pada dua string akan secara otomatis menggabungkan kedua string tersebut. Operator + juga dapat digunakan untuk menambahkan beberapa string secara bersamaan.
+
+Aku mengikuti contoh yang diberikan dengan mengetik syntax pada **live code editor** untuk memahami bagaimana Operation + bekerja pada Python.
+
+> ![image](https://user-images.githubusercontent.com/36031213/162911248-98ac288c-73d2-4081-b9a8-029eae6789c3.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/162911311-4dd6552e-c631-4120-98ea-2d1af76d4ae0.png)
+
+
+## Menghilangkan Spasi di Awal dan/atau di Akhir
+Sekarang aku akan mempelajari bagaimana menghilangkan kelebihan spasi yang dimiliki di awal dan/atau di akhir variabel string. Pertama, aku melihat fitur yang diberikan pada tabel contoh.
+
+Tugas:
+Agar lebih memahami bagaimana penerapan fitur ini pada Python, aku akan mengikuti contoh yang tercantum pada tabel dengan cara mengetikkannya pada live code editor.
+
+> ![image](https://user-images.githubusercontent.com/36031213/162911513-8a696ec9-34ba-4dc5-9ea4-0bc7b72dc712.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/162911591-7ac5f28f-1253-403b-aad9-e3fc7edb291d.png)
+
+## Merubah Caps pada String
+Pada bagian ini, aku akan mempelajari cara merubah caps (penggunaan huruf besar dan kecil). Jika diawal kalimat pada suatu string yang dimiliki belum berupa huruf kapital, maka dengan menggunakan fitur _.capitalize()_ kita dengan mudah mengubah _string_ tersebut menjadi kalimat yang benar secara bahasa.
+
+Tugas:
+Aku mengikuti contoh yang diberikan dengan mengetik syntax pada live code editor untuk memahami bagaimana fitur _.capitalize(), .lower(), dan .upper()_ bekerja pada Python.
+
+> ![image](https://user-images.githubusercontent.com/36031213/162912062-3e38c3a5-59da-4bf6-8848-49c243a56472.png)
+> ![image](https://user-images.githubusercontent.com/36031213/162912210-650a9abc-98bf-40bb-abd2-9ad1461b82a4.png)
+
+## Pemecahan, Penggabungan, dan Penggantian String
+Pada bagian ini, aku akan mempelajari bagaimana cara memecah suatu string dengan kondisi tertentu sehingga menghasilkan list of string. Kemudian, akan dipelajari bagaimana cara menggabungkan beberapa list of string menjadi string saja. Akhirnya, aku akan mengganti sub-string tertentu dengan sub-string lainnya sehingga mengubah string awalnya.
+
+Tugas:
+Agar lebih memahami bagaimana penerapannya pada Python, aku akan mengikuti contoh penggunaan yang diberikan dari tabel berikut dengan mengetik syntax pada live code editor.
+
+> ![image](https://user-images.githubusercontent.com/36031213/162912620-a8c5ef2e-7125-4b92-a5c8-e3ab037a8adb.png)
+> ![image](https://user-images.githubusercontent.com/36031213/162913094-222fe960-c18d-46ec-8e3f-d2ee2c8f4c30.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/162913149-776d7fa8-f0a5-4793-9ef1-922d5d2c9431.png)
+
+## Menentukan Posisi dan Jumlah Sub-string pada String
+Pada bagian ini, aku akan mempelajari bagaimana cara menentukan posisi awal suatu sub-string dan jumlah kemunculan sub-string tersebut pada suatu string agar lebih memahami bagaimana penerapannya pada Python.
+
+Tugas:
+Aku akan mengikuti contoh penggunaan yang diberikan dari tabel berikut dengan mengetiknya pada live code editor.
+
+> ![image](https://user-images.githubusercontent.com/36031213/162913318-695070de-1555-4ab8-9115-6de445a2a0ee.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/162913385-e837a194-1424-4df0-b16a-a67f757577ac.png)
+
+
+## Menentukan String Apakah Diawali/Diakhiri oleh Sub-string
+Pada bagian ini, aku akan mempelajari bagaimana menentukan apakah suatu string diawali atau diakhiri dengan suatu substring (teks) tertentu.
+
+Tugas:
+Agar lebih memahami bagaimana penerapannya pada Python, aku akan mengikuti contoh penggunaan yang diberikan menggunakan fitur dalam tabel berikut dengan mengetiknya pada live code editor.
+
+> ![image](https://user-images.githubusercontent.com/36031213/162913569-f2290541-f4ea-4f65-ab2f-02fa2a8da900.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/162913635-b35ac160-71ba-4cc4-9191-6eb93ec0267d.png)
+
+
+## Tugas Praktek
+Aku mengecek ponsel. Sejak kukirimkan progress latihanku terakhir pada Senja, belum ada kabar lagi sampai saat ini. Senja memang tiba-tiba pergi dari mejanya tadi. Sedikit bosan, aku coba membuka-buka dokumen di laptop. Aku menemukan folder “LATIHAN” dan teringat kalau ada satu latihan kecil yang belum kukerjakan. “Mumpung lagi lowong, aku coba deh.”
+
+Aku mengeklik dokumen PENGOLAHAN DATA TEKS. Di dalamnya aku diminta untuk meneliti popularitas antara buah salak dan buah jeruk berdasarkan judul artikel yang muncul di majalah Buah Sehat. Aku mulai menyiapkan susunan kodeku: 
+
+> ![image](https://user-images.githubusercontent.com/36031213/162913801-822733cb-468d-426a-9d1a-5acc17193405.png)
+
+Tugas:
+“Kalau mengikuti yang sudah kupelajari, langkah pertama adalah menghitung jumlah kemunculan kata jeruk dan salak di tiap judul artikel,” batinku.
+Aku kembali berkutat di depan layar laptop.
+
+> ![image](https://user-images.githubusercontent.com/36031213/162914573-d48e0bbd-e228-492a-9010-94a69148e75c.png)
+
+
+## Tugas Praktek
+Setelah selesai menghitung jumlah kemunculan kata, aku mencoba berpikir dari sudut pandang si pemilik majalah. Kalau aku jadi mereka, tentunya aku juga ingin tahu apakah kata yang muncul itu bermuatan positif atau tidak. Nah ini!
+
+Tugas:
+Dengan cepat, aku mendeklarasikan daftar bernama kata_positif yang berisi nuansa kata positif untuk menghitung jumlah kemunculan kata_positif bagi tiap artikel jeruk dan salak, seperti ini:
+
+> ![image](https://user-images.githubusercontent.com/36031213/162914207-1a080af1-9db8-4305-ac3f-0ce1ee19f1b2.png)
+
+# 3. Functions
+**Function** adalah sebuah blok statemen yang hanya akan dijalankan saat ia dipanggil. Secara tidak sadar, selama proses belajar ini, aku telah mencoba menggunakan fungsi-fungsi dalam bahasa pemrograman Python.
+
+Fungsi _len()_ untuk mengukur jumlah elemen dalam sebuah list dan fungsi _print()_ untuk menampilkan pesan pada layar konsol merupakan contoh dari bentuk fungsi yang telah disediakan oleh bahasa pemrograman Python, atau dengan kata lain _built-in functions_.
+
+Selain fungsi yang telah disediakan oleh Python, Python mengizinkan aku untuk mendeklarasikan fungsi dalam kode yang aku tuliskan yang dikenal dengan user defined function.
+
+> ![image](https://user-images.githubusercontent.com/36031213/162915043-336f4ae3-ec79-4a0a-a6e6-529927da4c65.png)
+
+Aku menuliskan dalam catatanku:
+
+* **nama_fungsi** adalah nama untuk fungsi yang kita definisikan, memiliki aturan seperti penamaan variabel
+* **argument** adalah variabel masukan ke fungsi, bisa tanpa variabel, satu variabel atau lebih
+* **statement_1 … statement_n** adalah algoritma yang telah kita transfer dalam bahasa Python. Ini merupakan inti dari fungsi yang kita definisikan. Seluruh statement adalah menjorok (indent) ke dalam seperti yang pernah dipelajari pada conditioning dan looping
+* **return_value** adalah variabel output dari fungsi kita. Bisa tanpa variabel, satu variabel, atau lebih.
+
+## Apa Itu Fungrions?
+_contoh_fungsi_ merupakan nama dari fungsi yang aku deklarasikan dan statemen-statemen di dalamnya disebut sebagai isi (body) dari fungsi.
+
+Tugas:
+Untuk menjalankan fungsi yang telah aku deklarasikan, aku dapat menuliskan potongan kode berikut dengan mengetiknya pada live code editor pada baris berikutnya.
+
+> ![image](https://user-images.githubusercontent.com/36031213/162915434-2dc1d0ff-39e5-4420-b459-9bae24d49b90.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/162915542-e6f9ca07-919e-40dd-b56e-245330fb85d8.png)
+
+## Fungsi Pertama
+_contoh_fungsi_ merupakan nama dari fungsi yang aku deklarasikan dan statemen-statemen di dalamnya disebut sebagai isi (body) dari fungsi.
+
+> ![image](https://user-images.githubusercontent.com/36031213/162916254-bbee4aa2-a005-4430-a00a-8b1eeee9d808.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/162916315-faf90ca1-4b30-4bee-bfc4-e7197eb29115.png)
+
+## Fungsi Kedua
+Sebuah fungsi dapat menerima serangkaian argumen pada bagian dalam kurung setelah nama fungsi telah aku definisikan.
+
+_fungsi_dengan_argumen_ membutuhkan dua argumen _(nama_depan, nama_belakang)_.
+Python akan menjalankan sebuah fungsi hanya ketika aku telah mensuplai jumlah argumen yang sesuai saat fungsi didefinisikan.
+
+> ![image](https://user-images.githubusercontent.com/36031213/162915694-ed346cde-eeb6-497a-8826-9e3f97956a1b.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/162915828-0af4f81a-0f04-4e04-a5e4-a8e7958234fe.png)
+
+## Fungsi Ketiga
+Saat aku melakukan pemanggilan fungsi dengan jumlah argumen yang tidak sesuai, Python akan mengembalikan pesan error yang menyatakan bahwa terdapat argumen yang belum disuplai agar fungsi dapat dijalankan dengan baik.
+
+Berikut ini adalah contoh pesan error yang akan dikembalikan oleh Python saat aku hanya menyuplai satu argumen saja untuk _fungsi_dengan_argumen_:
+
+> ![image](https://user-images.githubusercontent.com/36031213/162916670-df55cae6-b76e-4a30-9f35-d33f86faad9c.png)
+
+Bahasa Python mengizinkan aku untuk memberikan suatu nilai default terkait dengan sebuah argumen dalam sebuah fungsi. Melalui fitur ini, suatu argumen dalam sebuah fungsi akan bersifat opsional.
+
+> ![image](https://user-images.githubusercontent.com/36031213/162916814-2c875dfa-5a8f-4128-a56e-a97f0c3a97bd.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/162916934-dbda1960-6882-4656-9afb-9998ba131927.png)
+
+## Tugas Praktek
+> ![image](https://user-images.githubusercontent.com/36031213/162917143-8a482e33-502f-4148-963e-53144814d337.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/162917232-104fdde3-c771-4e49-8dbc-b9a3cec4120e.png)
+
+## Tugas Praktek
+> ![image](https://user-images.githubusercontent.com/36031213/162917411-a6f74f30-c39a-43f5-9846-bfd2ea652ac8.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/162917458-31bf016a-0dd6-49b4-93c1-43e63b8ef7ef.png)
+
+## Tugas Praktek
+> ![image](https://user-images.githubusercontent.com/36031213/162917592-59640223-1bc3-4091-9c16-12cdf49e1f2c.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/162917635-a70e5abc-3b8e-4ca5-9d33-78a9290e5b15.png)
+
+# 4. Manipulasi Berkas Teks dan Library Matematika pada Python
+## Manipulasi Berkas Teks
+### 1. Membaca file di local computer
+Pengolahan berkas teks pada Python tidak membutuhkan proses import dependencies lainnya seperti pada bahasa-bahasa pemrograman lainnya. Untuk memanipulasi berkas teks pada bahasa pemrograman Python, mula-mula aku harus membuka/membuat berkas teks yang aku inginkan dengan menggunakan fungsi open(). Fungsi open() menerima 2 parameter, di mana parameter pertama merupakan nama dari file yang ingin dibuka/dibuat dan mode yang berkaitan dengan aksi yang ingin dilakukan terhadap file yang telah terbuka. Sebagai contoh:
+
+`file = open("hello.txt", "r")`
+
+Argumen/parameter "r" mengartikan bahwa file yang akan dibuka berada dalam mode “read” sehingga nantinya aku tidak dapat menambahkan/ menuliskan ulang isi tulisan dari file "hello.txt".
+
+Perintah ini dapat digunakan untuk menutup file yang telah aku buka.
+
+`file.close()`
+
+Aku juga belajar bahwa selain mode "r" yang hanya digunakan untuk membaca file, terdapat juga mode lainnya seperti:
+
+1. **w:** write, mode ini dapat aku gunakan untuk menulis ke dalam sebuah berkas teks. Jika berkas tidak tersedia, maka Python akan secara otomatis membuat sebuah berkas baru dengan nama yang telah di spesifikasikan. Saat menulis dengan menggunakan mode ini, jika file semula tidak kosong, maka isi yang sebelumnya terdapat di dalam berkas akan terhapus.
+1. **a:** append, mode ini dapat aku gunakan untuk menambahkan isi dari sebuah berkas teks. Mode ini juga akan membuat sebuah berkas teks baru dengan nama yang telah kita spesifikasikan jika berkas teks tidak tersedia.
+1. **w+:** write+, mode ini dapat aku gunakan untuk membaca ataupun menuliskan isi dari sebuah berkas teks.
+1. **a+:** append+, mode ini dapat aku gunakan untuk membaca ataupun menambahkan isi dari sebuah berkas teks.
+
+### 2. Membaca file dari url
+Berkas teks yang berada di suatu alamat di internet dapat dibaca berdasarkan url-nya. Untuk membacanya aku perlu menggunakan library requests. File hello.txt yang aku temui di local komputer ku juga ada di url berikut https://storage.googleapis.com/dqlab-dataset/hello.txt. 
+
+Akhirnya, aku dapat menggunakan kode berikut
+> ![image](https://user-images.githubusercontent.com/36031213/162918548-73d4eba5-f5c9-42e2-aa0c-aa5d17b5c828.png)
+
+## Membaca Berkas Teks - Part 1
+
+Setelah mempelajari bagaimana membuka/membuat sebuah berkas teks dalam Python, aku akan mempelajari sintaks untuk dapat membaca isi dari sebuah berkas. Untuk membaca isi dari sebuah teks aku dapat menggunakan potongan kode berikut.
+
+Aku akan mengasumsikan baris-baris di bawah comment merupakan isi dari “hello.txt”
+
+> ![image](https://user-images.githubusercontent.com/36031213/162918774-0288e65b-9371-4c1f-afcb-c28f5ba98752.png)
+
+**Note**: Karena ada perubahan hosting file hello.txt yang tidak ditempatkan di direktori lokal sistem DQLab kamu dapat mempraktikkan bagian A1 dan A2 pada komputer kamu. Untuk itu file hello.txt dapat kamu unduh melalui https://storage.googleapis.com/dqlab-dataset/hello.txt.
+
+> ![image](https://user-images.githubusercontent.com/36031213/162918961-c0b990ce-f3cf-4aad-9b96-69784e8af672.png)
+
+Selain dapat membaca dan menampung isi dari sebuah berkas secara sekaligus menggunakan fungsi _read()_, aku juga dapat menggunakan fungsi _readline()_ ataupun _readlines()_ untuk membaca isi dari suatu berkas teks. Dengan menggunakan fungsi readline(), Python akan membaca konten dari sebuah berkas secara baris per baris, dimulai dari baris paling awal.
+
+> ![image](https://user-images.githubusercontent.com/36031213/162919342-931306d5-313a-4b91-8bba-c313787ad9f7.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/162919446-a5b6dbdf-8dd0-44fc-a929-6dfd7fd1e45c.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/162919620-10ffd4d4-3b0e-4493-879d-31e529a76d11.png)
+
+
+## Membaca Berkas Teks - Part 2
+Fungsi _readlines()_ akan mengembalikan sebuah list yang setiap elemennya merupakan setiap baris dalam sebuah berkas teks.
+
+**Note**: Karena ada perubahan hosting file hello.txt yang tidak ditempatkan di direktori lokal sistem DQLab kamu dapat mempraktikkan bagian A1 dan A2 pada komputer kamu. Untuk itu file hello.txt dapat kamu unduh melalui https://storage.googleapis.com/dqlab-dataset/hello.txt. 
+
+> ![image](https://user-images.githubusercontent.com/36031213/162919857-7022736d-67e1-4a7b-8ede-0390adda588c.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/162919907-bbef0d4d-a90e-44e6-bd66-6591ce8428e0.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/162919980-6508df88-deb7-4cf9-afd1-fd5810c6ecc0.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/162920087-3000c175-7694-4bb7-8422-48a6baa0875c.png)
+
+## Menulis Berkas Teks - Part 1
+Untuk menuliskan isi dari suatu berkas, aku dapat menggunakan fungsi _write()_ atau _writelines()_ yang telah disediakan oleh Python. Sebelum masuk ke dalam contoh penggunaan fungsi _write()_ atau _writelines()_, penting bagiku untuk mengingat bahwa mode yang aku spesifikasikan pada fungsi _open()_ akan mempengaruhi bagaimana Python menuliskan isi ke dalam berkas teks. Jika aku menggunakan mode w, maka Python akan menghapus seluruh isi dalam berkas sebelum menuliskan konten yang aku spesifikasikan.
+
+> ![image](https://user-images.githubusercontent.com/36031213/162920569-d7b6656e-e210-4d93-a5bf-ca9e4bb86cf2.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/162920640-cc58a1ba-15e4-42e4-8d74-753b85d076c7.png)
+
+## Menulis Berkas Teks - Part 2
+
+> ![image](https://user-images.githubusercontent.com/36031213/162920798-7f2acf8d-deab-4d97-ae22-05b2cee2748f.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/162920868-c5301775-66fc-41f0-8912-f4442e69f7ea.png)
+
+
+## Quiz
+> ![image](https://user-images.githubusercontent.com/36031213/162921123-0267cc1e-d084-46b9-b15b-490247543a35.png)
+
+## Quiz
+![image](https://user-images.githubusercontent.com/36031213/162921182-2d1841b7-0e64-4b97-b30f-09a30dbaac0e.png)
+
+## Library Matematika pada Python
+Salah satu keunikan Python adalah library yang dimilikinya karena dapat di-extend dengan library yang didefinisikan oleh pengguna Python, selain dari _library_ bawaan _(built-in)_ yang dimilikinya. Untuk membuat _library_ yang didefinisikan oleh pengguna umumnya dilakukan dengan menggunakan teknik pemrograman berorientasi obyek _(object oriented programming)_.
+
+Tentunya secara dasar, Python tidak dapat digunakan untuk pengolahan data, komputasi saintifik, _machine learning_ dan bahkan sistem cerdas. Melalui pengembang _library_ tentunya aku memiliki akses ke keperluan atau bidang tersebut. Library ini dapat diinstal melalui command pip yang bersumber dari web _python package index_.
+
+Bagi yang pernah menggunakan Matlab pasti tahu ada toolbox tertentu misal untuk optimasi, pengolahan sinyal, dll. Jadi, toolbox di Matlab itu ekuivalen dengan library pada Python. Bahasa pemrograman lain seperti R, PHP, GO, Java, dsb tentu juga memiliki hal yang serupa.
+
+Untuk memanggil library pada python, aku dapat menggunakan _syntax_:
+
+> `import`
+
+adalah nama library yang akan diimport untuk dapat digunakan dalam kode program yang disusun, baik _library_ bawaan (built-in), _library_ yang tersedia ada di web _python package index_ atau dikembangkan sendiri.
+
+Python adalah salah satu bahasa yang paling diminati untuk pengolahan data secara matematis. Untuk menggunakan fungsi-fungsi matematis yang telah disediakan oleh bahasa Python, aku dapat melakukan proses import library math seperti pada potongan kode berikut:
+
+> `import math`
+
+## Fungsi dalam Library Matematika Part 1
+Di dalam _library math_ aku mempelajari berbagai fungsi, beberapa diantaranya dapat dilihat pada tabel di bawah ini.
+
+Tugas:
+Aku mengetikkan potongan kode berikut dalam _live code editor_:
+
+> ![image](https://user-images.githubusercontent.com/36031213/162922189-e0256192-a320-4b7f-81fc-633ecb3b917a.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/162922287-0b528e72-bc8b-45bf-96e2-b4236811dbfc.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/162922441-e1122b8d-ddbc-4663-a687-353ce5267e52.png)
+
+
+## Fungsi dalam Library Matematika Part 2
+Aku masih melanjutkan bagian terakhir dari (bulit-in) library matematika pada Python yang dapat digunakan untuk perhitungan matematis.
+
+Tugas:
+Aku mempraktekkan potongan kode berikut dalam live code editor:
+
+> ![image](https://user-images.githubusercontent.com/36031213/162922590-8285f6ce-9e64-417d-a0cb-b9dc43b7539f.png)
+> ![image](https://user-images.githubusercontent.com/36031213/162922643-a950c277-bfe7-4cf3-a059-96661fc606c1.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/162922746-6902010b-a539-4c03-b2f7-6de0bd67841e.png)
+
+## Quiz
+> ![image](https://user-images.githubusercontent.com/36031213/162922915-99c05971-863d-41ef-8863-cb8c0d4b03de.png)
+
+## Quiz
+> ![image](https://user-images.githubusercontent.com/36031213/162922985-da889f16-6a0c-4ada-be19-c3c0f5a92c24.png)
+
+# 5. Mini Quiz
+## Pendahuluan
+Pada _mini_project dalam modul "Basic Python for Data Professional Beginner - Part 2", aku akan diuji oleh Senja cara memprediksi harga rumah di Tangerang berdasarkan luas tanah, luas bangunan, serta kedekatan lokasi dengan pusat kota.
+
+Data yang tersedia dalam format teks harus dibaca terlebih dahulu dan kemudian mengubahnya ke dalam **list of dict**. Data yang berupa **list of dict** ini akan digunakan untuk memprediksi harga rumah di Tangerang
+
+## Harga Rumah diTangerang
+“Terima kasih, Aksara! Akhirnya kelar juga pekerjaan kemarin. Masih semangat, kan? Belum kapok kalau ada proyek baru datang lagi? Hahaha,” goda Senja.
+
+“Asalkan ada bonus, maju terus,” candaku.
+
+“Oke, kali ini serius. Kita diminta untuk mengembangkan model prediksi harga rumah di di Tangerang berdasarkan luas tanah, luas bangunan serta kedekatan lokasi dengan pusat kota. Untuk mengembangkan model prediksi ini, saya telah mengumpulkan beberapa data yang diperlukan. Coba kamu lihat,” jelas Senja.
+
+> ![image](https://user-images.githubusercontent.com/36031213/162923285-05279426-5da3-48f6-a6bf-c2c4c482d4d1.png)
+
+“Berarti aku akan memprediksi harga rumah ini berdasarkan kemiripan atribut dari data yang telah ada ini?” tanyaku memastikan. Senja mengangguk.
+
+Aku pun segera menempatkan data tersebut ke dalam file **harga_rumah.txt** seperti berikut ini:
+> ![image](https://user-images.githubusercontent.com/36031213/162923399-f112f5e6-348d-43ec-889b-673b9798d326.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/162923481-2afacaca-e5ab-48f4-993e-96480f505321.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/162923579-e34a84d9-af6a-46cd-a8d2-8e06cbfc44e6.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/162923826-febac70a-546c-4615-971a-e34b79fea783.png)
+
+### Code Editor Tugas
+> ![image](https://user-images.githubusercontent.com/36031213/162924625-1cf58b58-b7ef-447f-a85d-66f03e22baaf.png)
+
+https://codeshare.io/9OzdoM
+
+## Hasil Belajarku
+Tidak terasa, aku berhasil menyelesaikan modul Python for Data Professional Beginner - Part 2. Dari materi yang telah aku pelajari dan praktekkan dalam module ini, aku telah mampu:
+
+* Memahami & mempraktikkan penggunaan collection manipulations (list, tuple, set dan dictionary) pada Python.
+* Memahami & mempraktikkan penggunaan string manipulation pada Python.
+* Memahami & mempraktikkan pembuatan fungsi yang didefinisikan sendiri untuk kebutuhan tertentu dengan menggunakan Python.
+* Memahami & mempraktikkan cara membaca data dari file menggunakan Python
+* Mengerjakan latihan dalam membuat program Python untuk penyelesaian kasus bisnis sederhana.
+
+## My certificate of completion
+> ![image](/static/images/certificates/certificate-DQLABINTP1HJBCVE.png)

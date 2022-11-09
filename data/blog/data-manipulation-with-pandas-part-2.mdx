@@ -1,0 +1,340 @@
+---
+title: Data Manipulation with Pandas part 2
+date: '2022-11-09'
+tags: ['Pandas','Python','Data Engineer']
+draft: false
+summary: Penggabungan Series/Dataframe
+image: /static/images/certificates/certificate-DQLABINTP1ONNLQU.png
+layout: PostLayout
+authors: ['default']
+---
+# 1. Penggabungan Series/Dataframe
+## Penahuluan
+Aku pun mengalihkan perhatianku dari layar laptop ke Andra. Pagi-pagi sekali ia sudah menghampiriku. Diam-diam aku menebak materi baru apa lagi yang harus kupelajari ataukah ada proyek dadakan lagi yang perlu diselesaikan?
+“Lagi latihan pakai Pandas, Ndra.”
+“Oh, masih modul Pandas part 1 kemarin?”
+
+Aku mengangguk.
+“Pas banget, pagi ini saya mau ngirim ke kamu lanjutan modulnya. Lagipula modul kemarin kamu sudah lulus kok. Sekarang fokus ke Pandas part 2 saja. Kali ini materinya lebih dalam mengenai interaksi dengan tabular data menggunakan Pandas. Nanti kamu baca dan pelajari saja dulu.”
+Setelah obrolan tadi, aku langsung menerima pesan dengan lampiran materi lanjutan dari Andra. Penasaran dengan apa yang bisa Pandas lakukan lagi, aku pun segera membuka dan mencernanya
+
+Reference: https://pandas.pydata.org/pandas-docs/stable/user_guide/merging.html
+
+## Bagaimana Cara Menggabungkan Pandas Series/Dataframe?
+Sebagai seorang praktisi data, pasti sering kali bertemu dengan banyak file sekaligus dan data yang dibutuhkan tersebar di berbagai file tersebut dan membutuhkan metode untuk menggabungkan semua informasi yang dibutuhkan dari setiap file itu.
+
+Dengan menggunakan excel atau tools pengolah spreadsheet lain hal itu bisa terjadi mungkin dengan menggunakan copy paste file satu ke file lainnya atau yang agak canggih menggunakan method importRange di google sheets. Tetapi tentu hal itu tidak bisa diandalkan ketika berurusan dengan big data yang datanya bisa miliaran rows dengan informasi yang tidak terbatas, Python dan Pandas adalah satu-satunya cara untuk mengatasinya.
+
+Terdapat beberapa metode untuk menggabungkan Series/Dataframe di Pandas, yaitu:
+* append
+* concat
+* merge
+* join
+
+Akan dibahas satu persatu dalam subbab berikutnya.
+
+## Append
+> ![image](https://user-images.githubusercontent.com/36031213/163145670-33af41a9-6984-4c8e-b5bf-2e7e8e477705.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163145727-c765320d-1d41-4ceb-8ed3-fcb60c4d3766.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163145763-fb7df6d9-ffb0-4fb7-9866-03411dd32751.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163145860-a7d28fd3-1991-42b5-aa77-a39b4f44fd28.png)
+
+## Concat
+> ![image](https://user-images.githubusercontent.com/36031213/163146213-3b4dc98d-53ac-4c31-8180-e630939b802c.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163146252-509ec787-0bd4-4376-ae7e-35ae4bef4a70.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163146292-dfe945ba-d9f1-4f3f-956e-d2acd108d144.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163146331-dfbdaa0f-5b33-4a48-97da-726bf2239cfb.png)
+
+## Merge - Part 1
+> ![image](https://user-images.githubusercontent.com/36031213/163146509-00855ed3-7de0-443c-b7ff-e48b4a36bcac.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163146565-f4267997-6182-4f3c-9ff5-9712e79641d8.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163146625-c3fc55b0-a7b1-4e52-8cfe-29a449758991.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163146660-3f3db6a4-3ee6-4469-b850-8200f1348339.png)
+
+## Merge - Part 2
+> ![image](https://user-images.githubusercontent.com/36031213/163146807-d8c5f000-c10c-480b-95f6-cea141e2dbc8.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163146896-4ed7496c-e200-40b8-8be1-3b96babc2e47.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163146948-4d0db263-683e-4204-ba0e-b320edb1c562.png)
+
+## Join
+> ![image](https://user-images.githubusercontent.com/36031213/163147099-c17aaff4-e99b-46a5-aae9-595a582689b1.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163147171-e6aa1ccc-2bdf-43e0-9b63-231882ba9893.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163147243-87b13155-39b8-492d-ad16-08dada3a8647.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163147295-785ec7e3-00bf-4f81-9eff-4011b8f5fa67.png)
+
+## Quiz
+> ![image](https://user-images.githubusercontent.com/36031213/163147532-9c8c4451-065b-4e30-bab3-447f62a8dfac.png)
+
+# 2. Pivot, Melt, Stack & Unstack
+## Pendahuluan
+Kotak masuk email-ku tak hentinya menerima sejumlah link baru dari Andra untuk bab-bab yang akan kupelajari di modul Pandas part 2 ini. Banyak sekali referensi dari Andra!
+
+“Pivot, Melt, Stack, dan Unstack, apa ini?” gumamku sendiri membaca subject email Andra.
+
+Aku pun bergegas mengaksesnya:
+
+Reference: https://pandas.pydata.org/pandas-docs/stable/user_guide/reshaping.html
+
+Melakukan format ulang pada dataset itu sangatlah penting, biasanya hal ini dilakukan untuk mengetahui keseluruhan data secara cepat dengan chart atau visualisasi. Untuk orang yang sudah mahir menggunakan spreadsheet pastilah tau banyak tentang fitur pivot ini.
+
+Di Pandas, ada beberapa teknik untuk melakukan pivot atau unpivot yang biasa disebut as melt di Pandas, terdapat pula konsep stack yang artinya menumpuk data dengan kolom yang lebih sedikit (stack) sama seperti konsep melt dan ada pula yang memperluas data dengan kolom yang lebih banyak (unstack) sama seperti konsep pivot.
+
+## Dataset
+> ![image](https://user-images.githubusercontent.com/36031213/163147771-4bc2488f-b078-4f99-a842-42d4d5d46f51.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163147800-61c23f03-6038-4081-af75-0225c5d2efe2.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163147866-8578bc47-4065-424d-b5cb-eaf3b6cad3b3.png)
+
+## Pivot
+> ![image](https://user-images.githubusercontent.com/36031213/163148012-aa4c5c3b-9059-4f1b-9ab2-a24c6fbecab1.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163148079-b18bffb7-dfb1-4900-af72-a933d55515ed.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163148132-32b7b98c-3791-4373-a8f3-ec36fb097672.png)
+
+## Pivot_table
+> ![image](https://user-images.githubusercontent.com/36031213/163148230-6c6c6b14-f410-4e52-93e5-5565455f8fa0.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163148309-bcf1ee2c-1b1a-4b67-867d-b0308a9de944.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163148345-f78f5b5b-66d9-4c8a-ab60-f1b3c00341f7.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163148430-801f240d-5bd0-484b-9f5a-a658f0e8eb29.png)
+
+## Melt - Part1
+> ![image](https://user-images.githubusercontent.com/36031213/163148569-cf71701a-b497-467d-8cdd-4c11102d4ae3.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163149024-836a121d-3287-4911-aa52-9055473fc8e7.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163149147-9df8a371-6d66-406d-b24e-4d22c371f1ec.png)
+
+## Melt - Part 2
+> ![image](https://user-images.githubusercontent.com/36031213/163155397-cfd6effb-9d9c-4248-8e0a-e79398ec0407.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163155445-e1f71b91-5759-438a-bb62-0cc13da5cec1.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163155483-a9d02a27-1f97-4e76-a351-ce604e60f615.png)
+
+## Stack & Unstack - Part 1
+> ![image](https://user-images.githubusercontent.com/36031213/163155622-152f66ed-1720-4ab4-ba5b-46a64e3195d6.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163155664-aae83d02-59b8-4247-af6c-6ee3b165ccf2.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163155743-1e8a8aa7-e86d-47ac-a00e-c9c1d82b7530.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163155776-866f9033-6eb6-4c56-85d1-675ec9c67729.png)
+
+## Stack & Unstack - Part 2
+> ![image](https://user-images.githubusercontent.com/36031213/163155892-4b7aab7f-ae8d-4676-be8c-39e1e0dc8808.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163155947-168e69b1-b1ad-48c4-a039-80b4cc63e743.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163155988-8f06ffda-9d16-4c31-a7c3-6b0dd108cfc9.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163156038-3c234f82-6428-4aa8-9c83-d0912ecd57ec.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163156096-7851cfa9-9134-4848-acff-9b1a71683b1e.png)
+
+## Quiz
+> ![image](https://user-images.githubusercontent.com/36031213/163156232-47d649bf-4e1e-40d6-8693-5574fb82acbf.png)
+
+# 3. Aggregation & GroupBy
+## Pendahluan
+Teknik agregasi diperlukan ketika mau melihat dataset dengan view yang berbeda, bisa set data tersebut akan dikelompokkan seperti apa, yang kemudian juga bisa menerapkan beberapa fungsi atau metode statistik ke hasil group dataset itu untuk mengetahui behavior dari data tersebut secara summary/overview.
+
+> ![image](https://user-images.githubusercontent.com/36031213/163156359-28d86dae-366b-4de3-8bb0-67258680c3d4.png)
+
+## Review inspesksi Data
+> ![image](https://user-images.githubusercontent.com/36031213/163156422-bfa6366d-49b4-4b69-ad95-0c393e3aa5b3.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163156467-61808333-8c08-4494-bbec-52a31f179750.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163156507-7bccdf84-bd8b-4247-918e-e387d79deca2.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163156550-713053fe-f009-44af-b399-7cb89c06e3c8.png)
+
+> **https://storage.googleapis.com/dqlab-dataset/LO4/global_air_quality_4000rows.csv**
+
+## Groupby dan Aggregasi dengan Fungsi Statistik Dasar -Part 1
+> ![image](https://user-images.githubusercontent.com/36031213/163156702-2d39a28f-e394-4edd-8cfb-3867fe36541d.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163156761-efa03bb4-1135-427f-8194-a17110f462e4.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163156806-363ea8d6-87f1-4dce-85ec-16c777877d84.png)
+
+## Groupby dan Aggregasi dengan Fungsi Statistik Dasar -Part 2
+> ![image](https://user-images.githubusercontent.com/36031213/163156924-750e7aba-55c4-4478-87e6-4de5b72a2728.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163156977-bda637fe-1fcc-4618-8884-e918bc081e87.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163157013-e333598b-50a0-4ec1-9910-3a75be098baf.png)
+
+## Groupby dan Aggregasi dengan Fungsi Statistik Dasar -Part 3
+> ![image](https://user-images.githubusercontent.com/36031213/163157222-e4a9bd8d-4e3f-4ba5-a1f0-8d6dc78b47fb.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163157273-6cb1ea78-6809-4be0-9fc6-6d40c08e4a54.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163157305-30e3383d-3753-4a09-8573-2f876670a56d.png)
+
+## Groupby dengan Multiple Aggregations
+> ![image](https://user-images.githubusercontent.com/36031213/163157426-c4ca0129-f3f2-4d6d-bde5-ff84aa7cbcf0.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163157581-e4d3a15a-1615-47b9-84e5-833e232f633a.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163157548-fb4d8516-3cd9-45f2-8ae3-11abb3c4651f.png)
+
+## Groupby dengan Custom Aggregations
+> ![image](https://user-images.githubusercontent.com/36031213/163157704-994a6534-e762-4ae5-9f82-b3118a48434c.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163157727-3b8db803-b774-419a-bd14-a0d2780cbed0.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163157775-2c5653d8-1d2b-493e-a589-13afc481a68b.png)
+
+
+## Groupby dengan Custom Aggregations by dict
+> ![image](https://user-images.githubusercontent.com/36031213/163157896-e16a38ac-a2fa-404e-a173-bbf2cdc3635c.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163157939-42186885-2bc3-416a-8805-3f7c782f0720.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163157997-17d9f918-8f7d-41e4-90e0-ee6392211388.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163158076-128aadda-9202-4480-9a00-e6b337757948.png)
+
+## Quiz
+> ![image](https://user-images.githubusercontent.com/36031213/163158211-f7e504bf-8450-41b5-8ee8-de6eb7d4168b.png)
+
+# 4. Time Series in Pandas
+## Pendahuluan
+Baru saja aku kelar dengan latihan dan kuis-kuis dari Bab 3, link referensi dari Andra untuk materi selanjutnya seputar “Time Series in Pandas” sudah muncul lagi! 
+
+Tampaknya ini ‘ujian’ baru dari Andra yang ingin menilai kegigihan belajarku. Kutarik nafas panjang. Tidak apa-apa, ini demi jadi data analyst profesional. Aku pantang menyerah!
+
+Aku mengklik link dari Andra dan kembali menelusuri isi materinya:
+
+Ketika berurusan dengan big data, biasanya akan selalu terdapat entitas waktu kapan suatu event itu terjadi, waktu ini digunakan untuk mengenali event itu terjadi pada suatu frame tertentu dan dapat dijadikan index yang membuat setiap event menjadi unique.
+
+**Basic format datetime** menurut ISO 8601 yaitu **YYYY-mm-dd HH:MM:SS**.
+ 
+## Load Dataset as Time Series
+> ![image](https://user-images.githubusercontent.com/36031213/163158451-d947d802-9df7-491b-a8c9-973635c99861.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163158500-844b3b8a-36f7-4564-8189-f30a39e8a619.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163158557-493e7c97-8ff3-4ab3-9040-ca19ee0df01a.png)
+
+## Convert to Datetime
+> ![image](https://user-images.githubusercontent.com/36031213/163158682-08453628-e7ea-48b9-b97e-d2d22fcadd73.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163158709-3922033b-cbc4-4a17-b39c-dce5b9c78883.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163158757-15bbbd3e-bb48-45f7-af3c-549528115bca.png)
+
+## Resampling untuk Time Series Data
+Pandas _time series_ juga memiliki fungsi **resampling** yang dapat berguna untuk:
+
+> ![image](https://user-images.githubusercontent.com/36031213/163320418-7df5d50d-616e-494e-bd3a-d3acaee5c22b.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163320445-e841d05a-8c2e-4eba-b5c8-4e86bbba578c.png)
+
+Dataset : **https://storage.googleapis.com/dqlab-dataset/LO4/global_air_quality_4000rows.csv**
+
+> ![image](https://user-images.githubusercontent.com/36031213/163320564-672a0c5c-6638-430d-b82a-d80b8e50be9a.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163320600-a98bdd1c-754a-4b01-a0ad-db48b6284eb1.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163320634-615691f8-1607-49d2-8d7f-d149d574ce85.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/163320749-4a83091d-2a6b-467f-bc4a-ee01db4223bc.png)
+
+## Downsampling Data
+> ![image](https://user-images.githubusercontent.com/36031213/163320974-48a3a799-57c7-4b2f-b92f-8a5694038e56.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163321019-633d39a7-ea96-46ba-ad3a-9b460caf7ee8.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163321044-e5c43b45-5012-470e-886a-23e40b79991a.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/163321084-26044def-872b-41af-90a1-ec121c4ec932.png)
+
+## Upsampling Data
+> ![image](https://user-images.githubusercontent.com/36031213/163321232-6d8095e5-80e1-4713-a678-a3e4b3dfff71.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163321266-cdf33138-7b34-44ab-8d40-568f53d41d4a.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163321299-923c97b6-3e80-4554-b266-f00c019d5098.png)
+
+## Resampling by Frequency
+> ![image](https://user-images.githubusercontent.com/36031213/163321377-0aadb277-d6cc-4ad6-9bd0-62cfb4d84aba.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163321420-a4f34010-c2c4-4bf6-a3aa-f86471b73c47.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163321447-16f73d56-bf96-45a8-9541-818fd5f8d8e4.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163321483-c3dbcfbd-3144-49f9-980a-dd40b6f308d3.png)
+
+## Visualisasi
+> ![image](https://user-images.githubusercontent.com/36031213/163321598-405929d9-a9e3-41c9-9c46-411566b72995.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163321644-8e9e0e17-ab44-402f-a9ed-48a74400c630.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163321717-3e9f69a4-683c-4357-a56a-238b88015e88.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163321771-689c8ee9-f1f4-46d1-aa8e-89ca4fae3dd1.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163321847-d215a358-bbcd-484c-87a6-1332fe845527.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163322087-033b1dc4-7842-4bcb-83c4-d617b7962e1e.png)
+
+## Quiz
+> ![image](https://user-images.githubusercontent.com/36031213/163322229-a0b080d2-c35c-4c50-aad5-fdb40f615b46.png)
+
+## Penutup
+“Iya, aku tadi lagi nyoba nyelesein project end to end dari extracting data, load dataset, sampai manipulating data. Kalau sekarang lagi latihan menyimpan data ke dalam output yang sesuai. Lebih rumit dari yang kemarin, tapi masih ngerti, Ndra,” jelasku bersemangat.
+
+Tak kusangka materi tentang Pandas ini seru sekali walau cukup padat. Seru karena aku tahu Pandas sangat implementatif dalam mengerjakan proyek-proyek data perusahaan. Banyaknya materi yang sempat kukeluhkan di awal jadi enggak terasa!
+Aku mendapati Andra tersenyum tipis mendengar poin-poin yang sudah berhasil kupelajari.
+Kalau dari responsnya, mungkinkah bakal ada proyek baru untukku?
+
+“Apa yang kamu pelajari barusan akan sangat berguna dalam proyek analisis data nantinya dan jadi bekal kamu mempelajari machine learning nanti. Keep learning, Aksara. Saya sedang mempertimbangkan satu proyek untuk dipercayakan padamu lagi.”
+
+# 5. Mini Project
+## Pendahuluan
+“Aksara, coba ikut saya ke ruangan rapat sebentar. Ada yang mau saya tunjukkan,” pinta Andra.
+
+Baru kali ini Andra mengajakku ke ruang rapat. Biasanya aku hanya mendengar ia mau rapat, dan sering kali ia sendiri juga yang menghampiriku. Aku pun segera beranjak. Ini pasti berkaitan dengan proyek yang dijanjikannya. Sesampaiku di ruang rapat, laptop Andra sudah terbuka dan menampilkan pantulan layar berupa data angka-angka. 
+
+“Begini, Aksara. Perusahaan kita lagi butuh perbandingan performa dari setiap cabang di berbagai kota. Nanti ambil saja lima kota terbesar di Pulau Jawa untuk dianalisis dari segi order size, customer count, product count, brand count, dan GMV dalam basis bulanan. Sampai sini apakah cukup paham?”
+
+Sebenarnya aku cukup paham, tapi untuk memastikannya aku pun bertanya, “Jadi, ini aku perlu pivot ya untuk setiap measure yang dibutuhkan, lalu mencari angkanya per bulan?”
+
+“Benar. Sebelum saya beri deadline, dari kamu bisa selesai kapan?” tawar Andra. 
+
+“Hmmm, datanya sendiri sudah bersih atau perlu aku cleaning lagi, Ndra?” tanyaku sembari menimbang-nimbang. 
+
+“Datanya sudah bersih. Nanti akan coba saya kirimkan yang versi lengkapnya dalam tahun 2019 agar bisa kamu pertimbangkan estimasi waktu pengerjaan.”
+
+“Oke, Ndra. Soalnya, kalau datanya sudah bersih, dua hari cukup sih. Tapi aku cek dulu deh data lengkap yang nanti dikirim.”
+
+“Selamat bekerja, Aksara.”
+
+## Performa Penjualan di Setiap Cabang - Part 1
+> csv (data dari bulan January - March)--> 
+> **https://storage.googleapis.com/dqlab-dataset/10%25_original_randomstate%3D42/retail_data_from_1_until_3_reduce.csv**
+
+> csv (data dari bulan April - June)--> 
+> **https://storage.googleapis.com/dqlab-dataset/10%25_original_randomstate%3D42/retail_data_from_4_until_6_reduce.csv**
+
+> csv (data dari bulan July - September)--> 
+> **https://storage.googleapis.com/dqlab-dataset/10%25_original_randomstate%3D42/retail_data_from_7_until_9_reduce.csv**
+
+> csv (data dari bulan October - December)  --> 
+> **https://storage.googleapis.com/dqlab-dataset/10%25_original_randomstate%3D42/retail_data_from_10_until_12_reduce.cs**
+
+> ![image](https://user-images.githubusercontent.com/36031213/163324762-d6db9e93-ce9e-487b-9d85-594bc5325231.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/163324862-37a961e0-f87a-4800-9fd5-7d5e9cb23481.png)
+
+## Performa Penjualan di Setiap Cabang - Part 2
+> ![image](https://user-images.githubusercontent.com/36031213/163325081-f31e4b14-a06e-42c4-90fd-8590221374d3.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163325109-0c1aa33e-09a4-4281-a72d-452717ba736e.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163325172-1180fd4e-da01-4556-9ff4-294ea77351b0.png)
+
+## Performa Penjualan di Setiap Cabang - Part 3
+![image](https://user-images.githubusercontent.com/36031213/163325334-fa5d6ea1-c576-4ab4-af0a-248331b4f805.png)
+![image](https://user-images.githubusercontent.com/36031213/163325369-4c91ef6b-d940-4ef4-b370-365478fe65c8.png)
+![image](https://user-images.githubusercontent.com/36031213/163325439-07ff50b6-042c-4bbb-a67b-4dfec8fc77ed.png)
+
+> https://codeshare.io/RbrqKL
+
+## Performa Penjualan di Setiap Cabang - Part 4
+> ![image](https://user-images.githubusercontent.com/36031213/163325712-a6c38f5a-7668-46fd-aa95-4d7a1006e13e.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163325832-e545d6a9-7d73-4133-aae1-b2f72b9bc6d6.png)
+
+
+## Performa Penjualan di Setiap Cabang - Part 5
+> ![image](https://user-images.githubusercontent.com/36031213/163326060-2a15b95c-b69b-4289-9951-e65a2c585ec2.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163326343-ce262367-795c-400a-9e84-9cdffe51d9ae.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163326405-c5f711d3-6b11-408f-a75c-dac771e7a440.png)
+
+## Performa Penjualan di Setiap Cabang - Part 6
+> ![image](https://user-images.githubusercontent.com/36031213/163326609-46453931-ff7b-45a6-9e1c-ddf88ecd7402.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163326974-c7546b27-cd39-4f1f-a7ab-08a3881b0571.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163327069-1df0d27b-314f-4061-9a6e-ca015c0184df.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/163329298-90743982-b480-4049-b3e4-1f1c68930e50.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163329341-4e1643c2-c80b-475b-83d0-745a8077474c.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163329375-bed29664-8699-4f0b-9999-8f10cbfa7d26.png)
+
+> https://codeshare.io/pqOj1Y
+
+## Evaluasi Andra untuk Project yang Telah Disubmit
+Aku baru selesai mengecek ulang hasil kerjaku sebelum kuberikan pada Andra. Sejauh pemeriksaanku semua tampak baik-baik saja. Aku pun menutup laptopku dan membawanya ke ruangan Andra. Harus kuakui, aku cukup berdebar-debar! Walaupun proyek pertama berjalan lancar, tetap saja rasanya tegang membayangkan tanggapan Andra terhadap hasil kerjaku. Semoga tidak mengecewakan. 
+
+“Ndra, maaf ganggu. Ini hasil proyek kemarin sudah selesai. Aku menganalisis rata-rata jumlah order, customer, produk, brand, dan GMV per hari dalam bulanan untuk 5 provinsi besar di Pulau Jawa sesuai rikues. Mau dicek dulu?”
+
+“Boleh, coba tolong dibawa ke mari laptop kamu.” 
+
+Selang beberapa menit, Andra menyahut “Saya mau tanya. Kamu pakai define function di kodemu, gunanya untuk apa?”
+
+“Buat automate pembuatan dan penyimpanan grafik, Ndra. Jadi tinggal state saja dataframe-nya yang mana dan pengelompokannya seperti apa.” jelasku. Ujian tanya jawab telah dimulai! Andra memang tipikal mentor yang akan menguji hasil pekerjaan. Perlahan cara ini melatihku untuk mengambil keputusan dan langkah yang benar-benar matang.
+
+“Oke. Kenapa kamu enggak pakai command saja yang diulang sampai 5 kali kepada 5 measurement yang berbeda?” 
+
+“Soalnya pakai looping akan lebih mudah, Ndra. Aku tinggal mengganti order pada Part 3 menjadi sebuah variable bernama measurement, lalu lakukan for loop untuk diulang ke semua measurement yang ada,” jawabku mantap.
+
+Andra tersenyum. “Oke, sepertinya kamu benar-benar tahu apa yang kamu lakukan. Akan saya bawa ke rapat nanti untuk dibahas dengan kepala cabang, saya akan undang kamu ke rapat juga.”
+
+Aku mengangguk antusias. 
+
+## Hasil Belajarku
+> ![image](https://user-images.githubusercontent.com/36031213/163329684-5cdd1d53-553a-4674-8620-2de6c30c9f53.png)
+
+## My certificate of completion
+> ![image](/static/images/certificates/certificate-DQLABINTP1ONNLQU.png)

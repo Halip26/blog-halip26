@@ -1,0 +1,338 @@
+---
+title: Data Manipulation with Pandas part 1
+date: '2022-11-09'
+tags: ['Pandas','Python','Data Engineer']
+draft: false
+summary: Memahami library Pandas dan interaksinya dengan numpy
+image: /static/images/certificates/certificate-DQLABINTP1BAOLRQ.png
+layout: PostLayout
+authors: ['default']
+---
+#1. Introduction to Pandas
+## Pendahuluan
+
+“Apa kegunaan mempelajari Pandas? Aku tahunya Pandas nama hewan,” kelakarku pada Andra. Benar kan! Lagi-lagi aku menemukan istilah umum tapi punya makna berbeda di dunia data.
+
+“Itu Panda, Aksara. Kalau Pandas berguna untuk melakukan analisis dan pengolahan data dari menengah sampai besar. Coba dibaca saja dulu modulnya biar lebih jelas. Nanti akan ada praktik yang memperjelas,” tukas Andra.
+
+Seperti yang bisa kutebak, aku harus memahami modul dan pembelajaran baru ini sendiri. Karena kulihat Andra sudah melengang pergi setelah memberi intruksi sederhana seperti itu. Tak apa, perlahan aku terbiasa juga belajar mandiri. Walau memang lebih nyaman kalau dibimbing, hehehe.
+
+## Memanggil Library Pandas
+> ![image](https://user-images.githubusercontent.com/36031213/163130744-cede4072-2e4b-4034-a2de-8226dbf887ce.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163130787-71a92784-b6ed-4824-bfe0-8f33eb8c02b2.png)
+
+## DataFrame & Series
+> ![image](https://user-images.githubusercontent.com/36031213/163130912-8992435f-8700-4f78-854f-045f6af41525.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163131082-d3f8ac3a-8319-4533-9172-c99b5f269c0f.png)
+
+## Atribut DataFrame & Series -Part1
+> ![image](https://user-images.githubusercontent.com/36031213/163131274-e39555a2-50b7-4824-9359-88c27b17fe35.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163131354-a5fd43ed-ff27-4b77-9a65-722c40d4000b.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163131412-0e711469-9037-4ba7-95fe-d8426a4d8737.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/163131579-4e45d07e-36d1-48d7-8bac-be8021a6f38d.png)
+
+## Atribut DataFrame & Series -Part2
+> ![image](https://user-images.githubusercontent.com/36031213/163131765-55410ceb-c1e7-4fb0-8353-8dc5734fb5c4.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163131812-d8f69af4-5f94-4221-89ad-f26b19a2c2b6.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/163131861-15205963-935a-4b19-acfc-c18f2a80d951.png)
+
+## Atribut DataFrame & Series -Part3
+> ![image](https://user-images.githubusercontent.com/36031213/163131978-d07d107f-cb61-4ef5-863b-c0e9dddbe3b7.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163132035-d37d174c-817c-48a9-bd60-861d9c831763.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163132078-b734ac7c-3e15-4769-b9d1-6a43156b50db.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/163132128-6ab90243-5937-4929-811b-615b892c09f8.png)
+
+## Quiz
+> ![image](https://user-images.githubusercontent.com/36031213/163132217-ec42f5d4-7785-47c5-a6d5-ce0fb229ffe4.png)
+
+## Creating Series & Dataframe from List
+> ![image](https://user-images.githubusercontent.com/36031213/163132341-f7995a3b-affb-47ea-bc42-673b8e99ce60.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163132384-e53fe255-2dd2-45e0-a830-6e27581e78c8.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/163132455-1fa9c0c9-6817-4ba3-8928-2ab3604b0d3c.png)
+
+## Creating Series & Dataframe from Dictionary
+> ![image](https://user-images.githubusercontent.com/36031213/163132691-3d846101-5c02-4628-9f98-a4568bbcf61d.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163132761-f3e028eb-2245-4270-b7c2-e5e5c9fe875e.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163132841-78654a75-0cb3-4a59-9c3f-773d1810eb62.png)
+
+## Creating Series & Dataframe from Numpy Array
+> ![image](https://user-images.githubusercontent.com/36031213/163132939-79fa29c7-b9a0-4cbe-8226-e6d7301a87c4.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163132992-4f7adff8-57fb-4389-bab6-e348bbe505f7.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/163133030-1390f440-8785-4270-987f-bf0ee6df9a91.png)
+
+## Quiz
+> ![image](https://user-images.githubusercontent.com/36031213/163133186-422608f9-b45f-4888-9ebb-b36bd99ff5d1.png)
+
+# 2. Dataset I/O
+## Pendahuluan
+Aku berhenti sejenak dari bacaan modul dan latihan kuis. Timbul satu pertanyaan yang menggelitikku. Dan, pas sekali aku melihat Andra sedang mampir ke meja di seberangku. Waktu yang tepat untuk memanggilnya dan bertanya.
+
+“Ndra, memangnya file apa saja sih yang bisa dibaca oleh Pandas? Aku penasaran.”
+
+“Saya kirim saja yah lengkapnya ada di link. Coba kamu cek di email,” jawab Andra singkat, padat, jelas.
+
+Sesaat setelah aku bertanya, aku melihat Andra mengutak-atik ponselnya. Semenit kemudian, aku sudah menemukan link di kotak masuk email-ku yang berisi file-file yang bisa diakses Pandas. Aku pun membukanya dan menyimaknya satu per satu:
+
+Pandas menyediakan berbagai method untuk membaca file tersebut hanya dengan dipanggil method itu, code yang lebih simple dan loading yang lebih, tentu saja output nya dapat berupa Series atau Dataframe.
+
+Terdapat sangat banyak file yang dapat dibaca/dapat disimpan oleh Pandas, tapi ada beberapa file yang paling umum dan sering digunakan oleh praktisi data seperti berikut ini:
+1. _CSV _(Comma Separated Values), antar data dalam satu baris dipisahkan oleh comma, ",".
+2. _TSV _(Tab Separated Values), antar data dalam satu baris dipisahkan oleh "Tab".
+3. _Excel_
+4. _Google BigQuery_
+5. _SQL Query_
+6. _JSON _(Java Script Object Notation)
+
+## Read Dataset -CSV dan TSV
+> ![image](https://user-images.githubusercontent.com/36031213/163133608-ff4cce8c-26eb-4316-a574-ef7f628ac86b.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163133696-4d2dbd0e-e5e4-49f6-889d-b7a102947faa.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/163133825-34ba3ee9-f12c-448e-810e-33f4103129ec.png)
+
+## Read Dataset - Excel
+> ![image](https://user-images.githubusercontent.com/36031213/163133965-686af8f0-2617-4fed-8eb0-7c8863fc4ded.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163134008-c712e4a7-a201-4bda-a9c7-956318b34185.png)
+
+## Read Dataset - JSON
+> ![image](https://user-images.githubusercontent.com/36031213/163134153-392a6575-fa81-43ee-accb-ef872eaed987.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163134193-e48a7b5c-30ed-48fb-b7f6-8cfd59ef46ba.png)
+
+url = "https://storage.googleapis.com/dqlab-dataset/covid2019-api-herokuapp-v2.json"
+
+## Read Dataset - SQL
+> ![image](https://user-images.githubusercontent.com/36031213/163134338-2c089c40-40ef-4b60-95da-d6b6636ddabc.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163134400-e9f6aff1-2079-4f14-8e43-ba369a93eedc.png)
+
+## Read Dataset - Google BigQuery
+> ![image](https://user-images.githubusercontent.com/36031213/163134729-db7065b6-c35b-43f5-9553-d1b44215c847.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163134766-50f9635b-0fc9-4a64-a9e3-47ebd6ab9c24.png)
+
+## Write Dataset
+> ![image](https://user-images.githubusercontent.com/36031213/163134937-58f27967-c1c7-4b1f-bde3-127d2a0a9bfc.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163135004-f3d2f9b9-d28c-4c26-b174-710e0b5e3fec.png)
+
+## Head & Tail
+> ![image](https://user-images.githubusercontent.com/36031213/163135191-6f4ceb63-1ea6-46ae-9207-dc35e367c3f1.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163135257-43b55a0a-d5e8-4792-b04c-62411f144510.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/163135342-73778990-a262-4322-b6fa-e49a93503118.png)
+
+## Quiz
+> ![image](https://user-images.githubusercontent.com/36031213/163135675-2b808be3-468f-48fb-a9b3-2b04437dd6f2.png)
+
+# 3. Indexing, Slicing, dan Transforming
+## Pendahuluan
+Aku masih fokus mengutak-atik dokumen yang bisa dibaca oleh Pandas ketika Andra menyahut dari belakangku. “Sudah dipelajari modulnya, Aksara? Apakah sudah cukup paham dasarnya penggunaan basic data of Pandas? Terutama cara bikin dataframe dan data source yang diolah dari Pandas?”
+
+Seperti biasa, Andra ingin memastikan proses belajarku berjalan lancar. Tapi, mumpung ia berada di sini dan aku punya pertanyaan, lebih baik kusampaikan.
+
+“Iya, Ndra. Tapi aku masih agak bingung soal manipulasi data, seperti membuat index, slicing, dan transform tipe data di series maupun dataframe,” ungkapku jujur. Apakah Andra akan membantuku? Aku menunggu responsnya sampai kemudian Andra menarik bangku ke sebelahku.
+
+“Oke, coba sini saya bantu jelaskan.”
+
+Mataku berbinar. Aku tak akan melewatkan kesempatan ini. Aku pun menggeser bangku agar lebih dekat dengan Andra yang siap menampilkan beberapa contoh manipulasi data, terutama membuat index, seperti yang dijelaskan selanjutnya.
+
+## Indexing - Part1
+Index merupakan key _identifier_ dari tiap _row/column _untuk Series atau Dataframe (sifatnya tidak _mutable _untuk masing-masing _value _tapi bisa diganti untuk semua _value _sekaligus).
+
+Jika tidak disediakan, pandas akan membuat kolom index default secara otomatis sebagai bilangan bulat (integer) dari 0 sampai range jumlah baris data tersebut.
+
+Kolom index dapat terdiri dari:
+1. satu kolom (single index), atau
+2. multiple kolom (disebut dengan hierarchical indexing).
+
+Index dengan multiple kolom ini terjadi karena _unique identifier_ tidak dapat dicapai hanya dengan set _index_ di 1 kolom saja sehingga membutuhkan beberapa kolom yang menjadikan tiap _row_ menjadi _unique_.
+
+## Indexing - Part2
+> ![image](https://user-images.githubusercontent.com/36031213/163136628-acca7667-6e35-4320-9496-22ca96d55435.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163136668-7d7f3a17-b40f-48c9-99b6-8140cfb9191c.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/163136717-bba67052-c976-40b5-86e9-b38dfd0d850a.png)
+
+## Indexing - Part3
+> ![image](https://user-images.githubusercontent.com/36031213/163136830-acf79a88-aa22-4d9f-88ea-22d5df66ff38.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163137168-292e513b-ee89-4681-916e-063fa8766735.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163137221-73f7f950-9daa-4150-b649-6db9df905b34.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163137287-3d967260-d15c-4b38-b3ee-ae59077a46d4.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163137317-45bd5600-83f5-473f-8bf2-63f92ffd8488.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/163137418-e1a1993a-ac4e-45a8-a1c1-bf26368f4068.png)
+
+## Indexing - Part4
+![image](https://user-images.githubusercontent.com/36031213/163137536-009ebf3d-9e11-4974-9598-8716d468e90a.png)
+![image](https://user-images.githubusercontent.com/36031213/163137601-0ad76bb6-e937-4ac3-bc27-3f760dc8b884.png)
+
+![image](https://user-images.githubusercontent.com/36031213/163137653-fece25ef-7c06-48dc-b26e-c2522afec443.png)
+
+**Dataset : https://storage.googleapis.com/dqlab-dataset/sample_tsv.tsv**
+
+## Indexing - Part5
+> ![image](https://user-images.githubusercontent.com/36031213/163137980-43971f32-590e-46fb-8a69-8077ec7eea5c.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163138019-5eba4c63-6be7-44f6-877b-a43f5bf6feb5.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163138118-cf379dc7-7d9f-4b94-bacb-579a0af0aa76.png)
+> Dataset : https://storage.googleapis.com/dqlab-dataset/sample_tsv.tsv
+
+## QUIZ
+> ![image](https://user-images.githubusercontent.com/36031213/163138350-2fae2b60-7018-4859-95a2-96e1baf5e3c9.png)
+
+## Slicing - Part1
+> ![image](https://user-images.githubusercontent.com/36031213/163139131-c6f0c05e-f11a-48d6-8488-c4965324a9ed.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163139178-f483cfe1-0955-4929-b5c3-d63bcf812e18.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163139228-47e55ac9-fd6b-43a3-8446-a87938769833.png)
+> **Dataset: https://storage.googleapis.com/dqlab-dataset/sample_csv.csv**
+
+## Slicing - Part2
+> ![image](https://user-images.githubusercontent.com/36031213/163139436-ec215119-a421-4bb1-9db2-63c1117087ca.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163139509-cbd490df-98b8-4c11-9ad7-3da552d052a4.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163139589-621609e1-b5ad-4873-966b-3f8b32e18c6f.png)
+> **Dataset :  https://storage.googleapis.com/dqlab-dataset/sample_csv.csv**
+
+## QUIZ
+> ![image](https://user-images.githubusercontent.com/36031213/163139778-65861d67-ec23-429f-a3b2-2915cd7e1ae4.png)
+
+## Transforming - Part1
+> ![image](https://user-images.githubusercontent.com/36031213/163139962-51016894-1e0b-4a58-bc51-df36ac56a681.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163140020-ff5922b0-80fb-4b04-8b6b-5bd28621a54b.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163140117-0de39937-45b1-4b89-a060-c72a73b5ca34.png)
+> **Dataset : https://storage.googleapis.com/dqlab-dataset/sample_csv.csv**
+
+## Transforming - Part2
+> ![image](https://user-images.githubusercontent.com/36031213/163140323-b8803c44-45dc-4eaa-9f2c-7a26a0a35943.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163140413-e30c439c-3f68-48c8-8185-04fae24f7263.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163140462-e34f07b2-a151-49a2-9f3b-9ba067b281fd.png)
+> **Dataset : https://storage.googleapis.com/dqlab-dataset/sample_csv.csv**
+
+## Transforming - Part3
+> ![image](https://user-images.githubusercontent.com/36031213/163140636-ab89f1ee-4d00-4b8b-aa55-0893d2856d1f.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163140706-1c85642e-a01c-4e27-b459-8f78940424d3.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163140839-25752ae1-78f0-443c-bc54-0301ffbf9c59.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163140890-47fcb3a9-421d-45b1-bece-f52a0fcdf8a1.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163141311-833512d8-43a6-4b9d-a4cd-15f173c482da.png)
+> **Dataset : https://storage.googleapis.com/dqlab-dataset/sample_csv.csv**
+
+## Transforming - Part4
+> ![image](https://user-images.githubusercontent.com/36031213/163141436-6c7713d6-1114-4b67-8598-0eb06830fe7f.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163141524-13e05797-1b59-442e-8304-1579759b06cd.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163141557-0487a968-c6d2-4e0e-afbf-d3417b6c108c.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163141608-a36b2e52-9ee6-4941-b09b-e69de55f207a.png)
+
+## Penutup dari Andra
+
+“Sampai di sini sudah cukup jelas, Aksara? Terutama soal manipulasi data dengan index,” ujar Andra mengonfirmasi padaku.
+
+Aku mengangguk antusias, “Iya, ini keren banget! Kayak upgrade-an dari Excel ya.”
+
+“Oke, kalau begitu kamu bisa coba mengerjakan kuisnya sebelum kita lanjut ke materi selanjutnya. Soalnya bakal ada proyek yang mau diberikan padamu berkaitan dengan Pandas ini.”
+
+Proyek? Ah, pantas saja Andra yang sibuk itu mau meluangkan waktu untuk menjelaskan panjang lebar seperti tadi. Tapi tak bisa dipungkiri, aku sedikit gugup sekaligus tertantang untuk mengetahui detail proyeknya. 
+
+# 4. Handling Missing Values
+## Pendahuluan
+“Aksara, saya barusan kirim email lagi ya berisi link seputar handling missing values untuk Pandas. Kamu bisa belajar lebih lengkap di sana bersama isi modul.”
+“Siap!”
+Tanpa menunggu lagi, aku mengecek link yang diberikan Andra:
+
+https://pandas.pydata.org/pandas-docs/stable/user_guide/missing_data.html
+
+## Inspeksi Missing Value
+> ![image](https://user-images.githubusercontent.com/36031213/163142025-cf9b49c1-025d-40fa-a17d-34c68aad4bb0.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163142065-d09a8172-680f-4985-92c1-8b9e5cf460a1.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163142111-464a5619-dff5-4068-b674-0d7109375682.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163142238-fc075609-2f8a-4b97-b234-55b3245fa09e.png)
+> **Dataset : https://storage.googleapis.com/dqlab-dataset/CHAPTER%204%20-%20missing%20value%20-%20public%20data%20covid19%20.csv**
+
+## Treatment untuk Missing Value - Part1
+> ![image](https://user-images.githubusercontent.com/36031213/163142383-bf620df5-69ba-44d5-9269-746bec886f15.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163142432-3388c71b-d4ee-451c-a7e8-dba7740548ca.png)
+
+## Treatment untuk Missing Value - Part2
+> ![image](https://user-images.githubusercontent.com/36031213/163142566-411c7da4-af3b-410c-bcc4-f90ee91f4313.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163142609-fa5d2640-bfbb-4edc-9884-b2aeacbae6e1.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163142679-8a6347a2-c0ed-4c19-8ebc-699f08dbc17f.png)
+> **Dataset: https://storage.googleapis.com/dqlab-dataset/CHAPTER%204%20-%20missing%20value%20-%20public%20data%20covid19%20.csv**
+
+## Treatment untuk Missing Value - Part3
+> ![image](https://user-images.githubusercontent.com/36031213/163142837-164ff51f-32e9-4486-8926-ac5b974ad5c4.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163142868-1f1b193f-3dec-4cde-970c-62203707c34b.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163142994-670f044e-880e-4f61-945b-2b47c8fcdf6b.png)
+> **Dataset : https://storage.googleapis.com/dqlab-dataset/CHAPTER%204%20-%20missing%20value%20-%20public%20data%20covid19%20.csv**
+
+## Treatment untuk Missing Value - Part4
+> ![image](https://user-images.githubusercontent.com/36031213/163143105-8a5ce304-80a1-4967-a036-267f1923ac70.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163143165-41803891-bd5a-43cc-9adf-5b99ac2445e4.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163143244-48606834-b74e-473c-8d92-bed3326cc092.png)
+> **Dataset : https://storage.googleapis.com/dqlab-dataset/CHAPTER%204%20-%20missing%20value%20-%20public%20data%20covid19%20.csv**
+
+## Treatment untuk Missing Value - Part5
+> ![image](https://user-images.githubusercontent.com/36031213/163143383-d7496198-2c7e-48dc-a64c-c5a9d4a72e93.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163143449-a5ffc0fb-1b18-4919-bb3d-cb04dc323973.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163143484-1c5e72fa-f78b-42fb-87d7-2dff63239ba6.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163143539-f315408b-dda4-4065-bbd0-f4c85ef555e6.png)
+
+## QUIZ
+> ![image](https://user-images.githubusercontent.com/36031213/163143794-33270285-0bfb-4601-8531-9bcba0e53350.png)
+
+# 5. Mini Project
+## Pendahuluan
+“Ndra, aku sudah cukup paham dengan teorinya,” sahutku seakan memberi kode jika aku sudah siap mengerjakan proyek yang tadi dijanjikan.
+“Saya suka kepercayaan dirimu, Aksara. Kalau begitu, sudah siap kalau diberi proyek?” pancing Andra.
+Aku mengangguk mantap.
+
+“Oke, untuk proyek pertama, kamu akan melakukan ETL sebelum analisis data. Karena data yang dibutuhkan masih belum bersih, sehingga tidak bisa dilakukan analisis lebih lanjut.”
+
+Aku menyimak pemaparan dari Andra sembari memikirkan solusi untuk ETL. Tentunya bisa aku eksekusi dengan Pandas. “Baik, Ndra. Data yang dibutuhkan apa saja nantinya?”
+
+“Data untuk cabang perusahaan ritel kita, Aksara. Berarti kumpulan data bulan Januari 2019 untuk setiap kota dan provinsi, tanggal order-nya, customer, order-nya apa aja terkait brand, product, quantity dan item price-nya juga. Dan, yang terakhir adalah GMV/Gross Merchandise Volume (total price)-nya.”
+
+“Banyak banget!” gumamku dalam hati.
+
+“Saya tahu kamu pasti sudah memikirkan detlennya karena data yang dibutuhkan banyak. Jangan khawatir, saya beri tenggat waktu sampai akhir minggu ini, bukan besok. Cukup?”
+
+Aku mengangkat ibu jari, “Langsung aku cicil dari sekarang deh, Ndra.”
+
+“Baik, selamat bekerja Aksara!”
+
+## Project dari Andra
+> ![image](https://user-images.githubusercontent.com/36031213/163144046-1d56da3a-8b6c-4c44-aa3c-f0abd7e1424f.png)
+> ![image](https://user-images.githubusercontent.com/36031213/163144099-135e936e-033e-4340-ae62-c22949459909.png)
+> **Dataset :  https://storage.googleapis.com/dqlab-dataset/retail_raw_test.csv**
+
+> https://codeshare.io/YLrZdQ
+
+## Evaluasi Andra untuk project yang telah disubmit
+Aku baru saja mengumpulkan hasil kerja dari proyek pertamaku pada Andra. Lebih cepat satu hari dari tenggat waktu yang diberikan, semoga hasilnya juga memuaskan! Doaku dalam hati.
+
+“Aksara, saya baru saja meninjau pekerjaanmu. Saya ada pertanyaan,” ujar Andra yang lagi-lagi sudah ada di sebelahku. Sepertinya Andra punya kemampuan teleportasi yang bisa muncul tiba-tiba.
+
+“Ada yang salah, Ndra?”
+
+“Saya ingin tahu alasanmu mengapa di langkah ketiga, kamu cari tahu terlebih dulu nilai null. Mengapa tidak kamu convert to string secara langsung?”
+
+“Soalnya, kalau aku cek di df.info()nya masih ada yang kosong di kolom ‘product_value’, Ndra.  Kalau aku langsung convert to string, nantinya value NaN akan berubah menjadi string ‘nan’, kemudian ketika aku pad 0 di depan dan concat dengan char ‘P’, hasilnya akan menjadi ‘P0nan’ yang aneh sekali, Ndra,” jelasku.
+
+“Oke. Satu lagi pertanyaanku, Aksara. Kenapa kamu memakai langkah ke-4? Mengapa tidak langsung menggunakan kolom date yang sudah ada. Bukankah format waktunya sudah ideal?”
+
+Aku merasa tanya jawab ini tampak seperti ujian apakah aku benar-benar memahami cara kerja Pandas. Aku memantapkan diri untuk memberi jawaban, “Tidak semua format datetime yang ideal pada umumnya akan ideal di dalam pandas environment. Seenggaknya harus translate dulu menjadi format yang ideal di dalam pandas sehingga pandas bisa mengenali.”
+
+“Great! Untuk materi dan proyek ini, kamu dinyatakan lulus, Aksara.”
+
+Mendengar apresiasi ini langsung dari Andra membuat hatiku hangat. Senang sekali rasanya!
+
+## Hasil Belajarku 
+Walau harus bekerja keras, aku cukup puas dengan hasil kerjaku hari ini. Aku memandangi kode final yang sudah selesai kukerjakan. Diam-diam ada perasaan bangga menyelip di benakku! YES!
+
+**Akhirnya**, aku telah menyelesaikan modul **Data Manipulation with Pandas - Part 1**. Materi-materi yang telah kupelajari dan praktikkan dalam modul ini aku telah mendapatkan pengetahuan (knowledge) dan praktek (skill) untuk:
+* Memahami library Pandas dan interaksinya dengan numpy
+* Memahami dan mempraktekkkan bagaimana membuat series dan dataframe pada pandas dari berbagai tipe data seperti list, list of list, dict, ataupun numpy array
+* Memahami dan mempraktekkkan bagaimana membaca dataset dari berbagai format standar seperti csv, tsc, excel, json, sql sehingga dapat dijadikan pandas dataframe/series serta bagaimana cara menyimpannya ke format standar dataset.
+* Mampu memahami dan mempraktikkan proses indexing, transformasi, dan slicing pada dataframe
+* Mampu memahami dan mempraktikkan bagaimana cara melakukan handle missing value pada suatu dataframe
+* Latihan dalam mengerjakan project bisnis sederhana menggunakan pandas
+
+## My certificate of completion
+> ![image](/static/images/certificates/certificate-DQLABINTP1BAOLRQ.png)

@@ -1,0 +1,638 @@
+---
+title: Python for data professional part 1
+date: '2022-11-09'
+tags: ['Python','Data Engineer']
+draft: false
+summary: Python adalah bahasa pemrograman yang ditujukan untuk general-purpose programming
+image: /static/images/certificates/certificate-DQLABINTP1HHTNWN.png
+layout: PostLayout
+authors: ['default']
+---
+# 1. Mari Mengenal Python
+## Pengantar
+
+Sesampai di ruangan, aku sibuk berpikir apakah bos mengetahui jika aku diam-diam membantu tim lain mendata profil pelanggan supermarket?
+“Aksara, saya puas dengan performa kerjamu. Kamu layak dipromosikan jadi data analyst perusahaan dan dipindahkan ke divisi data di bawah kepemimpinan Kroma serta dibimbing langsung Senja dan Andra.”
+Ini begitu mendadak. Aku masih mencerna informasi ini dalam diam.
+Semuanya serba cepat.
+Aku sudah memiliki laptop baru dan dua modul untuk dipelajari pada hari pertama bekerja di divisi baru. Sembari menunggu instruksi, aku membuka isi modul berharap ada bacaan seru.
+Tapi…
+
+Aku mengangguk sopan. “Sebenarnya tadi itu juga clue untuk pelatihanmu hari ini tentang Bahasa Pemrograman Python, hal paling fundamental dalam dunia data,” ujar Senja sambil menarik bangku untuk duduk di sebelahku. Mencoba melupakan kejadian tadi, aku memfokuskan diri pada penjelasan Senja. 
+
+## Mari Mengenal Python
+Python akan sangat membantuku memahami materi-materi lainnya. Kalau sudah paham mengenai Python aku sudah memiliki pijakan dasar. Oke, baiklah!
+
+## Apa dan Kenapa Python - Part 1?
+
+Python adalah bahasa pemrograman yang ditujukan untuk **_general-purpose programming_** dan termasuk dalam kategori **_high-level programming language_**.
+
+Sebagai general-purpose programming language, Python digunakan untuk berbagai macam permasalahan seperti: pengembangan aplikasi web ataupun mobile, data science, dll.
+
+Python masuk ke dalam kategori high-level programming language dikarenakan bahasa pemrograman Python yang mudah untuk dibaca dan dituliskan oleh manusia.
+
+Bahasa  pemrograman  Python  diciptakan  oleh Guido van Rossum dan pertama kali diperkenalkan pada tahun 1991 sebagai sebuah proyek open-source.
+
+Sifat **open-source** dari Python mengartikan bahwa setiap orang dapat mengembangkan program komputer dengan menggunakan bahasa pemrograman Python baik untuk **tujuan komersil/non-komersil**.
+
+## Apa dan Kenapa Python - Part 2?
+
+Bahasa pemrograman Python bersifat **dynamically typed** (Python akan secara otomatis mengubah masukan dari pengguna) dan mendukung berbagai paradigma pemrograman baik pemrograman secara **prosedural**, berbasis objek (**Object-Oriented**), ataupun **fungsional**.
+
+Selain alasan di atas terdapat beberapa alasan lain untuk menggunakan bahasa pemrograman Python:
+
+1. Python dikembangkan untuk bersifat extendible yang mengartikan bahwa Python dapat dikembangkan untuk berbagai macam tugas baik untuk pembuatan aplikasi web ataupun desktop, proses analisis data, dll.
+1. Python memiliki komunitas yang besar yang secara aktif berkontribusi untuk menyediakan berbagai macam fungsionalitas (third-party libraries). Third-party libraries yang tersedia dalam bahasa pemrograman Python memungkinkan para pengembang untuk dapat fokus menyelesaikan permasalahan yang ada. Per Januari 2020, terdapat 214,922 modul third-party yang dapat kita gunakan secara cuma-cuma.
+1. Python terintegrasi dengan baik dengan berbagai macam bahasa pemrograman dan layanan enterprise. Untuk bagian-bagian yang melibatkan sumber daya komputasi yang besar, pengembang dapat menggunakan fungsionalitas dalam bahasa pemrograman lainnya yang bersifat low-level yang telah dikemas ke dalam fungsionalitas Python.
+
+## Quiz
+Bahasa pemrograman Python, termasuk salah satu bahasa pemrograman yang mudah dimengerti dan dibaca oleh manusia, hal ini membuat Python dapat disebut sebagai: JAWABAN
+
+* User-centric programming language
+* **High-level programming language**
+* Medium-level programming language
+* Advance programming language
+* Functional programming language
+
+## Quiz
+Python diciptakan oleh … pada tahun …
+JAWABAN
+
+* Robert Kowalski, 1972
+* Dennis Ritchie, 1993
+* Rasmus Lerdof, 1994
+* **Guido van Rossum, 1991**
+* James Gosling, 1995
+
+## Program Pertama "Hello Word"
+Setelah memahami teori-teori fundamental terkait dengan "Apa dan Mengapa Python?" aku diminta membuat sebuah program sederhana dengan Python.
+Fungsi Python yang akan pertama kali aku pelajari adalah fungsi print().  Dengan fungsi print(), aku dapat menampilkan pesan ke layar pengguna.
+
+### Tugas
+menampilkan pesan “Hello World!” pada layar menggunakan fungsi print()
+
+`print ("Hello World!")`
+
+## Program Pertamaku
+Keren! Aku baru tahu kalau Python memiliki fungsi print() yang berguna untuk menampilkan pesan ke layar pengguna.
+### Tugas
+Sekarang aku diberikan tugas dari Senja untuk menampilkan kalimat “Halo Dunia” dan “Riset Bahasa Python” menggunakan fungsi print().
+
+`print("Halo Dunia")`
+
+`print("Riset Bahasa Python")`
+
+## Struktur Program Python - Part1
+Setelah berhasil membuat program sederhana menggunakan Python, aku diminta Senja untuk belajar struktur dari sebuah program Python.
+Dari situ aku paham sebuah program Python pada umumnya terdiri dari:
+
+1. **Statements**: Instruksi yang diberikan secara baris per baris untuk dijalankan oleh mesin. Contoh:
+![image](https://user-images.githubusercontent.com/36031213/162880609-60f1778f-d4a8-4b96-8dc8-b7fedf710f85.png)
+
+2. **Variables**: Lokasi penyimpanan yang dapat digunakan untuk menampung sebuah data atau informasi. Contoh: aku mempunyai variabel yang bernama bilangan1, bilangan2, dan kalimat1
+![image](https://user-images.githubusercontent.com/36031213/162880630-9c292f54-6968-4028-8fb6-66a059e6e988.png)
+
+3. **Literals**: Simbol-simbol yang dapat kita gunakan untuk mengisi suatu variabel. Pada kode yang telah dicontohkan di atas, angka 5 dan 10 serta 'Belajar Bahasa Python' disebut sebagai literal.
+
+4. **Operators**: Simbol-simbol yang dapat digunakan untuk mengubah nilai dari satu variabel dengan melibatkan satu atau lebih variabel dan literal. Contoh: Tanda + merupakan salah satu contoh operator. Dengan menggunakan tanda +, aku berhasil menambahkan isi dari bilangan1 dan bilangan2!.
+
+![image](https://user-images.githubusercontent.com/36031213/162880971-1e8ec851-82d9-4a1a-a04a-3e047ad1b4bd.png)
+
+
+Adapun operator yang lain selain operator + adalah sebagai berikut.
+1. Operator - yang berfungsi sebagai operator pengurangan,
+2. Operator * yang berfungsi sebagai operator perkalian, dan
+3. Operator ** untuk pemangkatan
+
+## Tugas Peraktek
+
+Aku diminta untuk mencoba mempraktekkan tutorial yang diajarkan untuk memahami struktur bahasa pemrograman Python.
+Ketik Syntax berikut pada Live Code Editor:
+
+`1. # Statement`
+
+`2. print("Belajar Python menyenangkan") `
+
+`3. print("Halo Dunia")`
+
+`4. print("Hello World!")`
+
+`5. # Variables & Literals`
+
+`6. bilangan1 = 5`
+
+`7. bilangan2 = 10`
+
+`8. kalimat1 = "Belajar Bahasa Python"`
+
+`9. # Operators`
+
+`10. print (bilangan1+bilangan2)`
+
+## Tugas Peraktek
+Tantangan belum berakhir. Aku diminta untuk membuat program pengurangan sederhana dengan Python.
+Deklarasi variable bilangan1 dengan 20, dan bilangan2 dengan 10 dan tampilkan hasil pengurangan bilangan1 & bilangan 2
+
+`bilangan1 = 20`
+
+`bilangan2 = 10`
+
+`print(bilangan1 - bilangan2)`
+
+## Tugas Peraktek
+1. Aku diminta menghitung **harga_setelah_potongan** dan **harga_final. harga_final** diperoleh dengan mengalikan **harga_setelah_potongan** dengan angka 1.1 karena PPN sebesar 10% (100% + 10% = 110% atau 1.1)
+2. Aku menggunakan **variabel harga_asli dengan nilai 20000** dan **variabel potongan dengan nilai 2000**.
+
+> `harga_asli = 20000`
+
+> `potongan = 2000`
+
+> `harga_setelah_potongan = harga_asli - potongan`
+
+> `harga_final = harga_setelah_potongan *1.1`
+
+> `print(harga_final)`
+
+## Struktur Program Python - Part2
+
+Setelah mengerjakan tugas yang diberikan Senja, aku kembali lanjut belajar. Berikut adalah hal-hal baru yang aku pelajari mengenai Python:
+1. **Reserved Words**: Kumpulan kata-kata yang memiliki makna khusus dalam bahasa pemrograman Python. Kata **False, return**, dan for merupakan contoh dari reserved words.
+**Catatan: Ternyata, aku tidak dapat mendeklarasikan variabel dengan menggunakan sebuah reserved word!**
+2. **Whitespace**: Pada bahasa Python, **spasi** dan **tab **memiliki makna khusus untuk menandai serangkaian blok dalam kode Python. Hal ini akan dijelaskan secara lebih lanjut pada bagian struktur pemilihan dan struktur pengulangan pada bahasa Python.
+3. **Comments**: Comments merupakan sekumpulan teks yang dituliskan di dalam sebuah program yang tidak akan mempengaruhi hasil dari sebuah program. Walaupun tidak mempengaruhi hasil program, comments merupakan salah satu komponen yang penting dalam pengembangan program. Hal tersebut dikarenakan comments dapat diselipkan di antara sekumpulan statements yang telah dituliskan, untuk berkomunikasi dengan rekan programmer lainnya dalam satu tim. 
+
+Terdapat dua jenis comments di dalam Python, yaitu:
+
+* a. single line comment (comments dalam satu baris) seperti pada contoh berikut:
+![image](https://user-images.githubusercontent.com/36031213/162882211-1fc882d2-b2c9-49d0-9425-0579209bc455.png)
+* b. multi line comment (comments dalam beberapa baris) yang dapat dituliskan seperti pada contoh berikut:
+![image](https://user-images.githubusercontent.com/36031213/162882242-78d1cb49-99ac-4a9c-be4b-7ec3f598459e.png)
+
+## Quiz
+Dari pilihan-pilihan di bawah ini, manakah yang bukan merupakan struktur dari sebuah program Python: JAWABAN
+
+* Reserved Words
+* Whitespace
+* Variables
+* Operators
+* **Pointers**
+
+## Quiz
+Dalam bahasa pemrograman Python, … berfungsi untuk memberikan nilai dari sebuah variabel. JAWABAN
+
+* Whitespace
+* Operators
+* **Literals**
+* Pointers
+* Assignment
+
+# 2. Python Variables & Data Types
+## Python Variabel
+Setelah mengetahui konsep sederhana dari sebuah variabel, aku diminta mencoba mendeklarasikan beberapa variabel dalam bentuk teks ataupun bilangan dan melakukan operasi yang melibatkan sekumpulan variabel. 
+
+Pada bagian ini, aku akan mengkaji variabel dan tipe data secara lebih detail. Pada pertemuan sebelumnya aku berhasil mendeklarasikan variabel dengan menggunakan ekspresi seperti:
+
+![image](https://user-images.githubusercontent.com/36031213/162882939-7bb17375-7842-4dfa-ac57-a8c2af824578.png)
+
+Tips:
+Dalam mendeklarasikan sebuah variabel, berilah nama yang mewakili isi dari variabel tersebut. Sebagai contoh :
+![image](https://user-images.githubusercontent.com/36031213/162882993-10c650be-d0e0-4e1c-9c51-9774430b873b.png)
+
+## Aturan Penamaan Python Variabel
+
+Penamaan suatu variabel pada python dapat dikatakan valid selama memenuhi aturan-aturan berikut:
+1. Nama dari sebuah variabel harus dimulai dengan huruf (a-z, A-Z) atau karakter garis bawah underscore (_) dan tidak dapat dimulai dengan angka (0-9).
+2. Variabel hanya boleh mengandung karakter alfabet, bilangan dan underscore (a-z, A-Z, 0-9, _)
+3. Variabel bersifat case-sensitive yang mengartikan bahwa variabel TINGGI, tinggi, dan Tinggi merujuk pada tiga variabel berbeda.
+
+Selain dapat mendeklarasikan nilai dari suatu variabel secara baris per baris, aku juga dapat mendeklarasikan beberapa variabel dalam satu baris dengan menggunakan ekspresi seperti:
+![image](https://user-images.githubusercontent.com/36031213/162883310-400e8848-644b-4280-9eab-acb29f6db177.png)
+
+## Quiz
+Temukan satu contoh pendeklarasian variabel yang tidak valid dari lima pilihan berikut. JAWABAN
+
+* x = 10
+* x, y, z = True, 1, 4.0
+* x, y, z = 3, 3.0, True
+* **2x = 80**
+* x, y, z = False, True, True
+
+## Quiz
+Temukan salah satu nama variabel yang tidak valid dari lima pilihan berikut : JAWABAN
+
+* _TinggiBadan
+* _1unit_
+* tinggi_badan
+* tinggi__badan
+* **Tinggi-badan**
+
+## Tipe Data Dasar : Null, Boolean, Numeric dan Text
+1. **Null Type**: Tipe data null dalam Python digunakan untuk menyimpan nilai kosong atau tidak ada yang dinyatakan dengan **None**.
+2. **Boolean Type**: Tipe data boolean atau bool digunakan untuk menyimpan nilai kebenaran (True, False) dari suatu ekspresi logika.
+3. **Numeric Type**: Tipe data yang digunakan untuk menyimpan data berupa angka. Terdapat dua macam tipe data numeric, yaitu **int** untuk menyimpan **bilangan bulat** (e.g.: 0, 1, 2, 404, -500, -1000) dan **float** untuk menyimpan **bilangan riil** (e.g.: 0.5, 1.01, 2.05, 4.04)
+4. **Text Type**: Pada Python, tipe data string (str) digunakan untuk menyimpan data teks. Tipe data string dimulai dengan tanda kutip (baik kutip satu/ dua) dan diakhir dengan tanda kutip. Contoh: "Teks", "Contoh teks menggunakan Python", dan 'Teks pada Python'
+
+## Quiz
+… merupakan sebuah tipe data yang hanya berisikan dua nilai kebenaran. JAWABAN
+
+* Numeric
+* Float
+* Integer
+* **Boolean**
+* Text
+
+## Quiz
+Tipe data … merupakan tipe data yang dapat digunakan untuk menampung bilangan berkoma atau bilangan riil. JAWABAN
+
+* **Float**
+* Integer
+* Boolean
+* Text
+* String
+
+## Sequence Type - Part 1
+Tipe data ini digunakan untuk menampung sekumpulan data secara terorganisir.
+Bentuk dari tipe data sequence ini adalah **List** dan **Tuple**.
+Pada part 1 ini, aku akan mempelajari tipe data list terlebih dahulu.
+
+Tipe data **list** diawali dengan tanda kurung siku buka ( [ ), memisahkan setiap elemen di dalamnya dengan tanda koma ( , ) dan ditutup dengan kurung siku tutup ( ] ). Sebagai contoh:
+> ![image](https://user-images.githubusercontent.com/36031213/162884198-01281a99-90ec-42d8-bfcc-dbfcf2658509.png)
+
+Setiap elemen dari list memiliki indeks yang dimulai dari angka 0 dan terus bertambah satu nilainya hingga elemen terakhir dari _list_. Sebagai contoh:
+> ![image](https://user-images.githubusercontent.com/36031213/162884265-621b2b86-f599-4c29-a6d1-74022d220049.png)
+
+Tipe data list bersifat **mutable** yang berarti setiap elemen di dalam list dapat dirubah nilainya setelah proses pendeklarasian _list_. Sebagai contoh:
+> ![image](https://user-images.githubusercontent.com/36031213/162884314-51470ea7-427e-4b2a-928e-24fccbf77fc6.png)
+
+### Tugas:
+Aku diberikan tugas untuk menerapkan variasi tipe data list dengan mengikuti petunjuk yang diberikan Senja. Berikut petunjuknya:
+
+* Petunjuk 1: Input data _1, 'dua', 3, 4.0, 5_ ke dalam _contoh_list_
+* Petunjuk 2: Ambil Elemen pertama dari _contoh_list_ untuk menampilkan output 1 menggunakan print statement
+* Petunjuk 3: Ambil Elemen ke empat dari _contoh_list_ untuk menampilkan output 4.0 menggunakan print statement
+* Petunjuk 4: Input data _1, 'dua', 3, 4.0, 5_ ke dalam _contoh_list_
+* Petunjuk 5: Rubah Elemen keempat dalam _contoh_list_ menjadi _'empat'_
+* Petunjuk 6: Tampilkan output elemen keempat yang telah dirubah tersebut menggunakan print statement
+
+> `contoh_list = [1, 'dua', 3, 4.0, 5]`
+
+> `print(contoh_list[0])`
+
+> `print(contoh_list[3])`
+
+> `contoh_list = [1, 'dua', 3, 4.0, 5]`
+
+> `contoh_list[3] = 'empat'`
+
+> `print(contoh_list[3])`
+
+## Sequence Type - Part 2
+Setelah mempelajari tipe data **list**, aku mempelajari tipe data **tuple**. Tipe data _tuple_ juga berfungsi untuk menampung sekumpulan data. Tipe data ini diawali dengan tanda kurung buka ( ( ), memisahkan setiap elemen di dalamnya dengan tanda koma ( , ) dan ditutup dengan tanda kurung tutup ( ) ). Sebagai contoh:
+> ![image](https://user-images.githubusercontent.com/36031213/162884916-ff10d346-3bda-4456-88ac-56dcef1fec29.png)
+
+Aturan indeks dan cara mengakses elemen pada sebuah tuple serupa dengan list. Sebagai contoh:
+> ![image](https://user-images.githubusercontent.com/36031213/162884954-765baefe-dea1-4190-a1ae-0df426377662.png)
+
+Berbeda dengan tipe data list, tipe data tuple bersifat **immutable** yang berarti elemen pada tipe data tuple tidak dapat diubah setelah proses pendeklarasiannya.
+
+Pada saat aku mengubah elemen pada tuple seperti pada kode berikut, 
+> ![image](https://user-images.githubusercontent.com/36031213/162885051-58d0f8a9-552d-4cd5-9358-79bd3f0b98a8.png)
+
+akan menghasilkan error di console, yaitu _TypeError_
+> ![image](https://user-images.githubusercontent.com/36031213/162885124-9ed708dc-eda6-4ac6-a43b-c9f555d219fe.png)
+
+### Tugas:
+Sekarang aku diberikan tugas untuk menerapkan variasi tipe data tuple dengan mengikuti petunjuk yang diberikan Senja:
+
+* Petunjuk 1: Input data **Januari sampai dengan April** ke dalam contoh_tuple
+* Petunjuk 2: Ambil Elemen pertama dari _contoh_tuple_ untuk menampilkan output 1 menggunakan print statement
+* Petunjuk 3: **Input kembali** data **Januari sampai dengan April** ke dalam _contoh_tuple_
+* Petunjuk 4: Rubah Elemen pertama dalam _contoh_tuple_ menjadi _'Desember'_
+
+> ![image](https://user-images.githubusercontent.com/36031213/162885454-c9a340da-c272-4fd6-b3ac-3180ebda5d3d.png)
+
+## Set Type
+Serupa dengan tipe data sequence, tipe data **set** digunakan untuk menampung sekumpulan data dengan tipe lainnya. Terdapat dua jenis dari tipe data set yaitu, **set** dan **frozenset**.
+
+````
+Tipe data **set** diawali dengan tanda kurung buka kurawal ( { ), memisahkan setiap elemen di dalamnya dengan tanda koma ( , ) dan ditutup dengan tanda kurung tutup ( } ). Namun berbeda dengan tipe data sequence, seperti list, tipe data objek tidak mengizinkan adanya elemen dengan nilai yang sama dan tidak memperdulikan urutan dari elemen.
+Sebagai contoh:
+> ![image](https://user-images.githubusercontent.com/36031213/162885634-3237b74f-2786-4116-bc4e-3278706a85ce.png)
+````
+Akan menghasilkan output:
+> ![image](https://user-images.githubusercontent.com/36031213/162885691-6c31124e-b667-4cf0-9b30-fbc4b4f748bd.png)
+
+sedangkan pada tipe data set:
+> ![image](https://user-images.githubusercontent.com/36031213/162885747-311f3838-1b40-4b15-93c7-a3fec015374b.png)
+
+Akan menghasilkan output :
+> ![image](https://user-images.githubusercontent.com/36031213/162885798-c0dcbcc0-b01e-457a-9c92-300b75f4383c.png)
+
+Dari kedua contoh output pada program, dapat terlihat:
+1. Berbeda dengan tipe data set, tipe data list memperdulikan urutan dari setiap elemen saat list dideklarasikan.
+2. Berbeda dengan list yang mengizinkan adanya duplikasi elemen, **tipe data set tidak mengizinkan adanya elemen dengan nilai yang sama di dalamnya**. 
+
+Keunikan dari kedua tipe data ini tentunya menjadi pengetahuan yang berguna. Dan aku akan mempelajarinya kembali pada bagian struktur kontrol pengulangan!
+
+Bagaimana dengan tipe data frozenset? Tipe data **frozenset** sebenarnya hanya merupakan set yang bersifat **immutable**, yang artinya setiap elemen di dalam frozenset tidak dapat diubah setelah proses deklarasinya. Untuk membuat tipe data frozenset, aku dapat merujuk potongan kode di bawah ini:
+
+> ![image](https://user-images.githubusercontent.com/36031213/162886435-8724b49d-3617-42fc-931b-a9101b850f99.png)
+
+### Tugas:
+Sekarang aku diberikan tugas untuk menerapkan variasi set dan frozenset oleh Senja:
+
+1. Tugas 1:Input data Dewi, Budi, Cici, Linda, Cici kedalam tipe data list dan tampilkan hasilnya
+2. Tugas 2: Input data Dewi, Budi, Cici, Linda, Cici kedalam tipe data set dan tampilkan hasilnya
+3. Tugas 3: Input data Dewi, Budi, Cici, Linda, Cici kedalam tipe data frozenset dan tampilkan hasilnya
+
+> ![image](https://user-images.githubusercontent.com/36031213/162886548-92e6fa64-3e95-4203-ba58-5dbe1d807add.png)
+
+## Mapping Type
+````
+Tipe data **mapping** dapat digunakan untuk memetakan sebuah nilai ke nilai lainnya. Dalam Python, tipe data mapping disebut dengan istilah **dictionary**. Tipe data _dictionary_ dapat dideklarasikan dengan diawali oleh tanda kurung buka kurawal ( { ), memisahkan setiap elemen di dalamnya dengan tanda koma ( , ) dan ditutup dengan tanda kurung tutup ( } ). Setiap elemen pada tipe data _dictionary_dideklarasikan dengan format:
+> `"kunci" : "nilai"`
+````
+
+Hal inilah yang membedakan tipe data _mapping_ dengan tipe data _set_. Untuk lebih memperjelas tipe data _mapping_, aku mempelajari potongan kode berikut:
+> ![image](https://user-images.githubusercontent.com/36031213/162886820-e2b2ad6b-e9bb-46f8-befb-63330c47ef4e.png)
+
+Potongan kode di atas adalah contoh pendeklarasian dari tipe data dictionary. Kemudian, bagaimana dengan cara mengakses informasi dari tipe data ini?
+> ![image](https://user-images.githubusercontent.com/36031213/162886889-559f930c-04b0-4936-af85-67bc6942e983.png)
+
+Dengan mencoba potongan code ini pada live code editor, maka aku akan mendapatkan output: 
+> ![image](https://user-images.githubusercontent.com/36031213/162886940-c78aedbf-dd08-43a7-9c09-0ccc96b3890e.png)
+
+Untuk mengakses elemen dari sebuah dictionary, aku hanya perlu menspesifikasikan kata kunci yang terdapat dalam dictionary tersebut.
+Tugas:
+Menggunakan tipe data mapping, aku diminta Senja untuk menampilkan nama & pekerjaan John Doe, seorang Programmer.
+> ![image](https://user-images.githubusercontent.com/36031213/162887062-1c4f8314-22ae-4643-aff3-9ba43050094a.png)
+
+## Tugas Praktek
+Ternyata seru juga! Aku jadi berniat mengembangkan program kalkulator potongan harga ini untuk beberapa barang sekaligus agar lebih fungsional. Kalau begitu, aku perlu rapikan dulu informasi setiap barang di tabel ini.
+
+“Lalu, aku tinggal merepresentasikan semuanya ke tipe data dictionary, dengan begitu akan lebih mudah mengolahnya,” gumamku.
+Aku pun mulai mendeklarasikan variabel sepatu, baju, dan celana untuk menampung informasi barang ke dalam live _code_ editor.
+> ![image](https://user-images.githubusercontent.com/36031213/162887205-389df658-cb6e-420d-8401-71f7a6faf318.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/162887244-1838c2fb-618d-48a3-ac8e-32c1baee1f1c.png)
+
+## Tugas Praktek
+Setelah berhasil merepresentasikan setiap barang ke dalam tipe data dictionary dengan variabel _nama, harga_, dan _diskon_, langkahku selanjutnya adalah: mendeklarasikan list dengan nama _daftar_belanja _yang berisi data _sepatu_, _baju_, dan _celana_.
+> ![image](https://user-images.githubusercontent.com/36031213/162887402-c4a4a2cc-1d3c-4e25-8a3b-ea30461f6c84.png)
+
+## Tugas Praktek
+Dengan data yang aku miliki, aku bisa menghitung total harga jual dengan potongan harga beserta pajak sebesar 10% dari nilai jual.
+Untungnya Senja memberikan beberapa tips untuk menyelesaikan tugas ini:
+1. Tips 1. # Data yang dinyatakan ke dalam dictionary
+1. Tips 2. # Hitung harga masing-masing data setelah dikurangi diskon
+1. Tips 3. # Hitung harga total
+1. Tips 4. # Hitung harga kena pajak
+1. Tips 5. # Cetak total_harga + total_pajak
+
+> ![image](https://user-images.githubusercontent.com/36031213/162887522-8457edd3-b7fd-4b62-8a5d-4916ef47bc19.png)
+
+# 3. Python Operators
+## Pendahuluan
+Setelah aku berhasil mempelajari detail terkait dengan variables dan data type, sekarang aku akan mempelajari operator-operator yang tersedia di dalam Python. Di dalam Python, operator terbagi ke dalam 6 kelompok:
+1. Arithmetic operators
+1. Assignment operators
+1. Comparison operators
+1. Logical operators
+1. Identity operators
+1. Membership operators
+
+## Aritmatic Operator
+**Operator arithmetic** digunakan pada tipe data numerik, untuk melakukan operasi matematika sederhana yang terdiri atas:
+> ![image](https://user-images.githubusercontent.com/36031213/162888226-bdec70e1-4532-4ea2-b657-61f74b565d5b.png)
+
+## Assignment Operator
+Operator assignment digunakan untuk mendeklarasikan nilai secara langsung ke suatu variabel.
+![image](https://user-images.githubusercontent.com/36031213/162888311-1674ec62-95e6-4745-924b-0df59a6b28a4.png)
+
+## Quiz
+> ![image](https://user-images.githubusercontent.com/36031213/162888440-c9e86976-bf1f-41f8-859d-10463eb70317.png)
+
+## Quiz
+> ![image](https://user-images.githubusercontent.com/36031213/162888501-2834d9e3-6280-4248-aaa2-71d6d99dc96f.png)
+
+## Comparison Operator
+**Operator comparison** dapat digunakan untuk membandingkan dua buah nilai, berikut merupakan contoh-contoh operator komparasi.
+> ![image](https://user-images.githubusercontent.com/36031213/162888651-0080051e-8c15-4e00-9ce1-f7bee1053ec0.png)
+
+## Logical Operator
+**Operator logical** digunakan untuk menggabungkan beberapa nilai kebenaran atas suatu statemen logika.
+> ![image](https://user-images.githubusercontent.com/36031213/162888746-46854f56-fe88-449f-9509-13ed821c18e8.png)
+
+## Quiz
+> ![image](https://user-images.githubusercontent.com/36031213/162888868-e8674f7f-0e9a-448e-8fbd-dd9f43392372.png)
+
+## Quiz
+> ![image](https://user-images.githubusercontent.com/36031213/162888945-4236ae31-6a6b-42a7-b981-e16cd2414a0c.png)
+
+## Identity Operator
+**Operator identitas** dapat digunakan untuk membandingkan identitas dari dua buah variabel.
+> ![image](https://user-images.githubusercontent.com/36031213/162889033-f5e5a3bd-8d4d-4704-bcd7-945f513092b2.png)
+
+Pada umumnya, operator identitas sering digunakan bersamaan dengan fungsi type(), yang mana fungsi type() akan menerima sebuah objek dan mengembalikan tipe data dari objek tersebut. Di bawah ini adalah contoh penggunaan operator identitas dan fungsi type().
+
+Nah, aku coba mempraktekkan contoh tutorial yang diberikan Senja pada _live code editor_.
+> ![image](https://user-images.githubusercontent.com/36031213/162889124-a59da17e-8252-4378-bf87-cca5dc70d3e0.png)
+akan menampilkan pesan True.
+
+Setelah line di bawah ini selesai dieksekusi, Python akan secara otomatis mengubah tipe data dari x menjadi _float_
+> ![image](https://user-images.githubusercontent.com/36031213/162889255-231a39cc-d5be-4690-891e-86b0e9c8476b.png)
+> ![image](https://user-images.githubusercontent.com/36031213/162889309-cb6874b4-0ed4-4217-940b-d390de3a13a9.png)
+
+## Membership Operator
+**Operator keanggotaan (membership)** dapat digunakan untuk memeriksa anggota dari sebuah tipe data sequence/set. Operator keanggotaan meliputi:
+> ![image](https://user-images.githubusercontent.com/36031213/162889470-1c48a164-e0f9-41cf-a1dd-2781352e8b47.png)
+
+## Nilai Prioritas Operator dalam Python - Part 1
+Setelah mempelajari berbagai operator dalam bahasa pemrograman Python, tentunya aku juga ingin bisa menuliskan operasi-operasi variabel yang bersifat ekspresif dan ringkas.
+
+Sebagai contoh, untuk menuliskan sebuah program menghitung diskon dan pajak pembelian berdasarkan ilmu yang telah aku pelajari, aku dapat menuliskannya dengan potongan kode berikut:
+> ![image](https://user-images.githubusercontent.com/36031213/162889599-82cf61c7-980d-4e28-b54f-26d6b0a7e4f1.png)
+
+cara lebih mudah dengan menjelaskan presedensi (urutan eksekusi) dari operator.
+atau dapat menuliskannya ke dalam jumlah baris yang lebih sedikit seperti pada potongan kode berikut
+> ![image](https://user-images.githubusercontent.com/36031213/162889652-86923a8f-6726-490e-9681-c077a121290e.png)
+
+### Tugas:
+Hitung lah harga yang harus dibayarkan menggunakan barang senilai 150,000, dengan diskon 30% dan pajak 10%, menggunakan cara yang aku gunakan awal dan cara lebih singkat. 
+> ![image](https://user-images.githubusercontent.com/36031213/162889927-2f5a7033-523c-4fe3-8f09-40e10aade8e4.png)
+
+## Nilai Prioritas Operator dalam Python - Part 2
+Dalam bahasa pemrograman Python, tabel berikut mencakup nilai prioritas dan arah pengerjaan dari setiap operator.
+> ![image](https://user-images.githubusercontent.com/36031213/162890187-1dc464a2-1a4b-49c6-ad0d-e56ef2c3c384.png)
+
+Dari tabel di atas, dapat terlihat bahwa tanda () memiliki nilai prioritas yang paling tinggi. Hal itu menandakan jika di dalam suatu statemen yang melibatkan beberapa operator secara sekaligus, setiap operasi yang berada di dalam tanda () akan dikerjakan terlebih dahulu.
+Kemudian, jika terdapat beberapa operasi dalam tanda (), tanda kurung yang berada di sebelah paling kiri akan dikerjakan terlebih dahulu dikarenakan arah pengerjaan dari tanda () adalah dari kiri ke kanan.
+
+Sebagai contoh, pada proses deklarasi variabel nilai di bawah ini.
+> ![image](https://user-images.githubusercontent.com/36031213/162890316-4ccb3635-7409-477f-b8cd-70ceb18b8df3.png)
+
+Dari contoh di atas, meskipun operator perkalian (*) memiliki nilai prioritas yang lebih tinggi dari operator pengurangan (-), tanda () akan membuat Python mengerjakan bagian pengurangan terlebih dahulu, sebelum akhirnya mengalikan hasil pengurangan dengan bilangan 100.
+> ![image](https://user-images.githubusercontent.com/36031213/162890357-b6c6f26c-8ff8-4a5c-a0cd-1b63a3dae97d.png)
+
+## Quiz
+> ![image](https://user-images.githubusercontent.com/36031213/162890492-185c770a-eef4-4647-86b3-68c9c106660a.png)
+
+## Tugas Praktek
+Kenapa tidak terpikirkan olehku, ya? Harusnya aku tidak perlu mendeklarasikan variabel **total_pajak** dan aku bisa langsung menampung hasil perhitungan akhir saat mendeklarasikan variabel total_harga. Jadi, kodeku akan berjalan jika aku menambahkan setiap harga barang yang telah dipotong diskon sebelum menghitung pajak.
+> ![image](https://user-images.githubusercontent.com/36031213/162890660-c2d15331-7d8c-4991-9b49-f1d3741e8bec.png)
+
+### Tugas:
+Dengan cara yang diajarkan Senja, aku akan membuat potongan kode diatas menjadi lebih simpel. Jangan lupa ada pajak 10%.
+> ![image](https://user-images.githubusercontent.com/36031213/162890764-0f9d4b53-438e-4347-ab8f-b4de5921d731.png)
+
+# 4. Pythons Conditioning & Looping
+## Python Conditioning for Decision - Part 1
+Layaknya bahasa pemrograman lainnya, bahasa pemrograman Python menyediakan statemen desisi (decision statement) untuk berinteraksi dengan variabel bertipe boolean dan operator logika. Statemen desisi dalam Python dapat dituliskan dengan menggunakan format berikut:
+> ![image](https://user-images.githubusercontent.com/36031213/162890912-a1eac7f7-09f9-4c4b-a1c0-00d6369d44a3.png)
+
+````
+Dengan <**conditions**> berisikan operator yang mengembalikan nilai kebenaran; ataupun beberapa operator yang mengembalikan nilai kebenaran, yang digabungkan dengan operator logika.  Melalui  sebuah statemen desisi (if statement), <**do_action_1**> sampai dengan <**do_action_n**> akan dijalankan saat <**conditions**> bernilai True.
+
+Dalam menuliskan serangkaian aksi (<**do_action_1**>, ... , <**do_action_n**>) dalam sebuah statemen **if**, aku harus mengemas setiap aksi dalam sebuah blok dengan menambahkan indentasi (jorokan) dari pada aksi.
+````
+
+## Python Conditioning for Decision - Part 2
+Aku mempelajari kode yang diberikan Senja dan coba mempraktekkannya ke dalam live code editor:
+> ![image](https://user-images.githubusercontent.com/36031213/162891193-fb5a3312-0c49-4a6d-9915-d4aeeb3234c3.png)
+
+Kemudian, untuk melengkapi sebuah statement if, aku bisa menambahkan satu ataupun lebih statemen desisi elif, untuk melakukan pengecekan kondisi lainnya, saat kondisi dalam statement if atau elif di atasnya tidak terpenuhi.
+
+### Tugas:
+Praktekkan kode berikut di live code editor pada baris setelah kode sebelumnya yang telah dibuat.
+> ![image](https://user-images.githubusercontent.com/36031213/162891307-18d59879-f992-44a2-a9aa-853f812ec511.png)
+
+ps: Aku juga bisa mengubah nilai x sehingga lebih mudah memahami statemen desisi mana yang akan dieksekusi oleh potongan kode yang telah aku jalankan.
+
+> ![image](https://user-images.githubusercontent.com/36031213/162891439-60c94657-2095-4bee-83ff-68762d44ab31.png)
+
+## Python Conditioning for Decision - Part 3
+Dari yang aku pelajari pada bagian awal dari statemen desisi, operator desisi juga dapat digunakan dengan operator logika. 
+Sebagai catatan tambahan, aku juga belajar bahwa aksi dalam sebuah desisi statemen dapat dituliskan desisi statemen tambahan (lainnya) yang dikenal dengan istilah **nested if**.
+
+### Tugas:
+Praktekkan potongan kode berikut dalam live code editor.
+> ![image](https://user-images.githubusercontent.com/36031213/162891832-cac131bb-a0ec-4845-a46e-f79859ee7794.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/162891893-f6748f38-4064-453e-a6ef-fed655ae0f30.png)
+
+## Tugas Praktek
+menghitung tagihan pembayaran karena saat ini prosesnya masih manual.
+### Tugas:
+“Aksara, kantor kita akan merilis penawaran baru terkait jasa pembuatan data warehouse. Bisa tolong kembangkan kalkulatormu untuk menghitung tagihan pembayaran? Soalnya selama ini kita masih manual,” jelas Senja sembari memberikan contoh nota tagihan kantor.
+
+Aku belum mengiyakan karena sedikit ragu. Mengingat sebelumnya aku sempat salah. Tapi dalam hati aku berkata, pasti bisa! Kali ini aku harus mampu membuat kalkulator lebih rumit.
+
+Solusi yang terlintas dalam bayanganku: Kalkulator ini harus dapat menghitung subtotal setiap jasa yang diambil dari kolom harga/ hari dan total hari dari setiap jasa. Ternyata Senja juga memikirkan hal yang sama dengan instruksinya yang sangat membantu.
+> ![image](https://user-images.githubusercontent.com/36031213/162892172-4484e316-8979-42fa-a832-ec9bd99dda50.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/162892226-97ccdc2c-4d71-40aa-a54b-757d3adfa9a2.png)
+
+## Tugas Praktek
+Aku menunjukkan potongan kode dan hasil dari kalkulator yang telah aku buat ke Senja yang sudah berhasil menampilkan kalimat:
+
+**Selamat pagi, Anda harus membayar tagihan sebesar:**
+
+Kulihat kedua alis Senja bertaut, ini pertanda kodeku pasti ada yang keliru.
+“Kalau kamu hanya memasukkan perintah ‘selamat pagi’ seakan kalau tagihan ini dikirim hanya saat pagi, padahal bisa kapan saja sesuai kebutuhan,” komentar Senja. Begini, jam pengiriman email kantor kita mulai dari 6 pagi sampai 9 malam.
+### Tugas:
+Tolong masukkan variabel keterangan waktu tersebut di kodemu. Lalu, diatur dengan detail berikut:
+
+1. Diatas jam 07 malam adalah salam 'selamat malam'
+1. Diatas jam 05 sore adalah salam 'selamat sore'
+1. Diatas jam 12 siang, adalah 'selamat siang'
+1. dan selain itu 'selamat pagi'
+
+“Oh, oke. Paham,” sahutku sembari merevisi. Saran yang bagus, kedepannya aku harus berpikir kritis.
+> ![image](https://user-images.githubusercontent.com/36031213/162892520-31153318-a51d-4770-aab6-137c188e5033.png)
+
+## Python Primitive Loop Control
+Loop Control merupakan salah satu fitur yang mengizinkan penggunanya untuk melakukan serangkaian aksi, selama suatu kondisi yang telah ditetapkan bernilai benar. Dalam Python, terdapat dua bentuk primitif dari loop kontrol (struktur pengulangan), yaitu
+* **while**loops
+* **for**loops
+ 
+## Python while loops - part1
+Pertama-tama aku mempelajari struktur kontrol **while loops** menggunakan contoh berikut:
+> ![image](https://user-images.githubusercontent.com/36031213/162892777-7be0363f-0146-4773-8763-05de0cc2bb58.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/162892878-9c0743ea-b679-464f-8dc4-e2e9bea17a95.png)
+
+Dari tugas di atas, aku belajar bahwa statemen **while** akan terus menjalankan aksi di dalamnya, selama kondisi yang dituliskan di samping kanan statemen **while** terus terpenuhi. Melalui penambahan nilai i sebagai salah satu aksi dalam statemen **while**, saat nilai i = 4, kondisi dari statemen **while** tidak akan terpenuhi dan eksekusi program akan dilanjutkan ke perintah print(total_tagihan).
+
+> ![image](https://user-images.githubusercontent.com/36031213/162893090-62af4a07-25d8-4c21-bcaf-90ddfdbc3e18.png)
+
+## Python while loops - part2
+Dalam sebuah struktur kontrol pengulangan, aku dapat menggunakan perintah _break_ untuk keluar dari struktur pengulangan dan perintah continue untuk melanjutkan proses pengulangan berikutnya
+
+> ![image](https://user-images.githubusercontent.com/36031213/162893247-f25d47db-0af0-4c3c-9875-045ab3d9b343.png)
+> ![image](https://user-images.githubusercontent.com/36031213/162893298-a8cd66c7-6e76-4158-8876-76c7b4f79ce8.png)
+
+## Python while loops - part3
+> ![image](https://user-images.githubusercontent.com/36031213/162895232-669a05ee-19a2-4d93-864a-bd16b4f46b33.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/162895319-d5649f0c-4fb7-451e-9953-9038fc2ffc78.png)
+
+## Python for loops - Part1
+> ![image](https://user-images.githubusercontent.com/36031213/162895395-14e97ffa-319c-4237-9bd1-f6e33d4ada61.png)
+> ![image](https://user-images.githubusercontent.com/36031213/162895451-a9e007de-26b4-47af-a1a7-aa950f93252d.png)
+
+## Python for loops - Part2
+Serupa dengan struktur pengulangan while, aku juga dapat memanfaatkan statement break dan continue di dalamnya. Aku mencoba potongan kode di bawah menggunakan live code editor untuk penggunaan statement break.
+
+> ![image](https://user-images.githubusercontent.com/36031213/162895597-21f387ac-a542-4b35-8363-80a0cd672282.png)
+
+Setelah dijalankan akan menghasilkan
+![image](https://user-images.githubusercontent.com/36031213/162895679-2dd73ee4-b25a-423d-bfd1-984b00db19c8.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/162895792-5a083dcf-d20d-4061-8a93-fc470241d19b.png)
+
+
+## Python for loops - Part3
+Ternyata, aku belajar bahwa ada istilah **nested loops**, yaitu pengulangan bersarang. Dengan nested loops, aku dapat mengkombinasikan (menambahkan) struktur pengulangan lain di dalamnya.  Aku mencoba potongan kode di bawah menggunakan _live code editor_:
+
+> ![image](https://user-images.githubusercontent.com/36031213/162896212-51d30bcc-1173-4743-b63f-3c94447f095f.png)
+
+> ![image](https://user-images.githubusercontent.com/36031213/162896262-bdea092e-c1d5-4cf9-a29c-2c96d7b471e4.png)
+
+## Tugas Praktek
+
+Aku diberi informasi oleh Senja bahwa manajemen cukup puas dengan hasil kalkulator potongan harga dan pajak yang aku kembangkan. Setelahnya, aku diberikan kepercayaan lebih untuk membuat program baru.
+Dalam program kali ini, aku diminta untuk menghitung total pengeluaran dan pemasukan perusahaan.
+Senja pun mengingatkan akan ada penghitungan cash flow.
+Melihat Senja dan tim manajemen memberikan kepercayaan yang besar kepadaku, akupun bersemangat!
+
+### Tugas:
+Program yang akan aku bangun akan mengolah sebuah list yang bernama list_cash_flow. Setiap elemen dari list_cash_flow berisikan pengeluaran (bilangan negatif) dan pemasukan (bilangan positif) pada perusahaan
+
+Dari _list_cash_flow_ ini, aku akan menghitung _total_pengeluaran_ dan _total_pemasukan_ perusahaan. 
+
+> ![image](https://user-images.githubusercontent.com/36031213/162896581-5475d952-4c74-40e2-ac88-e8bdf398c578.png)
+
+# 5. Mini Quiz
+## Pendahuluan
+## Ekspedisi Pamanku
+Aku menyambar ponsel di meja dan membuka pesan singkat dari paman tempo hari yang menjelaskan jika paman harus mengeluarkan uang sebesar **1,5 juta** per mobil dalam sehari. Tapi, beliau selalu kebingungan dengan total pengeluaran per bulan karena adanya aturan ganjil-genap yang membuat pengoperasian mobil yang berbeda.
+
+“Kalau begitu, aku akan masukkan variabel **jumlah_hari** berisi jumlah hari dalam sebulan dan variabel **list_plat_nomor** berisi seluruh nomor plat mobil milik paman,” gumamku sendiri. Kalau seperti ini paman hanya perlu mengganti variabel **jumlah_hari** atau modifikasi variabel **list_plat_nomor** untuk melacak total pengeluaran paman selama sebulan. Ide Cemerlang!
+
+> ![image](https://user-images.githubusercontent.com/36031213/162896951-16b51bf7-ebfc-4964-bc1a-5856968ef305.png)
+
+## Hasil Belajarku
+Wah senangnya! Aku telah berhasil menyelesaikan pelajaran Python pertamaku, Python for Data Professional Beginner - Part 1.
+Dari materi yang telah aku pelajari dan praktekkan, aku telah mempelajari:
+
+* Alasan Python secara luas digunakan dalam komputasi saintifik, web, ranah data (data domain).
+* Konstruksi dari struktur bahasa pemrograman Python.
+* Teknik mempraktekkan penggunaan tipe data pada Python.
+* Teknik mempraktekkan penggunaan jenis-jenis operator pada Python.
+* Teknik mempraktekkan penggunaan pengkondisian untuk pengambilan keputusan dan perulangan pada Python.
+* Program Python untuk penyelesaian kasus bisnis sederhana.
+## Journey Belajar
+> ![image](https://user-images.githubusercontent.com/36031213/162897238-1e28c861-c5cb-423f-b0b6-ae32312d1506.png)
+
+## My certificate of completion
+> ![image](/static/images/certificates/certificate-DQLABINTP1HHTNWN.png)

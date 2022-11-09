@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .task-list-item:before {
+    @apply hidden;
+  }
+  .un-effect {
+    background: linear-gradient(currentColor 0 0) 0 100% / var(--d, 0) 1.5px no-repeat;
+    transition: background-size 0.24s ease-in-out;
+  }
+  .un-effect:hover {
+    --d: 100%;
+  }
+}
+
+@layer base {
+  * {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  /* https://stackoverflow.com/questions/61083813/how-to-avoid-internal-autofill-selected-style-to-be-applied */
+  input:-webkit-autofill,
+  input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+  }
+}
