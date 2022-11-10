@@ -6,6 +6,7 @@ import { getAllFilesFrontMatter } from '@/lib/mdx'
 import formatDate from '@/lib/utils/formatDate'
 import { GetStaticProps, InferGetStaticPropsType } from 'next'
 import { PostFrontMatter } from 'types/PostFrontMatter'
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import Image from 'next/image'
 import SectionContainer from '@/components/SectionContainer'
 import ImageTransition from '@/components/ImageTransition'

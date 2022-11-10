@@ -29,7 +29,9 @@ module.exports = {
       },
     ],
     'react/prop-types': 0,
-    'no-unused-vars': 0,
+    // Note: you must disable the base rule as it can report incorrect errors
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': 'warn',
     'react/no-unescaped-entities': 0,
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-var-requires': 'off',

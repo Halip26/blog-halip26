@@ -16,8 +16,8 @@ const siteMetadata = {
   twitter: 'https://twitter.com/halip26',
   medium: 'https://halip26.medium.com',
   facebook: 'https://facebook.com/halip26',
-  spotify: 'https://open.spotify.com/',
-  youtube: 'https://www.youtube.com/',
+  spotify: 'https://open.spotify.com/user/halipuddin26',
+  youtube: 'https://www.youtube.com/user/Halipuddin',
   locale: 'id-ID',
   analytics: {
     // supports plausible, simpleAnalytics or googleAnalytics

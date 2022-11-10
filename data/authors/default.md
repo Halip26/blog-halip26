@@ -8,7 +8,7 @@ linkedin: https://www.linkedin.com/in/halipuddin
 twitter: https://twitter.com/halip26
 medium: https://halip26.medium.com
 facebook: https://facebook.com/halip26
-spotify: https://open.spotify.com/show/4H3wqTA5e4YGCbcBF4RX7i
+spotify: https://open.spotify.com/user/halipuddin26
 ---
 
 ## Hello guys 👋🏻

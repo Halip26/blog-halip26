@@ -2,6 +2,7 @@ import Link from '@/components/Link'
 import PageTitle from '@/components/PageTitle'
 import SectionContainer from '@/components/SectionContainer'
 import { BlogSEO } from '@/components/SEO'
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import Image from '@/components/Image'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
@@ -14,10 +15,7 @@ import ImageAvatarTransition from '@/components/ImageAvatarTransition'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 
 const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/master/data/blog/${fileName}`
-const discussUrl = (slug) =>
-  `https://mobile.twitter.com/search?q=${encodeURIComponent(
-    `${siteMetadata.siteUrl}/post/${slug}`
-  )}`
+const discussUrl = (slug) => `https://mobile.twitter.com/search?q=${slug}`
 
 const postDateTemplate: Intl.DateTimeFormatOptions = {
   weekday: 'long',
