@@ -5,7 +5,7 @@ const siteMetadata = {
   description: 'Dear Reader get out your map, Pick somewhere and just run',
   language: 'id-ID',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://blog.halip26.vercel.app',
+  siteUrl: 'https://blog-halip26.vercel.app/',
   siteRepo: 'https://github.com/Halip26/blog.halip26',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',
