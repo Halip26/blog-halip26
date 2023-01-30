@@ -15,7 +15,7 @@ import ImageAvatarTransition from '@/components/ImageAvatarTransition'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 
 const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/master/data/blog/${fileName}`
-const discussUrl = (slug) => `https://mobile.twitter.com/search?q=from:@halip26%20${slug}`
+const discussUrl = (slug) => `https://mobile.twitter.com/search?q=from%3A%40halip26%20${slug}`
 
 const postDateTemplate: Intl.DateTimeFormatOptions = {
   weekday: 'long',
