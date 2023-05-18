@@ -2,7 +2,7 @@ const siteMetadata = {
   title: `Halip's Blog`,
   author: 'Halip26',
   headerTitle: `Halip26`,
-  description: 'Dear Reader get out your map, Pick somewhere and just run',
+  description: `Welcome to Halip's Random Words & Stories Compilation`,
   language: 'id-ID',
   theme: 'system', // system, dark or light
   siteUrl: 'https://blog-halip26.vercel.app/',
