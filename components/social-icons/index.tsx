@@ -1,9 +1,10 @@
 import Mail from './mail.svg'
 import Github from './github.svg'
 import Facebook from './facebook.svg'
+import Instagram from './instagram.svg'
 import Youtube from './youtube.svg'
 import Linkedin from './linkedin.svg'
-import Twitter from './X.svg'
+import X_Twittter from './x-twitter-official.svg'
 import Medium from './medium.svg'
 import Spotify from './spotify.svg'
 
@@ -13,9 +14,10 @@ const components = {
   mail: Mail,
   github: Github,
   facebook: Facebook,
+  instagram: Instagram,
   youtube: Youtube,
   linkedin: Linkedin,
-  twitter: Twitter,
+  twitter: X_Twittter,
   medium: Medium,
   spotify: Spotify,
 }
