@@ -3,7 +3,7 @@ name: Guest
 avatar: /static/images/sparrowhawk-avatar.jpg
 occupation: Wizard of Earthsea
 company: Earthsea
-twitter: https://twitter.com/
+twitter: https://x.com/
 linkedin: https://www.linkedin.com/in/
 ---
 
