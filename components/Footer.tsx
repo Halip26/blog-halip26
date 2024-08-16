@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router'
 import siteMetadata from '@/data/siteMetadata'
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import Image from 'next/image'
 import SocialIcon from './social-icons'
 
@@ -21,12 +22,13 @@ export default function Footer() {
         {router == '/about' ? (
           ''
         ) : (
-          <div className="flex space-x-6 scale-75 opacity-75 md:scale-100">
+          <div className="flex space-x-4 scale-75 opacity-75 md:scale-100">
             <SocialIcon kind="github" href={siteMetadata.github} />
             <SocialIcon kind="linkedin" href={siteMetadata.linkedin} />
-            <SocialIcon kind="twitter" href={siteMetadata.twitter} />
-            <SocialIcon kind="medium" href={siteMetadata.medium} />
             <SocialIcon kind="facebook" href={siteMetadata.facebook} />
+            <SocialIcon kind="twitter" href={siteMetadata.twitter} />
+            <SocialIcon kind="instagram" href={siteMetadata.instagram} />
+            <SocialIcon kind="medium" href={siteMetadata.medium} />
             <SocialIcon kind="spotify" href={siteMetadata.spotify} />
           </div>
         )}
