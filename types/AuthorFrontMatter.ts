@@ -10,6 +10,7 @@ export type AuthorFrontMatter = {
   github: string
   medium: string
   facebook: string
+  instagram: string
   spotify: string
   youtube: string
 }
