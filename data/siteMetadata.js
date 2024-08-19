@@ -1,7 +1,7 @@
 const siteMetadata = {
   title: `Halip's Blog`,
   author: 'Halip26',
-  headerTitle: `Halip26`,
+  headerTitle: `Halip's Blog`,
   description: `Welcome to Halip's Random Words & Stories Compilation`,
   language: 'id-ID',
   theme: 'system', // system, dark or light
@@ -13,7 +13,8 @@ const siteMetadata = {
   email: 'halipuddin.angko@gmail.com',
   github: 'https://github.com/Halip26',
   linkedin: 'https://www.linkedin.com/in/halipuddin',
-  twitter: 'https://twitter.com/halip26',
+  twitter: 'https://x.com/halip26',
+  instagram: 'https://www.instagram.com/halip26',
   medium: 'https://halip26.medium.com',
   facebook: 'https://facebook.com/halip26',
   spotify: 'https://open.spotify.com/user/halipuddin26',
