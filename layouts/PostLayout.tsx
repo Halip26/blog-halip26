@@ -15,7 +15,7 @@ import ImageAvatarTransition from '@/components/ImageAvatarTransition'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 
 const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/master/data/blog/${fileName}`
-const discussUrl = (slug) => `https://mobile.twitter.com/search?q=from%3A%40halip26%20${slug}`
+const discussUrl = (slug) => `https://x.com/search?q=from%3A%40halip26%20${slug}`
 
 const postDateTemplate: Intl.DateTimeFormatOptions = {
   weekday: 'long',
@@ -101,7 +101,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                               href={author.twitter}
                               className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                             >
-                              {author.twitter.replace('https://twitter.com/', '@')}
+                              {author.twitter.replace('https://x.com/', '@')}
                             </Link>
                           )}
                         </dd>
@@ -119,7 +119,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
               </div>
               <div className="text-center font-semibold pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">
                 <Link href={discussUrl(slug)} rel="nofollow">
-                  {'Diskusikan di Twitter'}
+                  {'Diskusikan di X'}
                 </Link>
                 {` • `}
                 <Link href={editUrl(fileName)}>{'Lihat di GitHub'}</Link>
