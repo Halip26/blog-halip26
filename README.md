@@ -244,7 +244,9 @@ The API routes used in the newsletter component cannot be used in a static site 
 Using the Halip's Blog? Support this effort by giving a star on GitHub, sharing your own blog and giving a shoutout on Twitter or becoming a project [sponsor](https://github.com/sponsors/timlrx).
 
 ## My Portfolio Website
+
 [Halip26's Portfolio](https://halip26.github.io)
+
 ## Licence
 
 [MIT](https://github.com/timlrx/tailwind-nextjs-starter-blog/blob/master/LICENSE) Template by © [timlrx](https://github.com/timlrx/tailwind-nextjs-starter-blog)
