@@ -2,7 +2,7 @@ const siteMetadata = {
   title: `Halip's Blog`,
   author: 'Halip26',
   headerTitle: `Halip's Blog`,
-  description: `Welcome to Halip's Random Words! I share insights on programming, personal life, and inspiring stories.`,
+  description: `Welcome to Halip's Random Words, I share insights on programming, personal life, and inspiring stories.`,
   language: 'id-ID',
   theme: 'dark', // system, dark or light
   siteUrl: 'https://blog-halip26.thedev.id/',
