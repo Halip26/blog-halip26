@@ -2,10 +2,10 @@ const siteMetadata = {
   title: `Halip's Blog`,
   author: 'Halip26',
   headerTitle: `Halip's Blog`,
-  description: `Welcome to Halip's Random Words & Stories Compilation`,
+  description: `Welcome to Halip's Random Words! I share insights on programming, personal life, and inspiring stories.`,
   language: 'id-ID',
-  theme: 'system', // system, dark or light
-  siteUrl: 'https://blog-halip26.vercel.app/',
+  theme: 'dark', // system, dark or light
+  siteUrl: 'https://blog-halip26.thedev.id/',
   siteRepo: 'https://github.com/Halip26/blog.halip26',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',
