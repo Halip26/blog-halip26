@@ -75,8 +75,5 @@
     "*.+(js|jsx|ts|tsx|json|css|md|mdx)": [
       "prettier --write"
     ]
-  },
-  "engines": {
-    "node": "22.11.0"
   }
 }
