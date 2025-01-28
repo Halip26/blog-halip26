@@ -9,7 +9,13 @@
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/timlrx/tailwind-nextjs-starter-blog)
 
-This is a [Next.js](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/) blogging starter Halip's Blog. Probably the most feature-rich Next.js markdown blogging Halip's Blog out there. Comes out of the box configured with the latest technologies to make technical writing a breeze. Easily configurable and customizable. Perfect as a replacement to existing Jekyll and Hugo individual blogs.
+Welcome to Halip's Blog! This project is a complete rewrite and redesign based on the original Tailwind Next.js Starter Blog by [Timothy (timlrx)](https://github.com/timlrx). A dynamic, feature-rich, customizable markdown blogging template built from the ground up with the latest technologies. It is perfect for technical writing and blogging. This project is a personal blog and portfolio website for [Halip26](https://halip26.github.io/).
+
+## Introduction
+
+[Halip's Blog](https://blog-halip26.thedev.id/) signifies a leap forward in markdown blogging, built on a robust framework that prioritizes both developer and user experience. Whether you're transitioning from Jekyll or Hugo, or starting afresh, this project provides a solid foundation to create engaging, performant, and stylish blogs effortlessly.
+
+Feel free to explore the repo and contributions are more than welcome!
 
 Check out the documentation below to get started.
 
@@ -57,14 +63,15 @@ Feature request? Check the past discussions to see if it has been brought up pre
 - [musing.vercel.app](https://musing.vercel.app/) - Parth Desai's personal blog ([source code](https://github.com/pycoder2000/blog))
 - [onyourmental.com](https://www.onyourmental.com/) - [Curtis Warcup's](https://github.com/Cwarcup) website for the On Your Mental Podcast ([source code](https://github.com/Cwarcup/on-your-mental))
 - [cwarcup.com](https://www.cwarcup.com/) - Curtis Warcup's personal website and blog ([source code](https://github.com/Cwarcup/personal-blog).
+- [blog-halip26.thedev.id](https://blog-halip26.thedev.id/) - Halip's Blog is a blog that contains articles about programming, web development, personal life, inspiring stories and other things related to technology. ([source code](https://github.com/Halip26/blog-halip26).
 
-Using the Halip's Blog? Feel free to create a PR and add your blog to this list.
+Using the [Tailwind Nextjs Starter Blog](https://github.com/timlrx/tailwind-nextjs-starter-blog)? Feel free to create a PR and add your blog to this list.
 
 ## Motivation
 
-I wanted to port my existing blog to Nextjs and Tailwind CSS but there was no easy out of the box Halip's Blog to use so I decided to create one. Design is adapted from [Tailwindlabs blog](https://github.com/tailwindlabs/blog.tailwindcss.com).
+I wanted to port my existing blog to Nextjs and Tailwind CSS but there was no easy out of the box [Tailwind Nextjs Starter Blog](https://github.com/timlrx/tailwind-nextjs-starter-blog) to use so I decided to create one. Design is adapted from [Tailwindlabs blog](https://github.com/tailwindlabs/blog.tailwindcss.com).
 
-I wanted it to be nearly as feature-rich as popular blogging Halip's Blogs like [beautiful-jekyll](https://github.com/daattali/beautiful-jekyll) and [Hugo Academic](https://github.com/wowchemy/wowchemy-hugo-modules) but with the best of React's ecosystem and current web development's best practices.
+I wanted it to be nearly as feature-rich as popular blogging [Tailwind Nextjs Starter Blog](https://github.com/timlrx/tailwind-nextjs-starter-blog) like [beautiful-jekyll](https://github.com/daattali/beautiful-jekyll) and [Hugo Academic](https://github.com/wowchemy/wowchemy-hugo-modules) but with the best of React's ecosystem and current web development's best practices.
 
 ## Features
 
@@ -83,7 +90,6 @@ I wanted it to be nearly as feature-rich as popular blogging Halip's Blogs like 
 - Flexible data retrieval with [mdx-bundler](https://github.com/kentcdodds/mdx-bundler)
 - Support for tags - each unique tag will be its own page
 - Support for multiple authors
-- Blog Halip's Blogs
 - TOC component
 - Support for nested routing of blog posts
 - Newsletter component with support for mailchimp, buttondown, convertkit, klaviyo, revue, and emailoctopus
@@ -110,8 +116,7 @@ npm i -g @pliny/cli
 pliny new --tailwind-nextjs-starter-blog my-blog
 ```
 
-It supports the updated version of the blog with Contentlayer, optional choice of TS/JS and different package managers as well as more modularized components which will be the basis of the Halip's Blog going forward.
-
+It supports the updated version of the blog with Contentlayer, optional choice of TS/JS and different package managers as well as more modularized components which will be the basis of the [Tailwind Nextjs Starter Blog](https://github.com/timlrx/tailwind-nextjs-starter-blog)
 Alternatively to stick with the current version, TypeScript and Contentlayer:
 
 ```bash
@@ -232,21 +237,21 @@ Follow the interactive prompt to generate a post with pre-filled front matter.
 ## Deploy
 
 **Vercel**  
-The easiest way to deploy the Halip's Blog is to use the [Vercel Platform](https://vercel.com) from the creators of Next.js. Check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The easiest way to deploy the [Tailwind Nextjs Starter Blog](https://github.com/timlrx/tailwind-nextjs-starter-blog) is to use the [Vercel Platform](https://vercel.com) from the creators of Next.js. Check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 **Netlify / GitHub Pages / Firebase etc.**  
-As the Halip's Blog uses `next/image` for image optimization, additional configurations have to be made to deploy on other popular static hosting websites like [Netlify](https://www.netlify.com/) or [GitHub Pages](https://pages.github.com/). An alternative image optimization provider such as Imgix, Cloudinary or Akamai has to be used. Alternatively, replace the `next/image` component with a standard `<img>` tag. See [`next/image` documentation](https://nextjs.org/docs/basic-features/image-optimization) for more details.
+As the [Tailwind Nextjs Starter Blog](https://github.com/timlrx/tailwind-nextjs-starter-blog) uses `next/image` for image optimization, additional configurations have to be made to deploy on other popular static hosting websites like [Netlify](https://www.netlify.com/) or [GitHub Pages](https://pages.github.com/). An alternative image optimization provider such as Imgix, Cloudinary or Akamai has to be used. Alternatively, replace the `next/image` component with a standard `<img>` tag. See [`next/image` documentation](https://nextjs.org/docs/basic-features/image-optimization) for more details.
 
 The API routes used in the newsletter component cannot be used in a static site export. You will need to use a form API endpoint provider and substitute the route in the newsletter component accordingly. Other hosting platforms such as Netlify also offer alternative solutions - please refer to their docs for more information.
 
 ## Support
 
-Using the Halip's Blog? Support this effort by giving a star on GitHub, sharing your own blog and giving a shoutout on Twitter or becoming a project [sponsor](https://github.com/sponsors/timlrx).
+Using the [Tailwind Nextjs Starter Blog](https://github.com/timlrx/tailwind-nextjs-starter-blog)? Support this effort by giving a star on GitHub, sharing your own blog and giving a shoutout on Twitter or becoming a project [sponsor](https://github.com/sponsors/timlrx).
 
 ## My Portfolio Website
 
-[Halip26's Portfolio](https://halip26.github.io)
+I also have a portfolio website that I built using HTML, CSS, and JavaScript, with the Owl Carousel and jQuery libraries. This portfolio website is connected to Google Sheets, so every time users send a message, I receive it directly on the spreadsheet. Check it out here [Halip26's Portfolio](https://halip26.github.io).
 
 ## Licence
 
-[MIT](https://github.com/timlrx/tailwind-nextjs-starter-blog/blob/master/LICENSE) Template by © [timlrx](https://github.com/timlrx/tailwind-nextjs-starter-blog)
+[MIT](https://github.com/timlrx/tailwind-nextjs-starter-blog/blob/master/LICENSE) Template [Tailwind Nextjs Starter Blog](https://github.com/timlrx/tailwind-nextjs-starter-blog) by © [timlrx](https://github.com/timlrx/)
